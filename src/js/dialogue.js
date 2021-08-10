@@ -62,7 +62,7 @@ function MostrarDialogo(enviou, mensagem){
         
                     for(var i = 0; i < mensagem.length; i++){
                         actualMessage += mensagem[i];
-                        await sleep(25);
+                        await sleep(50);
                         texto.innerHTML = actualMessage;
                     }
 
