@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>OMORI - Site de Fãs</title>
+    <link href="src/css/config.css" type="text/css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div class="cookiesWarn">
+      <video autoplay muted loop class="video">
+        <source src="src/videos/sleeping.mp4" />
+      </video>
+      <video muted class="video" id="video2" style="display: none; opacity: 0;">
+        <source src="src/videos/opening.mp4" />
+      </video>
+
+      <div class="mainDialogo">
+        <div class="dialogoNome"><p class="dialogName"></p></div>
+        <div class="dialogo">
+            <p class="dialogName" id="dialogMessage">
+            </p>
+            <div id="setaBundle">
+                <p class="diagolSeta" id="diagolSetaTexto"> Pressione Enter para continuar</p>
+                <img src="src/img/seta.png" class="dialogSeta" id="dialogSeta" height="50px"></img>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="src/js/dialogue.js"></script>
+    <script src="src/js/intro.js"></script>
+  </body>
+</html>
