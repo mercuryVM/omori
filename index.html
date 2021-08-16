@@ -1,32 +1,162 @@
 <html>
-  <head>
-    <title>OMORI - Site de Fãs</title>
-    <link href="src/css/config.css" type="text/css" rel="stylesheet" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  </head>
-  <body>
-    <div class="cookiesWarn">
-      <video autoplay muted loop class="video">
-        <source src="src/videos/sleeping.mp4" />
-      </video>
-      <video muted class="video" id="video2" style="display: none; opacity: 0;">
-        <source src="src/videos/opening.mp4" />
-      </video>
 
-      <div class="mainDialogo">
-        <div class="dialogoNome"><p class="dialogName"></p></div>
-        <div class="dialogo">
-            <p class="dialogName" id="dialogMessage">
-            </p>
-            <div id="setaBundle">
-                <p class="diagolSeta" id="diagolSetaTexto"> Pressione Enter para continuar</p>
-                <img src="src/img/seta.png" class="dialogSeta" id="dialogSeta" height="50px"></img>
-            </div>
+<head>
+  <title>OMORI - Trabalho Final 1°DS</title>
+  <meta charset="UTF-8">
+  <link href="src/css/config.css" type="text/css" rel="stylesheet" />
+  <link href="src/css/wiki.css" type="text/css" rel="stylesheet" />
+  <link href="src/css/abridorImagem.css" type="text/css" rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body id="body">
+  <div class="cookiesWarn">
+    <div class="mainDialogo">
+      <div class="dialogoNome">
+        <p class="dialogName"></p>
+      </div>
+      <div class="dialogo">
+        <p class="dialogName" id="dialogMessage">
+        </p>
+        <div id="setaBundle">
+          <p class="diagolSeta" id="diagolSetaTexto"> Pressione Enter para continuar</p>
+          <img src="src/img/seta.png" class="dialogSeta" id="dialogSeta" height="50px"></img>
         </div>
       </div>
     </div>
+  </div>
 
-    <script src="src/js/dialogue.js"></script>
-    <script src="src/js/intro.js"></script>
-  </body>
+  <audio loop id="typing">
+    <source src="src/sounds/typing.ogg">
+  </audio>
+
+  <audio loop id="ost">
+    <source src="src/sounds/omori title.mp3">
+  </audio>
+
+  <div class="abrirImagem">
+    <div class="panel">
+      <div class="menu" style="margin-left: auto;" id="openedImageBack">
+        Voltar
+      </div>
+      <div class="viewport">
+          <img src="src/img/gamepics/1.jpg" id="openedImage">
+      </div>
+      <p class="comment" id="imageComment">"Omori e seus amigos no espaço branco."</p>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="header">
+      <img src="src/img/OMORI_logo.png" class="logo">
+
+      <div class="menus">
+        <div class="menu">
+          <a href="index.html">Inicio</a>
+        </div>
+        <div class="menu hasSubmenu" id="characters">
+          Personagens
+          <div class="submenu" id="charactersSubmenu">
+            <div class="option">Sunny</div>
+            <div class="option">Omori</div>
+            <div class="option">Mari</div>
+            <div class="option">Hero</div>
+            <div class="option">Basil</div>
+            <div class="option">Kel</div>
+          </div>
+        </div>
+        <div class="menu">
+          <a href="history.html">Historia</a>
+        </div>
+        <div class="menu">
+          <a href="secrets.html">Segredos</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="content">
+      <div class="intro">
+        <img src="src/img/omori_gif.gif" class="omori">
+        <div class="introDialogo">
+          <div class="dialogoNome">
+            <p class="dialogName">???</p>
+          </div>
+          <div class="dialogo">
+            <p class="dialogName" id="dialogMessage">
+              Bem-vindo ao meu espaco branco...
+            </p>
+            <div id="setaBundle">
+              <p class="diagolSeta" id="diagolSetaTexto"> Pressione Enter para continuar</p>
+              <img src="src/img/seta.png" class="dialogSeta" id="dialogSeta" height="50px"></img>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="experience">
+        <div class="box">
+          <div class="imageandheader">
+            <span class="header">Uma experiência única para um jogador.</span>
+            <p>
+              Explore um mundo estranho cheio de amigos e inimigos coloridos. Navegue pelo vibrante e mundano para
+              descobrir um passado esquecido. Quando chegar a hora, o caminho que você escolheu determinará seu
+              destino... e talvez o destino de outras pessoas também.
+            </p>
+            <div class="cards">
+              <img src="src/img/gamepics/REALYOU_TAGGED_KEL.png">
+              <img src="src/img/gamepics/REALHERO_TAGGED_YOU.png">
+            </div>
+          </div>
+          <img src="src/img/gamepics/1.jpg" id="imageOne" class="headImage">
+
+        </div>
+        <div class="box">
+          <img src="src/img/gamepics/2.jpg" id="imageTwo" class="headImage">
+          <div class="imageandheader">
+            <span class="header">Muitas horas de conteúdo e imersão ao jogador</span>
+            <p>
+              Não parece um grande jogo de terror, certo? Não há monstros assustadores e horrores existenciais no mundo dos sonhos coloridos, mas esse é o ponto. Incapaz de controlar ou enfrentar certos eventos no mundo real, Omori conjura este fantástico espaço de cabeça para escapar, como um cobertor de segurança.
+            </p>
+            <div class="cards">
+              <img src="src/img/gamepics/DW_ALBUM_06.png">
+              <img src="src/img/gamepics/TAG_AubreyOmori.png">
+            </div>
+          </div>
+
+        </div>
+        <div class="box">
+          <div class="imageandheader">
+            <span class="header">Uma soundtrack impactante</span>
+            <p>
+              Com mais de 100 músicas distribuídas em 22 horas de gameplay. OMORI te deixa preso com suas músicas que se adaptam perfeitamente ao clima do momento.
+              <iframe style="border: 0; width: 100%; height: 42px; margin-top: 50px" src="https://bandcamp.com/EmbeddedPlayer/album=1411025474/size=small/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://omori.bandcamp.com/album/omori-ost">OMORI OST by OMORI</a></iframe>
+            </p>
+          </div>
+          <img src="src/img/gamepics/OMORI_playing_piano.gif" id="imageTwo" class="headImage">
+        </div>
+      </div>
+
+      <div class="trailer">
+        <span class="header">Confira o trailer oficial!</span>
+        <video controls autoplay id="trailer" onplay="Musica(false)" onended="Musica(true)" onpause="Musica(true)" onplaying="Musica(false)">
+          <source src="src/videos/trailer.webm">
+        </video>
+
+        <div class="downloadBTN"><a target="_blank" href="https://store.steampowered.com/app/1150690/OMORI/"><img src="src/img/Steam.png"></a></div>
+      </div>
+
+    </div>
+    <div class="footer">
+      <p>Este site está sendo desenvolvido por
+      <br>
+      <span>Gabriel Luis da Silva do 1°DS</span></p>
+    </div>
+
+  </div>
+  </div>
+
+  <script src="src/js/dialogue.js"></script>
+  <script src="src/js/imageopener.js"></script>
+  <script src="src/js/intro.js"></script>
+</body>
+
 </html>

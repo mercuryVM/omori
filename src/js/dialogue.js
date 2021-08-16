@@ -2,6 +2,7 @@ const boxDialogo = document.getElementsByClassName("mainDialogo")[0];
 const nameDialogo = document.getElementsByClassName("dialogName")[0];
 const messageDialogo = document.getElementById("dialogMessage");
 const setaDialogo = document.getElementById("dialogSeta");
+const typing = $("#typing");
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -62,7 +63,9 @@ function MostrarDialogo(enviou, mensagem){
         
                     for(var i = 0; i < mensagem.length; i++){
                         actualMessage += mensagem[i];
-                        await sleep(40);
+                        typing[0].volume = 0.25;
+                        typing[0].play();
+                        await sleep(20);
                         texto.innerHTML = actualMessage;
                     }
 
@@ -73,6 +76,8 @@ function MostrarDialogo(enviou, mensagem){
                     $("#setaBundle").animate({
                         opacity: 1
                     }, 500);
+
+                    typing[0].pause();
 
                     await AnimateAgain();
 
@@ -98,3 +103,9 @@ $(document).keypress(function(event){
     }
     
 });
+
+$(boxDialogo).click(() =>{
+    if(waitingEnter){
+        waitingEnter = false;
+    }	
+})
