@@ -18,7 +18,7 @@ function MostrarDialogo(enviou, mensagem){
 
         $("#setaBundle").css("opacity", "0");
 
-        if(!enviou && !mensagem){
+        if(!mensagem){
             $(boxDialogo).animate({
                 opacity: 0,
               }, 500, async function() {

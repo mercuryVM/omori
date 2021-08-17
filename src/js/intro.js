@@ -5,7 +5,7 @@ async function Intro() {
     opacity: 1,
   }, 500, async function () {
     await MostrarDialogo("???", "Voce deseja aceitar nossas politicas de cookies, que no fim das contas nem existem?");
-    await MostrarDialogo("", "");
+    await MostrarDialogo("???", "");
     $(".cookiesWarn").css("display", "none");
     $("#body").css("overflow-y", "auto");
     $("#ost")[0].play();
@@ -78,7 +78,7 @@ $(".miau").click(() => {
     $("#meow")[0].play();
     $("#meow")[0].volume = 0.25;
     await MostrarDialogo("MEWO", "MEOW? (Esperando por algo acontecer?)")
-    await MostrarDialogo("", "");
+    await MostrarDialogo("MEWO", "");
     $(".cookiesWarn").css("display", "none");
     $("#body").css("overflow-y", "auto");
   });
