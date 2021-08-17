@@ -47,6 +47,10 @@ div.content {
     opacity: 0;
     background: white;
     padding: 100px;
+    border-left-width: 4px;
+    border-right-width: 4px;
+    border-style: solid;
+    border-color: black;
 }
 
 div.hands img.hand {
@@ -104,6 +108,10 @@ div.menu, div.permmenu {
     font-size: 32px;
     padding: 0 20px;
     cursor: pointer;
+}
+
+div.menu:hover a, div.menu:hover, div.permmenu:hover{
+    color: gray;
 }
 
 div.hasSubmenu:hover div.submenu {
@@ -171,6 +179,8 @@ img.miau {
     cursor: pointer;
     margin-left: auto;
 }
+
+/* modificações para mobile */
 
 @media screen and (max-width: 960px) {
     div.menu {

@@ -21,40 +21,6 @@ function Musica(bool) {
   else $("#ost")[0].pause();
 }
 
-$(document).ready(function () {
-
-  $(window).scroll(function () {
-
-    $('.box').each(function (i) {
-
-      var bottom_of_object = $(this).position().top + $(this).outerHeight();
-      var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-      if (bottom_of_window > bottom_of_object) {
-
-        $(this).animate({ 'opacity': '1' }, 1500);
-
-      }
-
-    });
-
-    $('.trailer').each(function (i) {
-
-      var bottom_of_object = $(this).position().top + $(this).outerHeight();
-      var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-      if (bottom_of_window > bottom_of_object) {
-
-        $(this).animate({ 'opacity': '1' }, 1500);
-
-      }
-
-    });
-
-  });
-
-});
-
 Intro();
 
 EnableHandler($("#imageOne"), "src/img/gamepics/1.jpg", "OMORI e seus amigos.")
@@ -83,3 +49,5 @@ $(".miau").click(() => {
     $("#body").css("overflow-y", "auto");
   });
 });
+
+AOS.init()

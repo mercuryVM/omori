@@ -3,12 +3,18 @@
 <head>
   <title>OMORI - Trabalho Final 1°DS</title>
   <meta charset="UTF-8">
+  <!-– estilos -->
   <link href="src/css/config.css" type="text/css" rel="stylesheet" />
   <link href="src/css/global.css" type="text/css" rel="stylesheet" />
   <link href="src/css/wiki.css" type="text/css" rel="stylesheet" />
   <link href="src/css/abridorImagem.css" type="text/css" rel="stylesheet" />
+  <!-– jquery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-– fontes -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-– bibliotecas de animação -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body id="body">
@@ -90,7 +96,7 @@
     </div>
 
     <div class="content">
-      <div class="intro">
+      <div class="intro" data-aos="fade-down">
         <img src="src/img/omori_gif.gif" class="omori">
         <div class="introDialogo">
           <div class="dialogoNome">
@@ -104,7 +110,7 @@
         </div>
       </div>
 
-      <div class="hands">
+      <div class="hands" data-aos="fade-up">
         <img src="src/img/HANDS_SPRITE.gif" class="hand hcima">
         <img src="src/img/HANDS_SPRITE.gif" class="hand hcima">
         <img src="src/img/HANDS_SPRITE.gif" class="hand hcima">
@@ -117,7 +123,7 @@
       </div>
 
       <div class="experience">
-        <div class="box">
+        <div class="box" data-aos="fade-up">
           <div class="imageandheader">
             <span class="header">Uma experiência única para um jogador</span>
             <p>
@@ -126,14 +132,14 @@
               destino... e talvez o destino de outras pessoas também.
             </p>
             <div class="cards">
-              <img src="src/img/gamepics/REALYOU_TAGGED_KEL.png" id="tag1" style="margin-left: 0; margin-right: 0;">
-              <img src="src/img/gamepics/REALHERO_TAGGED_YOU.png" id="tag2" style="margin-right: 0;">
+              <img src="src/img/gamepics/REALYOU_TAGGED_KEL.png" id="tag1" style="margin-left: 0; margin-right: 0;" data-aos="zoom-in-up">
+              <img src="src/img/gamepics/REALHERO_TAGGED_YOU.png" id="tag2" style="margin-right: 0;" data-aos="zoom-in-up">
             </div>
           </div>
-          <img src="src/img/gamepics/1.jpg" id="imageOne" class="headImage">
+          <img src="src/img/gamepics/1.jpg" id="imageOne" class="headImage" data-aos="zoom-in-left">
         </div>
-        <div class="box">
-          <img src="src/img/gamepics/2.jpg" id="imageTwo" class="headImage">
+        <div class="box" data-aos="fade-up">
+          <img src="src/img/gamepics/2.jpg" id="imageTwo" class="headImage" data-aos="zoom-in-right">
           <div class="imageandheader">
             <span class="header">Muitas horas de conteúdo e imersão ao jogador</span>
             <p>
@@ -142,13 +148,13 @@
               Omori conjura este fantástico espaço de cabeça para escapar, como um cobertor de segurança.
             </p>
             <div class="cards">
-              <img src="src/img/gamepics/DW_ALBUM_06.png" id="tag3" style="margin-left: 0; margin-right: 0;">
-              <img src="src/img/gamepics/TAG_AubreyOmori.png" id="tag4" style="margin-right: 0;">
+              <img src="src/img/gamepics/DW_ALBUM_06.png" id="tag3" style="margin-left: 0; margin-right: 0;" data-aos="zoom-in-up">
+              <img src="src/img/gamepics/TAG_AubreyOmori.png" id="tag4" style="margin-right: 0;" data-aos="zoom-in-up">
             </div>
           </div>
 
         </div>
-        <div class="box">
+        <div class="box" data-aos="fade-up">
           <div class="imageandheader">
             <span class="header">Uma soundtrack impactante</span>
             <p>
@@ -156,14 +162,14 @@
               adaptam perfeitamente ao clima do momento.
               <iframe style="border: 0; width: 100%; height: 42px; margin-top: 50px"
                 src="https://bandcamp.com/EmbeddedPlayer/album=1411025474/size=small/bgcol=ffffff/linkcol=0687f5/transparent=true/"
-                seamless><a href="https://omori.bandcamp.com/album/omori-ost">OMORI OST by OMORI</a></iframe>
+                seamless data-aos="zoom-in-up"><a href="https://omori.bandcamp.com/album/omori-ost">OMORI OST by OMORI</a></iframe>
             </p>
           </div>
-          <img src="src/img/gamepics/OMORI_playing_piano.gif" id="imageThree" class="headImage">
+          <img src="src/img/gamepics/OMORI_playing_piano.gif" id="imageThree" class="headImage" data-aos="zoom-in-left">
         </div>
       </div>
 
-      <div class="hands">
+      <div class="hands" data-aos="fade-up">
         <img src="src/img/HANDS_SPRITE.gif" class="hand hbaixo">
         <img src="src/img/HANDS_SPRITE.gif" class="hand hbaixo">
         <img src="src/img/HANDS_SPRITE.gif" class="hand hbaixo">
@@ -175,7 +181,7 @@
         <img src="src/img/HANDS_SPRITE.gif" class="hand hbaixo handextra">
       </div>
 
-      <div class="trailer">
+      <div class="trailer" data-aos="fade-up">
         <span class="header">Confira o trailer oficial!</span>
         <video controls id="trailer" onplay="Musica(false)" onended="Musica(true)" onpause="Musica(true)"
           onplaying="Musica(false)">
@@ -189,20 +195,22 @@
     </div>
 
     <div class="footer">
-      <img src="src/img/OMOCAT_Logo.png" />
-
-      <p>Este site está sendo desenvolvido por
-        <br>
-        <span>Gabriel Luis da Silva do 1°DS</span>
-      </p>
+      <img src="src/img/OMOCAT_Logo.png" data-aos="flip-left"/>
+      <div data-aos="flip-left">
+        <p>Este site está sendo desenvolvido por
+          <br>
+          <span>Gabriel Luis da Silva do 1°DS</span>
+        </p>
+      </div>
     </div>
 
   </div>
-  </div>
-
-  <script src="src/js/dialogue.js"></script>
-  <script src="src/js/imageopener.js"></script>
-  <script src="src/js/intro.js"></script>
 </body>
+
+<!-– scripts carregamento posterior -->
+
+<script src="src/js/dialogue.js"></script>
+<script src="src/js/imageopener.js"></script>
+<script src="src/js/intro.js"></script>
 
 </html>

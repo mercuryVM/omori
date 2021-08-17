@@ -50,6 +50,11 @@ div.cards img {
     border-color: rgba(0, 0, 0, 0.295);
     border-bottom-style: solid;
     border-right-style: solid;
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    transition: all 0.25s ease;
 }
 
 div.box img.headImage {
@@ -61,6 +66,11 @@ div.box img.headImage {
     max-width: 600px;
     width: 30vw;
     height: auto;
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    transition: all 0.25s ease;
 }
 
 div.experience span.header,
@@ -85,11 +95,17 @@ div.introDialogo {
     display: flex;
     flex-direction: column;
     position: relative;
+    width: 100%;
+}
+
+img.headImage:hover, div.cards img:hover{
+    -webkit-filter: brightness(50%);
+   filter: brightness(50%);
 }
 
 div.intro img.omori {
     height: 25vw;
-    min-height: 250px;
+    min-height: 215px;
 }
 
 div.left {
@@ -100,6 +116,8 @@ div.left {
     width: 15vw;
     border-style: solid;
 }
+
+/* modificações para mobile */
 
 @media screen and (max-width: 960px) {
 
@@ -114,6 +132,8 @@ div.left {
         font-size: 24px;
     }
 }
+
+/* correção para desktop */
 
 @media screen and (max-width: 1280px) {
     div.box img.headImage {
