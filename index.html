@@ -4,6 +4,7 @@
   <title>OMORI - Trabalho Final 1°DS</title>
   <meta charset="UTF-8">
   <link href="src/css/config.css" type="text/css" rel="stylesheet" />
+  <link href="src/css/global.css" type="text/css" rel="stylesheet" />
   <link href="src/css/wiki.css" type="text/css" rel="stylesheet" />
   <link href="src/css/abridorImagem.css" type="text/css" rel="stylesheet" />
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -34,6 +35,10 @@
     <source src="src/sounds/omori title.mp3">
   </audio>
 
+  <audio id="meow">
+    <source src="src/sounds/meow">
+  </audio>
+
   <div class="abrirImagem">
     <div class="panel">
       <div class="menu" style="margin-left: auto;" id="openedImageBack">
@@ -46,7 +51,7 @@
     </div>
   </div>
 
-  <div class="main">
+  <div class="main" style="background: url('src/img/1148181.png')">
     <div class="header">
       <img src="src/img/OMORI_logo.png" class="logo">
 
@@ -73,13 +78,15 @@
         </div>
       </div>
 
+      <img src="src/img/miau" class="miau">
+
     </div>
     <div class="content">
       <div class="intro">
         <img src="src/img/omori_gif.gif" class="omori">
         <div class="introDialogo">
           <div class="dialogoNome">
-            <p class="dialogName">???</p>
+            <p class="dialogName">OMORI</p>
           </div>
           <div class="dialogo">
             <p class="dialogName" id="dialogMessage">
@@ -92,18 +99,31 @@
           </div>
         </div>
       </div>
+
+      <div class="hands">
+        <img src="src/img/HANDS_SPRITE.gif" class="hand hcima">
+        <img src="src/img/HANDS_SPRITE.gif" class="hand hcima">
+        <img src="src/img/HANDS_SPRITE.gif" class="hand hcima">
+        <img src="src/img/HANDS_SPRITE.gif" class="hand hcima">
+        <img src="src/img/HANDS_SPRITE.gif" class="hand hcima">
+        <img src="src/img/HANDS_SPRITE.gif" class="hand hcima">
+        <img src="src/img/HANDS_SPRITE.gif" class="hand hcima">
+        <img src="src/img/HANDS_SPRITE.gif" class="hand hcima handextra">
+        <img src="src/img/HANDS_SPRITE.gif" class="hand hcima handextra">
+      </div>
+
       <div class="experience">
         <div class="box">
           <div class="imageandheader">
-            <span class="header">Uma experiência única para um jogador.</span>
+            <span class="header">Uma experiência única para um jogador</span>
             <p>
               Explore um mundo estranho cheio de amigos e inimigos coloridos. Navegue pelo vibrante e mundano para
               descobrir um passado esquecido. Quando chegar a hora, o caminho que você escolheu determinará seu
               destino... e talvez o destino de outras pessoas também.
             </p>
             <div class="cards">
-              <img src="src/img/gamepics/REALYOU_TAGGED_KEL.png">
-              <img src="src/img/gamepics/REALHERO_TAGGED_YOU.png">
+              <img src="src/img/gamepics/REALYOU_TAGGED_KEL.png" id="tag1" style="margin-left: 0; margin-right: 0;">
+              <img src="src/img/gamepics/REALHERO_TAGGED_YOU.png" id="tag2" style="margin-right: 0;">
             </div>
           </div>
           <img src="src/img/gamepics/1.jpg" id="imageOne" class="headImage">
@@ -117,8 +137,8 @@
               Não parece um grande jogo de terror, certo? Não há monstros assustadores e horrores existenciais no mundo dos sonhos coloridos, mas esse é o ponto. Incapaz de controlar ou enfrentar certos eventos no mundo real, Omori conjura este fantástico espaço de cabeça para escapar, como um cobertor de segurança.
             </p>
             <div class="cards">
-              <img src="src/img/gamepics/DW_ALBUM_06.png">
-              <img src="src/img/gamepics/TAG_AubreyOmori.png">
+              <img src="src/img/gamepics/DW_ALBUM_06.png" id="tag3" style="margin-left: 0; margin-right: 0;">
+              <img src="src/img/gamepics/TAG_AubreyOmori.png" id="tag4" style="margin-right: 0;">
             </div>
           </div>
 
@@ -127,17 +147,29 @@
           <div class="imageandheader">
             <span class="header">Uma soundtrack impactante</span>
             <p>
-              Com mais de 100 músicas distribuídas em 22 horas de gameplay. OMORI te deixa preso com suas músicas que se adaptam perfeitamente ao clima do momento.
+              Com mais de 100 músicas distribuídas em 22 horas de gameplay, OMORI te deixa preso com suas músicas que se adaptam perfeitamente ao clima do momento.
               <iframe style="border: 0; width: 100%; height: 42px; margin-top: 50px" src="https://bandcamp.com/EmbeddedPlayer/album=1411025474/size=small/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://omori.bandcamp.com/album/omori-ost">OMORI OST by OMORI</a></iframe>
             </p>
           </div>
-          <img src="src/img/gamepics/OMORI_playing_piano.gif" id="imageTwo" class="headImage">
+          <img src="src/img/gamepics/OMORI_playing_piano.gif" id="imageThree" class="headImage">
         </div>
+      </div>
+
+      <div class="hands">
+        <img src="src/img/HANDS_SPRITE.gif" class="hand hbaixo">
+        <img src="src/img/HANDS_SPRITE.gif" class="hand hbaixo">
+        <img src="src/img/HANDS_SPRITE.gif" class="hand hbaixo">
+        <img src="src/img/HANDS_SPRITE.gif" class="hand hbaixo">
+        <img src="src/img/HANDS_SPRITE.gif" class="hand hbaixo">
+        <img src="src/img/HANDS_SPRITE.gif" class="hand hbaixo">
+        <img src="src/img/HANDS_SPRITE.gif" class="hand hbaixo">
+        <img src="src/img/HANDS_SPRITE.gif" class="hand hbaixo handextra">
+        <img src="src/img/HANDS_SPRITE.gif" class="hand hbaixo handextra">
       </div>
 
       <div class="trailer">
         <span class="header">Confira o trailer oficial!</span>
-        <video controls autoplay id="trailer" onplay="Musica(false)" onended="Musica(true)" onpause="Musica(true)" onplaying="Musica(false)">
+        <video controls id="trailer" onplay="Musica(false)" onended="Musica(true)" onpause="Musica(true)" onplaying="Musica(false)">
           <source src="src/videos/trailer.webm">
         </video>
 

@@ -30,6 +30,7 @@ abrirImagemPanel.click(CloseMenu);
 function EnableHandler(button, source, comment){
     button.unbind("click");
     button.css("cursor", "pointer");
+    button.css("pointer-events", "all");
     button.attr("alt", comment);
     button.attr("title", comment);
     button.click(() =>{

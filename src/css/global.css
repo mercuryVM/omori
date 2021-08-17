@@ -1,0 +1,177 @@
+div.header,
+div.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+div.header {
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-color: black;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 3px;
+    border-style: solid;
+}
+
+div.footer p {
+    font-family: 'Calibri';
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}
+
+div.footer {
+    padding: 15px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.footer span {
+    font-family: 'OMORIGAME';
+}
+
+div.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 18%;
+    padding: 5vw 0px;
+    opacity: 0;
+    background: white;
+}
+
+div.hands img.hand {
+    height: 10vw;
+    max-height: 52px;
+    margin: 0px 15px;
+}
+
+div.hands img.hcima {
+    transform: rotate(0deg);
+}
+
+div.hands img.hbaixo {
+    transform: rotate(180deg);
+}
+
+div.content div.hands {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0px;
+}
+
+div.header img.logo {
+    height: 6vw;
+    min-height: 50px;
+    max-height: 75px;
+    margin-left: 15px;
+    flex: 10%;
+}
+
+div.menus {
+    flex: 90%;
+    margin-left: 5vw;
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+div.menu {
+    background-color: black;
+    border-radius: 4px;
+    border-width: 5px;
+    border-style: double;
+    border-color: white;
+    max-width: fit-content;
+    color: white;
+    font-family: 'OMORIGAME';
+    font-size: 32px;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+div.hasSubmenu:hover div.submenu {
+    display: flex;
+}
+
+div.menu div.submenu {
+    display: none;
+    flex-direction: column;
+    background-color: black;
+    position: absolute;
+    border-radius: 4px;
+    border-width: 5px;
+    border-left-style: double;
+    border-color: white;
+    border-right-style: double;
+    border-bottom-style: double;
+}
+
+div.submenu div.option {
+    color: white;
+    padding: 5px 10px;
+    min-width: 50px;
+}
+
+div.submenu div.option:hover {
+    background-color: gray;
+    transition: 0.2s;
+}
+
+div.submenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    background-color: white;
+    user-select: none;
+}
+
+img {
+    pointer-events: none;
+}
+
+img.handextra {
+    display: block;
+}
+
+img.miau {
+    height: 64px;
+    margin-right: 20px;
+    pointer-events: all;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 960px) {
+    div.menu {
+        font-size: 25px;
+    }
+
+    div.menus {
+        flex-direction: column;
+    }
+
+    img.handextra {
+        display: none;
+    }
+
+    div.content {
+        margin: 0 5%;
+    }
+}

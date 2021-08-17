@@ -1,142 +1,70 @@
-div.header, div.footer{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-div.header{
-    background-color: white;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-bottom-color: black;
-    border-top-width: 0px;
-    border-left-width: 0px;
-    border-right-width: 0px;
-    border-bottom-width: 3px;
-    border-style: solid;
-}
-
-div.trailer video{
+div.trailer video {
     height: 35vw;
     min-height: 250px;
     border-radius: 25px;
 }
 
-div.downloadBTN img{
+div.downloadBTN img {
     width: 8vw;
     margin: 20;
     min-width: 200px;
+    pointer-events: all;
 }
 
-div.footer p{
-    font-family: 'Calibri';
-    color: white;
-    font-size: 24px;
-    text-align: center;
-}
-
-div.footer span{
-    font-family: 'OMORIGAME';
-}
-
-div.trailer{
+div.trailer {
     margin-top: 100px;
     display: flex;
     align-items: center;
     flex-direction: column;
+    opacity: 0;
 }
 
-div.footer{
-    padding: 15px;
-    background-color: black;
+div.experience div.box {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    opacity: 0;
+    margin: 64px 0px;
+    padding: 25px;
 }
 
-div.content{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 5vw 15%;
-}
-
-div.header img.logo{
-    height: 6vw;
-    min-height: 50px;
-    max-height: 75px;
-    margin-left: 15px;
-    flex: 10%;
-}
-
-div.menus{
-    flex: 90%;
-    margin-left: 5vw;
-    padding: 10px 0px;
-    display: flex;
-    flex-direction: row;
-}
-
-div.menu{
-    background-color: black;
-    border-radius: 4px;
-    border-width: 5px;
-    border-style: double;
-    border-color: white;
-    max-width: fit-content;
-    color: white;
-    font-family: 'OMORIGAME';
-    font-size: 32px;
-    padding: 0 20px;
-    cursor: pointer;
-}
-
-div.hasSubmenu:hover div.submenu{
-    display: flex;
-}
-
-div.experience{
-    margin-top: 3vh
-}
-
-div.experience div.box{
-    display: flex;
-    margin: 40px 0px;
-}
-
-div.box div.imageandheader{
+div.box div.imageandheader {
     padding: 20px;
 }
 
-div.imageandheader p{
+div.imageandheader p {
     font-family: 'Calibri';
 }
 
-div.imageandheader div.cards{
+div.imageandheader div.cards {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-div.cards img{
+div.cards img {
     height: 22vw;
     position: relative;
     max-height: 200px;
     margin: 0 15px;
+    border-radius: 10px;
+    border-width: 4px;
+    border-color: rgba(0, 0, 0, 0.295);
+    border-bottom-style: solid;
+    border-right-style: solid;
 }
 
-div.box img.headImage{
-    height: auto;
+div.box img.headImage {
     border-radius: 20px;
     border-width: 4px;
     border-color: black;
     border-style: solid;
-    width: 32vw;
     object-fit: cover;
     max-width: 600px;
+    width: 30vw;
+    height: auto;
 }
 
-div.experience span.header, div.trailer span.header{
+div.experience span.header,
+div.trailer span.header {
     font-family: 'Calibri';
     font-size: 48px;
     text-align: end;
@@ -144,83 +72,27 @@ div.experience span.header, div.trailer span.header{
     margin-right: 20px;
 }
 
-@media screen and (max-width: 760px){
-    div.menu{
-        font-size: 25px;
-    }
-
-    div.menus{
-        flex-direction: column;
-    }
-
-    div.experience span.header, div.trailer span.header{
-        font-size: 48px;
-        text-align: right;
-    }
-
-    div.experience span.header, div.trailer span.header{
-        font-size: 24px;
-    }
-}
-
 div.intro {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-width: 2px;
-    border-radius: 5px;
-    border-color: black;
-    border-style: solid;
-    background: black;
     padding: 15px;
 }
 
-div.menu div.submenu{
-    display: none;
-    flex-direction: column;
-    background-color: black;
-    position: absolute;
-    border-radius: 4px;
-    border-width: 5px;
-    border-left-style: double;
-    border-color: white;
-    border-right-style: double;
-    border-bottom-style: double;
-}
-
-div.submenu div.option{
-    color: white;
-    padding: 5px 10px;
-    min-width: 50px;
-}
-
-div.submenu div.option:hover{
-    background-color: gray;
-    transition: 0.2s;
-}
-
-div.submenu{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-div.introDialogo{
-    width: 80vw;
+div.introDialogo {
     max-width: 800px;
     display: flex;
     flex-direction: column;
     position: relative;
 }
 
-div.intro img.omori{
+div.intro img.omori {
     height: 25vw;
     min-height: 250px;
 }
 
-div.left{
+div.left {
     background-color: white;
     border-radius: 10px;
     border-color: black;
@@ -229,12 +101,22 @@ div.left{
     border-style: solid;
 }
 
-a{
-    text-decoration: none;
-    color: white;
+@media screen and (max-width: 960px) {
+
+    div.experience span.header,
+    div.trailer span.header {
+        font-size: 48px;
+        text-align: right;
+    }
+
+    div.experience span.header,
+    div.trailer span.header {
+        font-size: 24px;
+    }
 }
 
-body{
-    background-color: white;
-    user-select: none;
+@media screen and (max-width: 1280px) {
+    div.box img.headImage {
+        width: 20vw;
+    }
 }
