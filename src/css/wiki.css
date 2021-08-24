@@ -23,7 +23,6 @@ div.experience div.box {
     display: flex;
     opacity: 0;
     margin: 64px 0px;
-    padding: 25px;
 }
 
 div.box div.imageandheader {
@@ -76,7 +75,7 @@ div.box img.headImage {
 div.experience span.header,
 div.trailer span.header {
     font-family: 'Calibri';
-    font-size: 48px;
+    font-size: 36px;
     text-align: end;
     font-weight: 700;
     margin-right: 20px;
@@ -95,7 +94,6 @@ div.introDialogo {
     display: flex;
     flex-direction: column;
     position: relative;
-    width: 100%;
 }
 
 img.headImage:hover, div.cards img:hover{
@@ -130,6 +128,34 @@ div.left {
     div.experience span.header,
     div.trailer span.header {
         font-size: 24px;
+    }
+
+    div.downloadBTN img{
+        min-width: 150px;
+    }
+
+    div.trailer video{
+        min-height: 150px;
+    }
+
+    p.dialogName{
+        font-size: 32px;
+    }
+}
+
+/* correção para telas muito pequenas */
+
+@media screen and (max-width: 600px) {
+    div.intro img.omori{
+        min-height: 150px;
+    }
+
+    div.content div.hands {
+        overflow: hidden;
+    }
+
+    div.header img.logo{
+        min-height: 46px;
     }
 }
 

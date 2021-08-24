@@ -3,6 +3,7 @@
 <head>
   <title>OMORI - Trabalho Final 1°DS</title>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-– estilos -->
   <link href="src/css/config.css" type="text/css" rel="stylesheet" />
   <link href="src/css/global.css" type="text/css" rel="stylesheet" />
@@ -61,38 +62,44 @@
   </div>
 
   <div class="main" style="background: url('src/img/1148181.png')">
-    <div class="header">
+    <div class="topmenus">
+      <div class="header">
       <img src="src/img/OMORI_logo.png" class="logo">
-
-      <div class="headermenu">
-        <span class="material-icons menuBTN">
-          menu
-        </span>
-        <div class="menus">
-          <div class="menu">
-            <a href="index.html">Inicio</a>
-          </div>
-          <div class="menu hasSubmenu" id="characters">
-            Personagens
-            <div class="submenu" id="charactersSubmenu">
-              <div class="option">Sunny</div>
-              <div class="option">Omori</div>
-              <div class="option">Mari</div>
-              <div class="option">Hero</div>
-              <div class="option">Basil</div>
-              <div class="option">Kel</div>
+        <div class="headermenu">
+          <span class="material-icons menuBTN" id="menuBTN">
+            menu
+          </span>
+          <div class="menus">
+            <div class="menu">
+              <a href="#">Inicio</a>
+            </div>
+            <div class="menu hasSubmenu" id="characters">
+              Personagens
+              <div class="submenu" id="charactersSubmenu">
+                <div class="option">Sunny</div>
+                <div class="option">Omori</div>
+                <div class="option">Mari</div>
+                <div class="option">Hero</div>
+                <div class="option">Basil</div>
+                <div class="option">Kel</div>
+              </div>
+            </div>
+            <div class="menu">
+              <a href="history.html">Historia</a>
+            </div>
+            <div class="menu">
+              <a href="secrets.html">Segredos</a>
             </div>
           </div>
-          <div class="menu">
-            <a href="history.html">Historia</a>
-          </div>
-          <div class="menu">
-            <a href="secrets.html">Segredos</a>
-          </div>
         </div>
-      </div>
-
       <img src="src/img/miau" class="miau">
+      </div>
+      <div class="mobileMenu">
+        <div class="btn"><a href="#">Inicio</a></div>
+        <div class="btn"><a href="characters.html">Personagens</a></div>
+        <div class="btn"><a href="history.html">Historia</a></div>
+        <div class="btn"><a href="secrets.html">Segredos</a></div>
+      </div>
     </div>
 
     <div class="content">
@@ -212,5 +219,6 @@
 <script src="src/js/dialogue.js"></script>
 <script src="src/js/imageopener.js"></script>
 <script src="src/js/intro.js"></script>
+<script src="src/js/global.js"></script>
 
 </html>
