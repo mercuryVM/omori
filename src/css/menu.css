@@ -1,0 +1,155 @@
+div.headermenu div.menu {
+  display: flex;
+  margin: 0px 30px;
+  column-gap: 10px;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+div.menu div.menuOption {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+div.menuOption div.info {
+    background: white;
+    align-items: center;
+    border-color: black;
+    border-radius: 5px;
+    border-style: solid;
+    box-sizing: border-box;
+    border-width: 1px;
+    display: flex;
+    transition: 0.2s;
+}
+
+div.menuOption div.innerSubmenu {
+    position: sticky;
+    left: 0;
+    right: 0;
+    height: 5px;
+}
+
+div.innerSubmenu div.subMenu{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: calc(100%);
+    justify-content: center;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border-width: 1px;
+}
+
+div.hasSubMenu:hover div.subMenu{
+    display: flex
+}
+
+div.menu div.menuOption:hover div.info{
+    background: rgb(240, 240, 240);
+    border-bottom-width: 3px;
+    border-right-width: 3px;
+    border-bottom-color: rgba(0, 0, 0, 0.75);
+    border-right-color: rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+}
+
+div.menu img.icon {
+  margin: 2px 10px;
+  margin-left: 5px;
+}
+
+div.menu span.text {
+  color: black;
+  margin-right: 15px;
+  font-family: 'Averia Sans Libre', cursive;
+  font-size: 18px;
+}
+
+div.subMenuOption span.subMenuOptionText{
+    color: rgb(31, 31, 31);
+    font-family: 'Averia Sans Libre', cursive;
+    font-size: 16px;
+}
+
+div.subMenu a {
+    width: 100%;
+}
+
+div.subMenu div.subMenuOption {
+    display: flex;
+    transition: 0.1s;
+    column-gap: 2px;
+    align-items: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+div.subMenu div.subMenuOption:hover {
+    background-color: black;
+    color: white;
+}
+
+div.subMenu div.subMenuOption:hover span.subMenuOptionText{
+    color: white;
+}
+
+div.subMenuOption div.image{
+    height: 54px;
+    width: 54px;
+    background-size: contain;
+}
+
+div.subMenuOption div.omori {
+    background-image: url(../../src/img/menuoptions/characters/omori.gif)
+}
+
+div.subMenu div.subMenuOption:hover div.omori {
+    background-image: url(../../src/img/menuoptions/characters/sunny.gif)
+}
+
+div.subMenuOption div.aubrey {
+    background-image: url(../../src/img/menuoptions/characters/aubrey.gif)
+}
+
+div.subMenu div.subMenuOption:hover div.aubrey {
+    background-image: url(../../src/img/menuoptions/characters/aubrey_rw.gif)
+}
+
+div.subMenuOption div.kel {
+    background-image: url(../../src/img/menuoptions/characters/kel.gif)
+}
+
+div.subMenu div.subMenuOption:hover div.kel {
+    background-image: url(../../src/img/menuoptions/characters/kel_rw.gif)
+}
+
+div.subMenuOption div.hero {
+    background-image: url(../../src/img/menuoptions/characters/hero.gif)
+}
+
+div.subMenu div.subMenuOption:hover div.hero {
+    background-image: url(../../src/img/menuoptions/characters/hero_rw.gif)
+}
+
+div.subMenuOption div.basil {
+    background-image: url(../../src/img/menuoptions/characters/basil.png)
+}
+
+div.subMenu div.subMenuOption:hover div.basil {
+    background-image: url(../../src/img/menuoptions/characters/basil_rw.png)
+}
+
+div.subMenuOption div.mari {
+    background-image: url(../../src/img/menuoptions/characters/mari.png)
+}
+
+div.subMenu div.subMenuOption:hover div.mari {
+    background-image: url(../../src/img/menuoptions/characters/FACE_SOMETHING.png)
+}

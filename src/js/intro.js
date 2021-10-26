@@ -1,11 +1,13 @@
-async function Intro() {
-  MostrarDialogo("???", "");
+async function Intro(skip) {
+  if(!skip) MostrarDialogo("???", "");
   $("#body").css("overflow-y", "hidden");
   $(boxDialogo).animate({
     opacity: 1,
   }, 500, async function () {
-    await MostrarDialogo("???", "Voce deseja aceitar nossas politicas de cookies, que no fim das contas nem existem?");
-    await MostrarDialogo("???", "");
+    if(!skip){
+      await MostrarDialogo("???", "Voce deseja aceitar nossas politicas de cookies, que no fim das contas nem existem?");
+      await MostrarDialogo("???", "");
+    }
     $(".cookiesWarn").css("display", "none");
     $("#body").css("overflow-y", "auto");
     $("#ost")[0].play();
@@ -21,7 +23,7 @@ function Musica(bool) {
   else $("#ost")[0].pause();
 }
 
-Intro();
+Intro(true);
 
 EnableHandler($("#imageOne"), "src/img/gamepics/1.jpg", "OMORI e seus amigos.")
 
