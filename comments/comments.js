@@ -138,5 +138,6 @@ $("#form").on("submit", function (e) {
 $("#omori").click(() => { SelectCharacter("omori") })
 $("#aubrey").click(() => { SelectCharacter("aubrey") })
 $("#hero").click(() => { SelectCharacter("hero") })
-$("#basil").click(() => { SelectCharacter("kel") })
+$("#basil").click(() => { SelectCharacter("basil") })
+$("#kel").click(() => { SelectCharacter("kel") })
 $("#mari").click(() => { SelectCharacter("mari") })
