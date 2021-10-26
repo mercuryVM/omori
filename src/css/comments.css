@@ -1,0 +1,81 @@
+div.comments{
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    row-gap: 10px;
+}
+
+div.comments div.comment {
+    display: flex;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+div.comment div.info{
+    margin: 0px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+div.sendingAComment {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+div.sendingAComment textarea, input, button {
+    width: 100%;
+    resize:none;
+    border-radius: 5px;
+    border-color: rgba(0, 0, 255, 0.295);
+    padding: 10px;
+}
+
+div.sendingAComment button:hover {
+    background: white;
+    cursor: pointer;
+}
+
+div.sendingAComment div.characters {
+    display: flex;
+    margin: 10px 0px;
+    column-gap: 10px;
+    flex-wrap: wrap;
+}
+
+div.sendingAComment div.characters div.selectCharacter {
+    border-radius: 5px;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    padding: 5px;
+    width: min-content;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+div.sendingAComment div.characters div.selectCharacter:hover {
+    background: gray;
+}
+
+div.info span.name {
+    color: rgb(17, 17, 17);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+div.info span.message {
+    color: rgb(17, 17, 17);
+    font-size: 14px;
+    margin: 5px 0px;
+}
+
+span.name span.time{
+    color: rgb(65, 65, 65);
+    font-size: 12px;
+    margin-left: 5px;
+}

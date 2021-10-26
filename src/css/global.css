@@ -68,10 +68,9 @@ div.content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 18%;
-    opacity: 0;
+    margin: 0 15%;
     background: white;
-    padding: 100px;
+    padding: 100px 50px;
     border-left-width: 4px;
     border-right-width: 4px;
     border-style: solid;
@@ -145,7 +144,6 @@ img.miau {
     cursor: pointer;
     margin-left: auto;
 }
-
 /* modificações para mobile */
 
 @media screen and (max-width: 960px) {
@@ -175,6 +173,6 @@ img.miau {
     }
 
     div.content {
-        margin: 0 10%;
+        margin: 0;
     }
 }

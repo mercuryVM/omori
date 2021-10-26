@@ -47,6 +47,18 @@ div.innerSubmenu div.subMenu{
     max-height: calc(100vh - 100px);
 }
 
+div.menu div.menuOption div.selected{
+    background: #2f0c7a;
+}
+
+div.menu div.menuOption div.selected span.text{
+    color: white;
+}
+
+div.menu div.menuOption div.selected:hover span.text{
+    color: black;
+}
+
 div.subMenu span.title {
     text-align: center;
     font-family: 'Averia Sans Libre', cursive;
@@ -108,13 +120,22 @@ div.subMenu div.subMenuOption:hover {
     color: white;
 }
 
+div.subMenu div.subMenuSelected {
+    background-color: black;
+    color: white;
+}
+
+div.subMenu div.subMenuSelected span.subMenuOptionText{
+    color: white;
+}
+
 div.subMenu div.subMenuOption:hover span.subMenuOptionText{
     color: white;
 }
 
 div.subMenuOption div.image{
-    height: 54px;
-    width: 54px;
+    height: 50px;
+    width: 50px;
     background-size: contain;
 }
 
