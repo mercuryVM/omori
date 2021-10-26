@@ -47,6 +47,12 @@ div.innerSubmenu div.subMenu{
     max-height: calc(100vh - 100px);
 }
 
+div.subMenu span.title {
+    text-align: center;
+    font-family: 'Averia Sans Libre', cursive;
+    margin: 5px 0px;
+}
+
 div.hasSubMenu:hover div.subMenu{
     display: flex
 }
@@ -158,4 +164,62 @@ div.subMenuOption div.mari {
 
 div.subMenu div.subMenuOption:hover div.mari {
     background-image: url(../../src/img/menuoptions/characters/FACE_SOMETHING.png)
+}
+
+div.subMenuOption div.boss {
+    background-image: url(../../src/img/menuoptions/characters/Boss_Sprite.gif);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+div.subMenu div.subMenuOption:hover div.boss {
+    background-image: url(../../src/img/menuoptions/characters/BOSSdefeatedl.gif)
+}
+
+div.subMenuOption div.pluto {
+    background-image: url(../../src/img/menuoptions/characters/PLUTO_COMBINED.gif);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+div.subMenu  div.subMenuOption:hover div.pluto {
+    background-image: url(../../src/img/menuoptions/characters/PLUTO_HAPPY.gif);
+}
+
+div.subMenuOption div.sweetheart {
+    background-image: url(../../src/img/menuoptions/characters/Sweetheartnormal.gif);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+div.subMenu  div.subMenuOption:hover div.sweetheart {
+    background-image: url(../../src/img/menuoptions/characters/Sweetheart_HURT.gif);
+}
+
+div.subMenuOption div.jawsum {
+    background-image: url(../../src/img/menuoptions/characters/Jawsum.gif);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+div.subMenu  div.subMenuOption:hover div.hooligans {
+    background-image: url(../../src/img/menuoptions/characters/Hooligans_Hurt.gif);
+}
+
+div.subMenuOption div.hooligans {
+    background-image: url(../../src/img/menuoptions/characters/HOOLIGANS.gif);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+div.subMenuOption div.humphrey {
+    background-image: url(../../src/img/menuoptions/characters/Humphrey_sprite_final.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
