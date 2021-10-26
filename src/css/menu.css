@@ -35,15 +35,16 @@ div.innerSubmenu div.subMenu{
     flex-direction: column;
     position: absolute;
     top: calc(100%);
-    justify-content: center;
     left: 0;
     right: 0;
     background-color: white;
     border-color: black;
     border-style: solid;
     border-radius: 5px;
-    box-sizing: border-box;
     border-width: 1px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: calc(100vh - 100px);
 }
 
 div.hasSubMenu:hover div.subMenu{
@@ -75,10 +76,13 @@ div.subMenuOption span.subMenuOptionText{
     color: rgb(31, 31, 31);
     font-family: 'Averia Sans Libre', cursive;
     font-size: 16px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 div.subMenu a {
     width: 100%;
+    height: min-content;
 }
 
 div.subMenu div.subMenuOption {
@@ -89,6 +93,8 @@ div.subMenu div.subMenuOption {
     cursor: pointer;
     box-sizing: border-box;
     padding: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 div.subMenu div.subMenuOption:hover {

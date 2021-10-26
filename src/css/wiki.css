@@ -30,7 +30,7 @@ div.box div.imageandheader {
 }
 
 div.imageandheader p {
-    font-family: 'Calibri';
+    font-family: 'Roboto';
 }
 
 div.imageandheader div.cards {
@@ -74,7 +74,7 @@ div.box img.headImage {
 
 div.experience span.header,
 div.trailer span.header {
-    font-family: 'Calibri';
+    font-family: 'Roboto';
     font-size: 36px;
     text-align: end;
     font-weight: 700;

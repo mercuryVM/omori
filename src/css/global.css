@@ -46,7 +46,7 @@ div.mobileMenu div.btn:hover{
 }
 
 div.footer p {
-    font-family: 'Calibri';
+    font-family: 'Roboto';
     color: white;
     font-size: 24px;
     text-align: center;
@@ -112,18 +112,12 @@ div.headermenu{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 15px 0px
 }
 
 span.menuBTN {
     font-size: 0px;
     margin: 0px 15px;
-}
-
-div.submenu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 a {
@@ -164,8 +158,8 @@ img.miau {
         cursor: pointer;
     }
 
-    div.menus {
-        display: none;
+    div.desktopMenu {
+        display: none !important;
     }
 
     span.menuBTN:hover div#mobileMenu{
