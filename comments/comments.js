@@ -1,5 +1,7 @@
 const socket = io("https://omori-backend.herokuapp.com/");
 
+moment.locale("pt-br");
+
 socket.on("connect", () => {
     socket.emit("get");
     $("#loading").css("display", "none");
@@ -70,7 +72,7 @@ function CreateMessage(data) {
     <div class="info">
         <span class="name">
             ${data.name}
-            <span class="time">Hoje às 18:39</span>
+            <span class="time">${moment(data.timestamp).calendar()}</span>
         </span>
         <span class="message">
             ${data.message}
