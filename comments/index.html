@@ -23,6 +23,8 @@
                 <!-– bibliotecas de animação -->
                     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
                     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+                    <!--socket io-->
+                    <script src="../src/js/socket.io.min.js" type="application/javascript"></script>
 </head>
 
 <body id="body">
@@ -316,7 +318,10 @@
                         
                         <span>Escolha um personagem</span>
 
+                        <form id="form">
                         <div class="characters">
+                            <input id="character" type="text" oninvalid="this.setCustomValidity('Selecione um personagem')" oninput="this.setCustomValidity('')" style="opacity: 0" id="selectedCharacter" required>
+
                             <div class="selectCharacter" id="omori">
                                 <img src="../src/img/menuoptions/characters/omori.gif">
                             </div>
@@ -342,32 +347,35 @@
                             </div>
                         </div>
 
-                        <input type="text" placeholder="Digite o seu nome aqui..."/>
+                        <input maxlength="20" minlength="3" id="name" required type="text" placeholder="Digite o seu nome aqui..."/>
 
-                        <textarea placeholder="Digite o conteúdo da mensagem aqui..." ></textarea>
+                        <textarea minlength="10" maxlength="100" id="message" required placeholder="Digite o conteúdo da mensagem aqui..." ></textarea>
 
-                        <button>Enviar</button>
+                        <button type="submit">Enviar</button>
+                    </form>
+                    </div>
+
+                    <div class="alert spoiler" id="tooMessages" style="display: none">
+                        <img src="../src/img/menuoptions/characters/omori_furios.webp" height="96px">
+                        <div
+                            style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: auto;">
+                            <span style="font-weight: 700;">CALMA LÁ!</span>
+                            <span>Você acabou de enviar um comentário. Espere um pouco!</span>
+                        </div>
+                        <img src="../src/img/menuoptions/characters/omori_furios.webp" height="96px">
                     </div>
 
                     <h1 class="title">Últimos 20 comentários <span
                             style="color: rgb(44, 44, 44); font-size: 16px;">(está atualizando em tempo real)</span>
                     </h1>
+
+                    <span id="loading">Carregando...</span>
+                    
                 </div>
             </div>
 
             <div class="comments">
-                <div class="comment">
-                    <img src="../src/img/menuoptions/characters/aubrey.gif" height="96px">
-                    <div class="info">
-                        <span class="name">
-                            Gabriel Luís da Silva
-                            <span class="time">Hoje às 18:39</span>
-                        </span>
-                        <span class="message">
-                            boa tarde a todos.
-                        </span>
-                    </div>
-                </div>
+                
             </div>
         </div>
 </body>
@@ -376,5 +384,5 @@
 
     <script src="../src/js/imageopener.js"></script>
     <script src="../src/js/global.js"></script>
-
+    <script src="comments.js"></script>
 </html>

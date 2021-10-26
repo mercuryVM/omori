@@ -62,6 +62,10 @@ div.sendingAComment div.characters div.selectCharacter:hover {
     background: gray;
 }
 
+div.sendingAComment div.characters div.selectedCharacter {
+    background: gray;
+}
+
 div.info span.name {
     color: rgb(17, 17, 17);
     font-size: 16px;
