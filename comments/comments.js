@@ -1,4 +1,4 @@
-const socket = io("http://localhost:3000");
+const socket = io("https://omori-backend.herokuapp.com/");
 
 socket.on("connect", () => {
     socket.emit("get");
@@ -25,7 +25,7 @@ socket.on("get", (data) => {
     try {
         data = JSON.parse(data);
 
-        for (var i = data.length; i > 0; i--) {
+        for (var i = data.length; i >= 0; i--) {
             const message = data[i];
             if (!message) continue;
             CreateMessage(message);
