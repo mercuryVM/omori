@@ -104,13 +104,17 @@ function CreateMessage(data) {
             <span class="time">${moment(data.timestamp).calendar()}</span>
         </span>
         <span class="message">
-            ${strip(data.message)}
+            
         </span>
     </div>
 </div>
     `)
 
     if(!objeto.dom) return;
+
+    console.log($("#" + data._id.toString()))
+
+    $("#" + data._id.toString()).find(".info").find(".message").text(data.message)
 
     messageList.push(objeto);
 
