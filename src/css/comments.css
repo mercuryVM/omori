@@ -63,7 +63,11 @@ div.sendingAComment div.characters div.selectCharacter:hover {
 }
 
 div.sendingAComment div.characters div.selectedCharacter {
-    background: gray;
+    background: rgb(0, 0, 0) !important;
+}
+
+div.sendingAComment div.characters div.selectedCharacter:hover{
+    background: rgb(24, 24, 24) !important;
 }
 
 div.info span.name {
