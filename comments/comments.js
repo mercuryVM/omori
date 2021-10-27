@@ -4,6 +4,8 @@ moment.locale("pt-br");
 
 let messageList = [];
 
+let loadedNow = false;
+
 function DeleteMessage(message){
     const id = message.data._id.toString();
     if(!id) return;
@@ -25,10 +27,12 @@ socket.on("connect", () => {
 
 socket.on("connect_error", () => {
     $("#loading").css("display", "block");
+    loadedNow = false;
 })
 
 socket.on("disconnect", () => {
     $("#loading").css("display", "block");
+    loadedNow=  false;
 })
 
 $("#loading").css("display", "block");
@@ -38,6 +42,7 @@ socket.on("too", () => {$("#tooMessages").css("display", "flex")})
 socket.on("get", (data) => {
     if (!data) return;
     $("#loading").css("display", "none");
+    loadedNow = true;
     try {
         data = JSON.parse(data);
 
@@ -55,6 +60,7 @@ socket.on("get", (data) => {
 socket.on("receive", (data) => {
     if(!data) return;
 
+    if(!loadedNow) return;
 
     try {
         data = JSON.parse(data);
