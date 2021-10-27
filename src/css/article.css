@@ -8,6 +8,7 @@ div.block div.subblock{
     flex-direction: column;
     flex-wrap: wrap;
     flex: 1;
+    user-select: text;
 }
 
 div.block div.subblock p{
