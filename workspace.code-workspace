@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../omori backend"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "omori"
+	}
+}
