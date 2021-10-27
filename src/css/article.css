@@ -181,14 +181,6 @@ div.block div.subblock div.separatorline {
         margin-bottom: 25px;
         margin-top: 25px;
     }
-    
-    div.block div.subblock p{
-        font-size: 14px;
-    }
-
-    div.block div.subblock div.info div.line div.values div.value, div.block div.subblock div.info div.line  {
-        font-size: 11px;
-    }
 
     div.block div.alert span {
         font-size: 13px !important;
