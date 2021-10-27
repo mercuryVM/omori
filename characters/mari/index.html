@@ -1,0 +1,544 @@
+<html>
+
+<head>
+    <title>MARI - OMORI</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-– estilos -->
+        <link href="../../src/css/config.css" type="text/css" rel="stylesheet" />
+        <link href="../../src/css/global.css" type="text/css" rel="stylesheet" />
+        <link href="../../src/css/wiki.css" type="text/css" rel="stylesheet" />
+        <link href="../../src/css/abridorImagem.css" type="text/css" rel="stylesheet" />
+        <link href="../../src/css/menu.css" type="text/css" rel="stylesheet" />
+        <link href="../../src/css/article.css" type="text/css" rel="stylesheet" />
+    <!-– jquery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-– fontes -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre&family=Roboto&display=swap" rel="stylesheet">
+    <!-– bibliotecas de animação -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body id="body">
+
+    <div class="cookiesWarn" style="display: none;">
+        <div class="mainDialogo">
+          <div class="dialogoNome">
+            <p class="dialogName"></p>
+          </div>
+          <div class="dialogo">
+            <p class="dialogName" id="dialogMessage">
+            </p>
+            <div id="setaBundle">
+              <p class="diagolSeta" id="diagolSetaTexto"> Pressione Enter para continuar</p>
+              <img src="../../src/img/seta.png" class="dialogSeta" id="dialogSeta" height="50px"></img>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <audio loop id="typing">
+        <source src="../../src/sounds/typing.ogg">
+    </audio>
+
+    <audio id="meow">
+        <source src="../../src/sounds/meow">
+    </audio>
+
+    <div class="abrirImagem">
+        <div class="panel">
+            <div class="permmenu" style="margin-left: auto;" id="openedImageBack">
+                Voltar
+            </div>
+            <div>
+                <div class="viewport">
+                    <img src="../../src/img/gamepics/1.jpg" id="openedImage">
+                </div>
+            </div>
+            <p class="comment" id="imageComment">"Omori e seus amigos no espaço branco."</p>
+        </div>
+    </div>
+
+    <div class="main" style="background: url('../../src/img/1148181.png')">
+        <div class="topmenus">
+            <div class="header">
+                <img src="../../src/img/OMORI_logo.png" class="logo">
+                <div class="headermenu">
+
+                    <div class="menu desktopMenu">
+                        <a href="/index.html?s">
+                            <div class="menuOption">
+                                <div class="info">
+                                    <img src="../../src/img/menuoptions/home.png" class="icon" height="32px" />
+                                    <span class="text">Início</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <div class="menuOption hasSubmenu">
+                            <div class="info">
+                                <img src="../../src/img/menuoptions/bed.png" class="icon" height="32px" />
+                                <span class="text">Personagens</span>
+                            </div>
+                            <div class="innerSubmenu">
+                                <div class="subMenu">
+                                    <span class="title">Principais</span>
+
+                                    <a href="/characters/sunny">
+                                        <div class="subMenuOption">
+                                            <div class="image omori"></div>
+                                            <span class="subMenuOptionText">OMORI</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/characters/aubrey/">
+                                        <div class="subMenuOption">
+                                            <div class="image aubrey"></div>
+                                            <span class="subMenuOptionText">Aubrey</span>
+                                        </div>
+
+                                        <a href="/characters/kel/">
+                                            <div class="subMenuOption">
+                                                <div class="image kel"></div>
+                                                <span class="subMenuOptionText">Kel</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/hero">
+                                            <div class="subMenuOption">
+                                                <div class="image hero"></div>
+                                                <span class="subMenuOptionText">Hero</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/basil">
+                                            <div class="subMenuOption">
+                                                <div class="image basil"></div>
+                                                <span class="subMenuOptionText">Basil</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="#">
+                                            <div class="subMenuOption subMenuSelected">
+                                                <div class="image mari"></div>
+                                                <span class="subMenuOptionText">Mari</span>
+                                            </div>
+                                        </a>
+
+                                        <span class="title">Vilões</span>
+
+                                        <a href="/characters/boss">
+                                            <div class="subMenuOption">
+                                                <div class="image boss"></div>
+                                                <span class="subMenuOptionText">Boss</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/pluto">
+                                            <div class="subMenuOption">
+                                                <div class="image pluto"></div>
+                                                <span class="subMenuOptionText">Pluto</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/sweetheart">
+                                            <div class="subMenuOption">
+                                                <div class="image sweetheart"></div>
+                                                <span class="subMenuOptionText">Sweet H.</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/jawsum">
+                                            <div class="subMenuOption">
+                                                <div class="image jawsum"></div>
+                                                <span class="subMenuOptionText">Mr. Jawsum</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/hooligans">
+                                            <div class="subMenuOption">
+                                                <div class="image hooligans"></div>
+                                                <span class="subMenuOptionText">Valentões</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/humphrey">
+                                            <div class="subMenuOption">
+                                                <div class="image humphrey"></div>
+                                                <span class="subMenuOptionText">Humphrey</span>
+                                            </div>
+                                        </a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menuOption hasSubmenu">
+                            <div class="info">
+                                <img src="../../src/img/menuoptions/history.png" class="icon" height="32px" />
+                                <span class="text">História</span>
+                            </div>
+
+                            <div class="innerSubmenu">
+                                <div class="subMenu">
+                                    <a href="/history/general">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/history/general.gif" height="32px" />
+                                            <span class="subMenuOptionText">Roteiro</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/history/secrets">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/history/questions.gif" height="32px" />
+                                            <span class="subMenuOptionText">Perguntas</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/history/secrets">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/history/secrets.gif" height="32px" />
+                                            <span class="subMenuOptionText">Segredos</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/history/mechanics">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/history/mechanics.gif" height="32px" />
+                                            <span class="subMenuOptionText">Emoções</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menuOption hasSubmenu">
+                            <div class="info">
+                                <img src="../../src/img/menuoptions/worlds.png" class="icon" height="32px" />
+                                <span class="text">Mundos</span>
+                            </div>
+
+                            <div class="innerSubmenu">
+                                <div class="subMenu">
+                                    <a href="/worlds/vastforest">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/worlds/VAST_FOREST_Logo.png"
+                                                height="64px" />
+                                            <span class="subMenuOptionText">Floresta Vasta</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/worlds/otherworld">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/worlds/OTHERWORLD_Logo.png"
+                                                height="64px" />
+                                            <span class="subMenuOptionText">Outro Mundo</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/worlds/orangeoasis">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/worlds/ORANGE_OASIS_Logo.png"
+                                                height="64px" />
+                                            <span class="subMenuOptionText">Oasis Laranja</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/worlds/raintown">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/worlds/RAIN_TOWN_Logo.png"
+                                                height="64px" />
+                                            <span class="subMenuOptionText">Cidade Chuvosa</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/worlds/pyreflyforest">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/worlds/PYREFLY_FOREST_Logo.png"
+                                                height="64px" />
+                                            <span class="subMenuOptionText">Floresta Pirefly</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/worlds/sweetheartcastle">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/worlds/SWEET_HEART_CASTLE.png"
+                                                height="64px" />
+                                            <span class="subMenuOptionText">Castelo da SweetHeart</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/worlds/underwaterhighway">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/worlds/UNDERWATER_HIGHWAY_Logo.png"
+                                                height="64px" />
+                                            <span class="subMenuOptionText">Rodovia embaixo d'água</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="/comments">
+                            <div class="menuOption">
+                                <div class="info">
+                                    <img src="../../src/img/menuoptions/something.png" class="icon" height="32px" />
+                                    <span class="text">Deixe seu comentário</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <span class="material-icons menuBTN" id="menuBTN">
+                        menu
+                    </span>
+
+                </div>
+                <img src="../../src/img/miau" class="miau">
+            </div>
+            <div class="mobileMenu">
+                <div class="btn"><a href="#">Inicio</a></div>
+                <div class="btn"><a href="characters.html">Personagens</a></div>
+                <div class="btn"><a href="history.html">Historia</a></div>
+                <div class="btn"><a href="secrets.html">Segredos</a></div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="block">
+                <div class="subblock" style="flex: 1;">
+                    <div class="alert spoiler">
+                        <img src="../../src/img/menuoptions/characters/basil_rw.png" height="96px">
+                        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: auto;">
+                            <span style="font-weight: 700;">ALERTA DE SPOILER</span>
+                            <span>Essa página possui spoilers importantes referentes ao "plot-twist" do jogo OMORI. </span>
+                        </div>
+                        <img src="../../src/img/menuoptions/characters/basil.webp" height="96px">
+                    </div>
+
+                    <div class="alert fandom">
+                        <img src="../../src/img/menuoptions/characters/aubreyhappy.webp" height="96px">
+                        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: auto;">
+                            <span style="font-weight: 700;">OMORI WIKI</span>
+                            <span>Boa parte do conteúdo de texto ou imagens foram retiradas da WIKI de fãs de OMORI.</span>
+                            <span>Se você gostar daqui, visite lá para mais detalhes em relação a história do jogo!</span>
+                            <a href="https://omori.fandom.com/wiki/" target="_blank">CLIQUE AQUI</a>
+                        </div>
+                        <img src="../../src/img/menuoptions/characters/aubreyhappy.webp" height="96px">
+                    </div>
+
+                    <h1 class="title">MARI</h1>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="subblock" style="flex: 80%">
+                    <p>
+                        <strong>MARI</strong> é um dos principais personagens coadjuvantes em OMORI.
+                    </p>
+
+                    <p>
+                        Ela é a irmã mais velha de OMORI no Mundo Imaginário, e era a irmã mais velha de SUNNY no MUNDO REAL. 
+                    </p>
+
+                    <h2 class="title">PERFIL</h2>
+
+                    <div class="separatorline"></div>
+
+                    <h3 class="title">APARÊNCIA</h3>
+
+                    <p>
+                        Uma garota com cabelo comprido e liso e franja. 
+                        No Mundo Imaginário, ela tem cabelos escuros e olhos estilizados de roxo. 
+                        Ela usa o que parece uma variação de um <a href="https://en.wikipedia.org/wiki/School_uniforms_in_Japan" target="_blank">seifuku</a> japonês. 
+                    </p>
+
+                    <p>
+                        No MUNDO REAL, MARI tinha cabelo preto, olhos pretos e usava uma jaqueta ou suéter roxo sobre um vestido branco. 
+                        Ela usava sapatos roxos. Sua aparência também influenciou a aparência de sua contraparte HEADSPACE. 
+                    </p>
+
+                    <p>
+                        Como um espírito, MARI parece um pouco mais velha do que sua contraparte no Mundo Imaginário. 
+                        Semelhante a OMORI, ela é completamente preta e branca, e seus olhos são pretos com pupilas brancas. 
+                        Ela também usa um vestido longo e branco. 
+                    </p>
+
+                    <h3 class="title">PERSONALIDADE</h3>
+
+                    <p>
+                        Ela é frequentemente mencionada como sendo gentil e gentil, e desempenha um papel de irmã no grupo de amigos com SUNNY, HERO, KEL, AUBREY e BASIL. 
+                        Sua primeira aparição mostra que ela tem um lado travesso, zombando dos maneirismos de KEL e AUBREY e depois provocando HERO. 
+                        Essas características são compartilhadas com sua contraparte no Mundo Imaginário. 
+                    </p>
+                    
+                    <p>
+                        Mais tarde no jogo, também é revelado que ela pregaria peças especialmente no HERO, como colocar insetos em sua carteira escolar. 
+                        Também é mostrado que ela era uma perfeccionista, passando horas praticando a mesma peça para piano repetidamente. 
+                    </p>
+
+                    <p>
+                        Mesmo depois de sua morte, sua forma espiritual demonstra perdoar SUNNY, apesar do que ele fez a ela. 
+                        Ela também tenta ajudar SUNNY a se perdoar e o lembra de se lembrar do que é importante. 
+                    </p>
+
+                    <p>
+                        Apesar de saber que seu irmão a matou acidentalmente no passado, 
+                        MARI deseja que SUNNY siga em frente e viva sua vida sem nenhum arrependimento. 
+                    </p>
+                </div>
+                <div class="subblock infosub" >
+                    <div class="info">
+                        <img src="../../src/img/menuoptions/characters/mari.png">
+                        <div class="line">
+                            <div class="name">Idade</div>
+                            <div class="values">
+                                <div class="value">Momento da morte: 15</div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="name">Sexo</div>
+                            <div class="values">
+                                <div class="value">Mulher</div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="name">Aniversário</div>
+                            <div class="values">
+                                <div class="value">1 de Março</div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="name">Habilidade</div>
+                            <div class="values">
+                                <div class="value">??</div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="name">Localizações</div>
+                            <div class="values">
+                                <div class="value">Imaginário</div>
+                                <div class="value">Mundo Real (enterrada)</div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="name">Parentes</div>
+                            <div class="values">
+                                <div class="value">Sem nome <span style="color: gray">(Mãe)</span></div>
+                                <div class="value">Sem nome <span style="color: gray">(Pai)</span></div>
+                                <div class="value"><a href="/characters/sunny/">Sunny</a><span style="color: gray">(Irmão)</span></div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="name">Amizades</div>
+                            <div class="values">
+                                <div class="value"><a href="/characters/hero/">Hero</a> <span style="color: gray">(Interesse amoroso)</span></div>
+                                <div class="value"><a href="/characters/aubrey/">Aubrey</a>  <span style="color: gray">(Amiga)</span></div>
+                                <div class="value"><a href="/characters/kel/">Kel</a>   <span style="color: gray">(Amigo)</span></div>
+                                <div class="value"><a href="/characters/basil/">Basil</a> <span style="color: gray">(Amigo)</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="subblock">
+                    <h2 class="title">HISTÓRIA</h2>
+
+                    <div class="separatorline"></div>
+
+                    <h3 class="title">COMO ELES SE CONHECERAM?</h3>
+
+                    <p>
+                        MARI nasceu em 1º de março, filho de mãe e pai não identificados, cerca de 19 anos antes do jogo principal. 
+                        Três anos depois, seus pais tiveram seu irmão mais novo, SUNNY. 
+                        Os dois cresceram na cidade ao lado da família de KEL. 
+                    </p>
+
+                    <p>
+                        Ela costumava jogar softball antes de sofrer uma lesão permanente no joelho. 
+                        Ela era amiga de HERO e mais tarde tornou-se amiga de KEL, AUBREY e BASIL. 
+                        O grupo costumava passar algum tempo junto, com um relacionamento romântico se formando entre ela e o HERO. 
+                    </p>
+
+                    <p>
+                        Certa vez, em uma viagem ao parque, SUNNY quase se afogou, mas foi salvo por MARI. Por causa desse incidente, o grupo parou de ir ao parque da cidade. 
+                    </p>
+
+                    <p>
+                        Antes dos eventos do jogo, MARI passava muito tempo praticando piano e tendo aulas preparatórias para a faculdade. 
+                        Por causa disso, ela passaria menos tempo com seu irmão mais novo, SUNNY. 
+                        Na tentativa de passar mais tempo com sua irmã, SUNNY pegou seu violino novamente e os dois praticavam juntos muitas vezes para um recital que se aproximava. 
+                    </p>
+
+                    <p>
+                        No dia do recital, MARI e SUNNY tiveram uma discussão que resultou nele empurrando-a sem querer escada abaixo, matando-a. 
+                        Em seu choque, SUNNY a trouxe para a cama. SUNNY se fecha em si mesmo, dando início ao ESPAÇO BRANCO. 
+                    </p>
+
+                    <p>
+                        BASIL, que estava passando por lá, apresentou um plano para enquadrar sua morte como suicídio.
+                        Juntos, eles arrastaram seu corpo para o quintal. BASIL utilizou uma corda de pular para criar um laço para pendurar o corpo de MARI, encenando com sucesso o suicídio dela.
+                    </p>
+
+                    <p>
+                        Recuando para dentro de casa, os dois olharam para seu cadáver para ver um de seus olhos olhando para eles, traumatizando as crianças e assombrando-as na forma de ALGUMA COISA.
+                    </p>
+
+                    <p>
+                        Embora SUNNY e BASIL soubessem a verdade, todos os outros tinham a impressão de que MARI havia cometido suicídio. 
+                    </p>
+                    
+                    <p>
+                        Ela foi enterrada no CEMITÉRIO da Cidade, com sua lápide dizendo "NOSSA MAIS QUERIDA MARI; O SOL BRILHOU MAIS BRILHANTE QUANDO ELA ESTAVA AQUI." 
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="subblock">
+                    <h2 class="title">IMAGENS</h2>
+
+                    <div class="separatorline"></div>
+
+                    <div class="imagecontainer">
+                        <img src="../../src/img/gamepics/Mari_Mirror.gif">
+
+                        <img src="../../src/img/gamepics/MariandSunnyrecital1.webp">
+
+                        <img src="../../src/img/gamepics/mari_death.gif">
+
+                        <img src="../../src/img/gamepics/Maricrying.png">
+
+                        <img src="../../src/img/gamepics/MarihuggingSunnyrelief.png">
+
+                        <img src="../../src/img/gamepics/MarisavingSunny.gif">
+
+                        <img src="../../src/img/gamepics/Marisfuneral.png">
+
+                        <img src="../../src/img/gamepics/SunnyMariChildren.gif">
+                    </div>
+
+                    <h2 class="title">Referências</h3>
+
+                    <a href="https://omori.fandom.com/wiki/MARI" target="_blank">Omori Fandom</a>
+
+
+                </div>
+            </div>
+        </div>
+</body>
+
+<!-– scripts carregamento posterior -->
+<script src="../../src/js/dialogue.js"></script>
+    <script src="../../src/js/imageopener.js"></script>
+    <script src="../../src/js/global.js"></script>
+
+</html>
