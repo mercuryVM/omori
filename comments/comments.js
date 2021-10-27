@@ -65,6 +65,20 @@ socket.on("receive", (data) => {
     }
 })
 
+function strip(text)
+{
+    text.replace(/<style[^>]*>.*<\/style>/gm, '')
+    // Remove script tags and content
+    .replace(/<script[^>]*>.*<\/script>/gm, '')
+    // Remove all opening, closing and orphan HTML tags
+    .replace(/<[^>]+>/gm, '')
+    // Remove leading spaces and repeated CR/LF
+    .replace(/([\r\n]+ +)+/gm, '');
+
+    return text;
+}
+
+
 function CreateMessage(data) {
     if (!data) return;
     const objeto = {
@@ -90,7 +104,7 @@ function CreateMessage(data) {
             <span class="time">${moment(data.timestamp).calendar()}</span>
         </span>
         <span class="message">
-            ${data.message}
+            ${strip(data.message)}
         </span>
     </div>
 </div>
