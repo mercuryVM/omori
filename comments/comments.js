@@ -71,18 +71,15 @@ socket.on("receive", (data) => {
     }
 })
 
-function strip(text)
-{
-    text.replace(/<style[^>]*>.*<\/style>/gm, '')
-    // Remove script tags and content
-    .replace(/<script[^>]*>.*<\/script>/gm, '')
-    // Remove all opening, closing and orphan HTML tags
-    .replace(/<[^>]+>/gm, '')
-    // Remove leading spaces and repeated CR/LF
-    .replace(/([\r\n]+ +)+/gm, '');
+let soma = 0;
 
-    return text;
+for(var i = 101; i < 399; i++){
+    if(i % 2 !== 0 && i % 3 !== 0 && i % 5 !== 0) {
+        soma += i;
+    }
 }
+
+console.log(soma)
 
 
 function CreateMessage(data) {
@@ -117,9 +114,7 @@ function CreateMessage(data) {
     `)
 
     if(!objeto.dom) return;
-
-    console.log($("#" + data._id.toString()))
-
+    
     $("#" + data._id.toString()).find(".info").find(".message").text(data.message)
 
     messageList.push(objeto);
