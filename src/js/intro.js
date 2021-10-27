@@ -1,4 +1,15 @@
-async function Intro(skip) {
+async function Intro(skip) {  
+  if(skip){
+    $(".cookiesWarn").css("display", "none");
+    $("#body").css("overflow-y", "auto");
+    $("#ost")[0].play();
+    $("#ost")[0].volume = 0.25;
+    $(".content").animate({
+      opacity: 1
+    }, 500);
+    return;
+  }
+
   if(!skip) MostrarDialogo("???", "");
   $("#body").css("overflow-y", "hidden");
   $(boxDialogo).animate({
@@ -23,7 +34,9 @@ function Musica(bool) {
   else $("#ost")[0].pause();
 }
 
-Intro(true);
+var skip = location.search.split('s')[0]
+
+Intro(skip ? true : false);
 
 EnableHandler($("#imageOne"), "src/img/gamepics/1.jpg", "OMORI e seus amigos.")
 
@@ -35,21 +48,5 @@ EnableHandler($("#tag1"), "src/img/gamepics/REALYOU_TAGGED_KEL.png", "Foto retir
 EnableHandler($("#tag2"), "src/img/gamepics/REALHERO_TAGGED_YOU.png", "Foto retirada de OMORI e Hero.")
 EnableHandler($("#tag3"), "src/img/gamepics/DW_ALBUM_06.png", "Foto do album retirada de OMORI e Basil.")
 EnableHandler($("#tag4"), "src/img/gamepics/TAG_AubreyOmori.png", "Foto retirada de OMORI e Aubrey.")
-
-$(".miau").click(() => {
-  $(".cookiesWarn").css("display", "flex");
-  $("#body").css("overflow-y", "hidden");
-  MostrarDialogo("MEWO", " ");
-  $(boxDialogo).animate({
-    opacity: 1,
-  }, 500, async function () {
-    $("#meow")[0].play();
-    $("#meow")[0].volume = 0.25;
-    await MostrarDialogo("MEWO", "MEOW? (Esperando por algo acontecer?)")
-    await MostrarDialogo("MEWO", "");
-    $(".cookiesWarn").css("display", "none");
-    $("#body").css("overflow-y", "auto");
-  });
-});
 
 AOS.init()

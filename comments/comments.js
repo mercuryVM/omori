@@ -2,9 +2,25 @@ const socket = io("https://omori-backend.herokuapp.com/");
 
 moment.locale("pt-br");
 
+let messageList = [];
+
+function DeleteMessage(message){
+    const id = message.data._id.toString();
+    if(!id) return;
+    $("#" + id).remove();
+}
+
 socket.on("connect", () => {
+
+    for (var i = messageList.length; i >= 0; i--) {
+        const message = messageList[i];
+        if (!message) continue;
+        DeleteMessage(message);
+    }
+
+    messageList = []
+
     socket.emit("get");
-    $("#loading").css("display", "none");
 })
 
 socket.on("connect_error", () => {
@@ -17,13 +33,11 @@ socket.on("disconnect", () => {
 
 $("#loading").css("display", "block");
 
-let messageList = [];
-
 socket.on("too", () => {$("#tooMessages").css("display", "flex")})
 
 socket.on("get", (data) => {
     if (!data) return;
-
+    $("#loading").css("display", "none");
     try {
         data = JSON.parse(data);
 
@@ -34,6 +48,7 @@ socket.on("get", (data) => {
         }
     } catch (e) {
         console.error(e);
+        socket.emit("get")
     }
 })
 
@@ -88,10 +103,7 @@ function CreateMessage(data) {
     if(messageList.length > 20){
         const oldMessage = messageList[0];
         if(!oldMessage) return;
-        const id = oldMessage.data._id.toString();
-        console.log(id);
-        if(!id) return;
-        $("#" + id).remove();
+        DeleteMessage(oldMessage);
         messageList = messageList.slice(1, messageList.length);
     }
 }

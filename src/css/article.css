@@ -7,6 +7,7 @@ div.block div.subblock{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    flex: 1;
 }
 
 div.block div.subblock p{
@@ -54,7 +55,22 @@ div.block div.subblock div.info div.line {
     font-size: 14px;
     align-items: center;
     flex-wrap: wrap;
-    margin: 1px;
+    margin: 1px 0px;
+}
+
+div.block div.subblock div.imagecontainer {
+    margin: 10px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+div.block div.subblock div.imagecontainer img {
+    border-radius: 10px;
+    width:300px;
+    height: auto;
+    margin: auto;
 }
 
 div.block div.subblock div.info div.line div.values {
@@ -80,7 +96,7 @@ div.block div.infosub {
 
 div.subblock a {
     color: #2f0c7a;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 div.subblock div.alert {
@@ -137,6 +153,14 @@ div.block div.subblock div.separatorline {
     div.block div.subblock div.info div.line div.values div.value, div.block div.subblock div.info div.line  {
         font-size: 12px;
     }
+
+    div.block div.alert img {
+        height: 64px;
+    }
+    
+    div.block div.alert span {
+        font-size: 14px !important;
+    }
 }
 
 
@@ -151,5 +175,9 @@ div.block div.subblock div.separatorline {
 
     div.block div.subblock div.info div.line div.values div.value, div.block div.subblock div.info div.line  {
         font-size: 11px;
+    }
+
+    div.block div.alert span {
+        font-size: 13px !important;
     }
 }

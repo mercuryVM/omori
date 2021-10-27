@@ -174,5 +174,6 @@ img.miau {
 
     div.content {
         margin: 0;
+        padding: 100px 50px !important;
     }
 }

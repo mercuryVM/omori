@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>OMORI - Trabalho Final 1°DS</title>
+    <title>Aubrey - OMORI</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-– estilos -->
@@ -24,6 +24,22 @@
 </head>
 
 <body id="body">
+
+    <div class="cookiesWarn" style="display: none;">
+        <div class="mainDialogo">
+          <div class="dialogoNome">
+            <p class="dialogName"></p>
+          </div>
+          <div class="dialogo">
+            <p class="dialogName" id="dialogMessage">
+            </p>
+            <div id="setaBundle">
+              <p class="diagolSeta" id="diagolSetaTexto"> Pressione Enter para continuar</p>
+              <img src="../../src/img/seta.png" class="dialogSeta" id="dialogSeta" height="50px"></img>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <audio loop id="typing">
         <source src="../../src/sounds/typing.ogg">
@@ -54,7 +70,7 @@
                 <div class="headermenu">
 
                     <div class="menu desktopMenu">
-                        <a href="/index.html">
+                        <a href="/index.html?s">
                             <div class="menuOption">
                                 <div class="info">
                                     <img src="../../src/img/menuoptions/home.png" class="icon" height="32px" />
@@ -427,10 +443,10 @@
                         <div class="line">
                             <div class="name">Amizades</div>
                             <div class="values">
-                                <div class="value">Sunny <span style="color: gray">(Amigo)</span></div>
-                                <div class="value">Hero  <span style="color: gray">(Amigo)</span></div>
-                                <div class="value">Kel   <span style="color: gray">(Amigo)</span></div>
-                                <div class="value">Basil <span style="color: gray">(Amigo)</span></div>
+                                <div class="value"><a href="/characters/sunny/">Sunny</a> <span style="color: gray">(Amigo)</span></div>
+                                <div class="value"><a href="/characters/hero/">Hero</a>  <span style="color: gray">(Amigo)</span></div>
+                                <div class="value"><a href="/characters/kel/">Kel</a>   <span style="color: gray">(Amigo)</span></div>
+                                <div class="value"><a href="/characters/basil/">Basil</a> <span style="color: gray">(Amigo)</span></div>
                                 <div class="value">KIM   <span style="color: gray">(Melhor Amigo)</span></div>
                             </div>
                         </div>
@@ -495,17 +511,39 @@
                     </p>
 
                     <p>Ela também começou a assistir aos sermões da igreja regularmente, na esperança de encontrar paz de espírito.</p>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="subblock">
+                    <h2 class="title">IMAGENS</h2>
+
+                    <div class="separatorline"></div>
+
+                    <div class="imagecontainer">
+                        <img src="../../src/img/gamepics/ComfortingAubrey.webp">
+
+                        <img src="../../src/img/gamepics/BringingBasil.webp">
+
+                        <img src="../../src/img/gamepics/ComfortingAubrey.webp">
+
+                        <img src="../../src/img/gamepics/SunsetPicnic.webp">
+
+                        <img src="../../src/img/gamepics/Omoriorigingroup.webp">
+                    </div>
 
                     <h2 class="title">Referências</h3>
 
                     <a href="https://omori.fandom.com/wiki/AUBREY" target="_blank">Omori Fandom</a>
+
+
                 </div>
             </div>
         </div>
 </body>
 
 <!-– scripts carregamento posterior -->
-
+<script src="../../src/js/dialogue.js"></script>
     <script src="../../src/js/imageopener.js"></script>
     <script src="../../src/js/global.js"></script>
 
