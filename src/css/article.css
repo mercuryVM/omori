@@ -152,7 +152,7 @@ div.block div.subblock div.separatorline {
     }
 
     div.block div.subblock div.info div.line div.values div.value, div.block div.subblock div.info div.line  {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     div.block div.alert img {
@@ -168,6 +168,18 @@ div.block div.subblock div.separatorline {
 @media screen and (max-width: 640px) {
     div.block div.infosub {
         flex: 90%;
+    }
+
+    div.block {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.block div.subblock div.info {
+        margin-left: 0;
+        margin-bottom: 25px;
+        margin-top: 25px;
     }
     
     div.block div.subblock p{
