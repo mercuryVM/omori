@@ -40,6 +40,8 @@ window.onresize = VerificarMenu;
 let images = [];
 
 $(".content").find($("img")).each(function(){
+  if($(this).attr("ignore")) return;
+
   if(this.src){
     images.push($(this));
     EnableHandler($(this), $(this).attr("src"), false)
