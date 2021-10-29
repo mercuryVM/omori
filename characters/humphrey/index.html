@@ -1,0 +1,489 @@
+<html>
+
+<head>
+    <title>HUMPHREY - OMORI</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-– estilos -->
+        <link href="../../src/css/config.css" type="text/css" rel="stylesheet" />
+        <link href="../../src/css/global.css" type="text/css" rel="stylesheet" />
+        <link href="../../src/css/wiki.css" type="text/css" rel="stylesheet" />
+        <link href="../../src/css/abridorImagem.css" type="text/css" rel="stylesheet" />
+        <link href="../../src/css/menu.css" type="text/css" rel="stylesheet" />
+        <link href="../../src/css/article.css" type="text/css" rel="stylesheet" />
+    <!-– jquery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-– fontes -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre&family=Roboto&display=swap" rel="stylesheet">
+    <!-– bibliotecas de animação -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body id="body">
+
+    <div class="cookiesWarn" style="display: none;">
+        <div class="mainDialogo">
+          <div class="dialogoNome">
+            <p class="dialogName"></p>
+          </div>
+          <div class="dialogo">
+            <p class="dialogName" id="dialogMessage">
+            </p>
+            <div id="setaBundle">
+              <p class="diagolSeta" id="diagolSetaTexto"> Pressione Enter para continuar</p>
+              <img src="../../src/img/seta.png" class="dialogSeta" id="dialogSeta" height="50px"></img>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <audio loop id="typing">
+        <source src="../../src/sounds/typing.ogg">
+    </audio>
+
+    <audio id="meow">
+        <source src="../../src/sounds/meow">
+    </audio>
+
+    <div class="abrirImagem">
+        <div class="panel">
+            <div class="permmenu" style="margin-left: auto;" id="openedImageBack">
+                Voltar
+            </div>
+            <div>
+                <div class="viewport">
+                    <img src="../../src/img/gamepics/1.jpg" id="openedImage">
+                </div>
+            </div>
+            <p class="comment" id="imageComment">"Omori e seus amigos no espaço branco."</p>
+        </div>
+    </div>
+
+    <div class="main" style="background: url('../../src/img/1148181.png')">
+        <div class="topmenus">
+            <div class="header">
+                <img src="../../src/img/OMORI_logo.png" class="logo">
+                <div class="headermenu">
+
+                    <div class="menu desktopMenu">
+                        <a href="/index.html?s">
+                            <div class="menuOption">
+                                <div class="info">
+                                    <img src="../../src/img/menuoptions/home.png" class="icon" height="32px" />
+                                    <span class="text">Início</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <div class="menuOption hasSubmenu">
+                            <div class="info">
+                                <img src="../../src/img/menuoptions/bed.png" class="icon" height="32px" />
+                                <span class="text">Personagens</span>
+                            </div>
+                            <div class="innerSubmenu">
+                                <div class="subMenu">
+                                    <span class="title">Principais</span>
+
+                                    <a href="/characters/sunny">
+                                        <div class="subMenuOption">
+                                            <div class="image omori"></div>
+                                            <span class="subMenuOptionText">OMORI</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/characters/aubrey/">
+                                        <div class="subMenuOption">
+                                            <div class="image aubrey"></div>
+                                            <span class="subMenuOptionText">Aubrey</span>
+                                        </div>
+
+                                        <a href="/characters/kel">
+                                            <div class="subMenuOption">
+                                                <div class="image kel"></div>
+                                                <span class="subMenuOptionText">Kel</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/hero">
+                                            <div class="subMenuOption">
+                                                <div class="image hero"></div>
+                                                <span class="subMenuOptionText">Hero</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/basil">
+                                            <div class="subMenuOption">
+                                                <div class="image basil"></div>
+                                                <span class="subMenuOptionText">Basil</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/mari">
+                                            <div class="subMenuOption">
+                                                <div class="image mari"></div>
+                                                <span class="subMenuOptionText">Mari</span>
+                                            </div>
+                                        </a>
+
+                                        <span class="title">Vilões</span>
+
+                                        <a href="/characters/boss">
+                                            <div class="subMenuOption">
+                                                <div class="image boss"></div>
+                                                <span class="subMenuOptionText">Boss</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/pluto">
+                                            <div class="subMenuOption">
+                                                <div class="image pluto"></div>
+                                                <span class="subMenuOptionText">Pluto</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/sweetheart">
+                                            <div class="subMenuOption">
+                                                <div class="image sweetheart"></div>
+                                                <span class="subMenuOptionText">Sweet H.</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/jawsum">
+                                            <div class="subMenuOption">
+                                                <div class="image jawsum"></div>
+                                                <span class="subMenuOptionText">Mr. Jawsum</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/hooligans">
+                                            <div class="subMenuOption">
+                                                <div class="image hooligans"></div>
+                                                <span class="subMenuOptionText">Valentões</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="#">
+                                            <div class="subMenuOption subMenuSelected">
+                                                <div class="image humphrey"></div>
+                                                <span class="subMenuOptionText">Humphrey</span>
+                                            </div>
+                                        </a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menuOption hasSubmenu">
+                            <div class="info">
+                                <img src="../../src/img/menuoptions/history.png" class="icon" height="32px" />
+                                <span class="text">História</span>
+                            </div>
+
+                            <div class="innerSubmenu">
+                                <div class="subMenu">
+                                    <a href="/history/general">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/history/general.gif" height="32px" />
+                                            <span class="subMenuOptionText">Roteiro</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/history/secrets">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/history/questions.gif" height="32px" />
+                                            <span class="subMenuOptionText">Perguntas</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/history/secrets">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/history/secrets.gif" height="32px" />
+                                            <span class="subMenuOptionText">Segredos</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/history/mechanics">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/history/mechanics.gif" height="32px" />
+                                            <span class="subMenuOptionText">Emoções</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menuOption hasSubmenu">
+                            <div class="info">
+                                <img src="../../src/img/menuoptions/worlds.png" class="icon" height="32px" />
+                                <span class="text">Mundos</span>
+                            </div>
+
+                            <div class="innerSubmenu">
+                                <div class="subMenu">
+                                    <a href="/worlds/vastforest">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/worlds/VAST_FOREST_Logo.png"
+                                                height="64px" />
+                                            <span class="subMenuOptionText">Floresta Vasta</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/worlds/otherworld">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/worlds/OTHERWORLD_Logo.png"
+                                                height="64px" />
+                                            <span class="subMenuOptionText">Outro Mundo</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/worlds/orangeoasis">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/worlds/ORANGE_OASIS_Logo.png"
+                                                height="64px" />
+                                            <span class="subMenuOptionText">Oasis Laranja</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/worlds/raintown">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/worlds/RAIN_TOWN_Logo.png"
+                                                height="64px" />
+                                            <span class="subMenuOptionText">Cidade Chuvosa</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/worlds/pyreflyforest">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/worlds/PYREFLY_FOREST_Logo.png"
+                                                height="64px" />
+                                            <span class="subMenuOptionText">Floresta Pirefly</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/worlds/sweetheartcastle">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/worlds/SWEET_HEART_CASTLE.png"
+                                                height="64px" />
+                                            <span class="subMenuOptionText">Castelo da SweetHeart</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/worlds/underwaterhighway">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/worlds/UNDERWATER_HIGHWAY_Logo.png"
+                                                height="64px" />
+                                            <span class="subMenuOptionText">Rodovia embaixo d'água</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="/comments">
+                            <div class="menuOption">
+                                <div class="info">
+                                    <img src="../../src/img/menuoptions/something.png" class="icon" height="32px" />
+                                    <span class="text">Deixe seu comentário</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <span class="material-icons menuBTN" id="menuBTN">
+                        menu
+                    </span>
+
+                </div>
+                <img src="../../src/img/miau" class="miau">
+            </div>
+            <div class="mobileMenu">
+                <div class="btn"><a href="#">Inicio</a></div>
+                <div class="btn"><a href="characters.html">Personagens</a></div>
+                <div class="btn"><a href="history.html">Historia</a></div>
+                <div class="btn"><a href="secrets.html">Segredos</a></div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="block">
+                <div class="subblock" style="flex: 1;">
+                    <div class="alert spoiler">
+                        <img src="../../src/img/menuoptions/characters/basil_rw.png" height="96px">
+                        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: auto;">
+                            <span style="font-weight: 700;">ALERTA DE SPOILER</span>
+                            <span>Essa página possui spoilers importantes referentes ao "plot-twist" do jogo OMORI. </span>
+                        </div>
+                        <img src="../../src/img/menuoptions/characters/basil.webp" height="96px">
+                    </div>
+
+                    <div class="alert fandom">
+                        <img src="../../src/img/menuoptions/characters/aubreyhappy.webp" height="96px">
+                        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: auto;">
+                            <span style="font-weight: 700;">OMORI WIKI</span>
+                            <span>Boa parte do conteúdo de texto ou imagens foram retiradas da WIKI de fãs de OMORI.</span>
+                            <span>Se você gostar daqui, visite lá para mais detalhes em relação a história do jogo!</span>
+                            <a href="https://omori.fandom.com/wiki/" target="_blank">CLIQUE AQUI</a>
+                        </div>
+                        <img src="../../src/img/menuoptions/characters/aubreyhappy.webp" height="96px">
+                    </div>
+
+                    <h1 class="title">HUMPHREY</h1>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="subblock" style="flex: 80%">
+                    <p>
+                        <strong>HUMPHREY</strong> é um personagem em OMORI.
+                        Ele serve como o chefe final obrigatório para os segmentos do Mundo Imaginário do jogo. 
+                    </p>
+
+                    <h2 class="title">PERFIL</h2>
+
+                    <div class="separatorline"></div>
+
+                    <h2 class="title">APARÊNCIA</h2>
+
+                    <p>
+                        HUMPHREY é uma baleia azul-clara e constantemente exibe um sorriso que mostra os dentes. 
+                        Ele parece ter pequenas saliências no topo da cabeça. 
+                        Sua língua também é longa o suficiente para ser esticada e ancorada no calçadão para ser usada 
+                        como uma ponte em seu interior. 
+                    </p>
+
+                    <p>
+                        Pode-se interagir com ele mesmo enquanto está dentro dele, através dos numerosos botões em seu interior. 
+                        Embora sejam capazes de se mover individualmente, eles parecem pertencer à consciência coletiva de HUMPHREY. 
+                    </p>
+
+                    <p>
+                        O interior de HUMPHREY é principalmente rosa, com seus líquidos intestinais sendo verdes. 
+                        O líquido da HUMPHREY dentro do setor da MOLLY é azul, 
+                        o líquido dentro do setor da MEDUSA é verde e o líquido dentro do setor da MARINA é avermelhado. 
+                    </p>
+
+                   
+                </div>
+                <div class="subblock infosub" >
+                    <div class="info">
+                        <img src="../../src/img/menuoptions/characters/Humphrey_sprite_final.png" height="128px">
+                        <div class="line">
+                            <div class="name">Sexo</div>
+                            <div class="values">
+                                <div class="value">Homem</div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="name">Localizações</div>
+                            <div class="values">
+                                <div class="value">Last Resort</div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="subblock">
+                    <h2 class="title">PERSONALIDADE</h2>
+
+                    <div class="separatorline"></div>
+
+                    <p>
+                        HUMPHREY pode interagir com suas entranhas por meio de botões. 
+                        Cada botão parece ter recebido alguma tarefa das SLIME GIRLS ou apenas preencher 
+                        o vazio de seu intestino com atividades mundanas, como jogos e relaxamento.
+                    </p>
+
+                    <p>
+                        Ele parece ser descontraído e amante da diversão, especialmente no laboratório da MEDUSA pela 
+                        forma como ele projetou jogos que podem ser jogados dentro de si.
+                    </p>
+
+                    <p>
+                        Ele também pode ser descuidado e sujeito a erros, demonstrados principalmente no laboratório de MOLLY. 
+                        Seus botões parecem ter medo de MARINA, já que ela os usa como cobaias. 
+                    </p>
+
+                    <p>
+                        No entanto, ele é facilmente dominado por sua fome de CLAMS. 
+                        Se não consegue comer CLAMS, recorre a comer de qualquer coisa, 
+                        inclusive as MENINAS SLIME, e até liga a festa para saciá-la.
+                    </p>
+
+                    <p>
+                        Ele é extremamente sádico, brincando com OMORI e seus amigos e dizendo a eles que sua luta é inútil. 
+                        Ele também tem o hábito de falar rimas durante a briga com o chefe.
+                    </p>
+
+                    <p>
+                        Ele também contém esqueletos em seu intestino, que parecem ser os restos mortais de visitantes anteriores que não conseguiram sair vivos. 
+                    </p>
+                    
+                    <p>
+                        BRANCH CORAL afirma que HUMPHREY viveu por tanto tempo que perdeu seu senso de moralidade, 
+                        explicando porque ele foi tão rápido em decidir devorar OMORI e amigos apesar de ter sido amigável com eles antes. Isso implica que HUMPHREY pode ter sido mais gentil e mais empático no passado.
+                    </p>
+
+                    <h3 class="title">HISTÓRIA</h3>
+
+                    <div class="separatorline"></div>
+
+                    <p>
+                        O jogador encontrará HUMPHREY, depois de fazer o seu caminho através das curvas e voltas do POÇO PROFUNDO perseguindo SWEETHEART. 
+                        HUMPHREY observa que eles não são os primeiros convidados e convida a equipe a entrar em suas entranhas para continuar sua busca por SWEETHEART. 
+                    </p>
+
+                    <p>
+                        Após alcançar cada um dos setores das MENINAS SLIME e observar a insatisfação de SWEETHEART com cada uma delas, elas obtêm um CARTÃO CHAVE SLIMY. 
+                        Isso permitirá que eles se aprofundem em HUMPHREY. As SLIME GIRLS confrontam SWEETHEART por conta do pagamento, provavelmente para ser usado para alimentar HUMPHREY. 
+                    </p>
+
+                    <p>
+                        SWEETHEART dispara, mas HUMPHREY a impede, notando que ela não tem dinheiro e que ele está ficando com mais fome. 
+                        As SLIME GIRLS atacam o grupo em troca do pagamento da SWEETHEART, no entanto, são derrotadas. 
+                        Sem mariscos para se alimentar, HUMPHREY engole as MENINAS SLIME e tenta comer o jogador em seguida, iniciando uma luta de chefe. 
+                    </p>
+
+                    <p>
+                        Depois de ser derrotado, o jogador é ejetado dele pelo respiradouro. 
+                        HUMPHREY então diz que vai tirar uma soneca e afunda, deixando-o inacessível. (Em todas as rotas, exceto OMORI, não foi confirmado se ele está vivo ou não)
+                    </p>
+
+                    <p>
+                        O jogador pode retornar a ele na ROTA OMORI após receber o CHEQUE GIGANTE. HUMPHREY comerá o GIGANTE CHECK e, com sua fome saciada, ele permite que o jogador volte para suas entranhas para continuar a explorar. 
+                        Isso dá ao jogador acesso ao BOSS RUSH no laboratório de MOLLY, cada uma das missões secundárias das SLIME GIRLS para restaurar seus corpos e a habilidade de lutar contra ROBOHEART, MUTANTHEART e PERFECTHEART. 
+                    </p>
+
+                    <h2 class="title">IMAGENS</h2>
+
+                    <div class="separatorline"></div>
+
+                    <div class="imagecontainer">
+                        <img src="../../src/img/gamepics/Omori_AAPI_Wallpaper.webp">
+
+                        <img src="../../src/img/gamepics/Omori_14.webp">
+                    </div>
+
+                    <h2 class="title">Referências</h3>
+
+                    <a href="https://omori.fandom.com/wiki/HUMPHREY" target="_blank">Omori Fandom</a>
+
+
+                </div>
+            </div>
+        </div>
+</body>
+
+<!-– scripts carregamento posterior -->
+<script src="../../src/js/dialogue.js"></script>
+    <script src="../../src/js/imageopener.js"></script>
+    <script src="../../src/js/global.js"></script>
+
+</html>

@@ -1,0 +1,558 @@
+<html>
+
+<head>
+    <title>SWEETHEART - OMORI</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-– estilos -->
+        <link href="../../src/css/config.css" type="text/css" rel="stylesheet" />
+        <link href="../../src/css/global.css" type="text/css" rel="stylesheet" />
+        <link href="../../src/css/wiki.css" type="text/css" rel="stylesheet" />
+        <link href="../../src/css/abridorImagem.css" type="text/css" rel="stylesheet" />
+        <link href="../../src/css/menu.css" type="text/css" rel="stylesheet" />
+        <link href="../../src/css/article.css" type="text/css" rel="stylesheet" />
+    <!-– jquery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-– fontes -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre&family=Roboto&display=swap" rel="stylesheet">
+    <!-– bibliotecas de animação -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body id="body">
+
+    <div class="cookiesWarn" style="display: none;">
+        <div class="mainDialogo">
+          <div class="dialogoNome">
+            <p class="dialogName"></p>
+          </div>
+          <div class="dialogo">
+            <p class="dialogName" id="dialogMessage">
+            </p>
+            <div id="setaBundle">
+              <p class="diagolSeta" id="diagolSetaTexto"> Pressione Enter para continuar</p>
+              <img src="../../src/img/seta.png" class="dialogSeta" id="dialogSeta" height="50px"></img>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <audio loop id="typing">
+        <source src="../../src/sounds/typing.ogg">
+    </audio>
+
+    <audio id="meow">
+        <source src="../../src/sounds/meow">
+    </audio>
+
+    <div class="abrirImagem">
+        <div class="panel">
+            <div class="permmenu" style="margin-left: auto;" id="openedImageBack">
+                Voltar
+            </div>
+            <div>
+                <div class="viewport">
+                    <img src="../../src/img/gamepics/1.jpg" id="openedImage">
+                </div>
+            </div>
+            <p class="comment" id="imageComment">"Omori e seus amigos no espaço branco."</p>
+        </div>
+    </div>
+
+    <div class="main" style="background: url('../../src/img/1148181.png')">
+        <div class="topmenus">
+            <div class="header">
+                <img src="../../src/img/OMORI_logo.png" class="logo">
+                <div class="headermenu">
+
+                    <div class="menu desktopMenu">
+                        <a href="/index.html?s">
+                            <div class="menuOption">
+                                <div class="info">
+                                    <img src="../../src/img/menuoptions/home.png" class="icon" height="32px" />
+                                    <span class="text">Início</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <div class="menuOption hasSubmenu">
+                            <div class="info">
+                                <img src="../../src/img/menuoptions/bed.png" class="icon" height="32px" />
+                                <span class="text">Personagens</span>
+                            </div>
+                            <div class="innerSubmenu">
+                                <div class="subMenu">
+                                    <span class="title">Principais</span>
+
+                                    <a href="/characters/sunny">
+                                        <div class="subMenuOption">
+                                            <div class="image omori"></div>
+                                            <span class="subMenuOptionText">OMORI</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/characters/aubrey/">
+                                        <div class="subMenuOption">
+                                            <div class="image aubrey"></div>
+                                            <span class="subMenuOptionText">Aubrey</span>
+                                        </div>
+
+                                        <a href="/characters/kel">
+                                            <div class="subMenuOption">
+                                                <div class="image kel"></div>
+                                                <span class="subMenuOptionText">Kel</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/hero">
+                                            <div class="subMenuOption">
+                                                <div class="image hero"></div>
+                                                <span class="subMenuOptionText">Hero</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/basil">
+                                            <div class="subMenuOption">
+                                                <div class="image basil"></div>
+                                                <span class="subMenuOptionText">Basil</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/mari">
+                                            <div class="subMenuOption">
+                                                <div class="image mari"></div>
+                                                <span class="subMenuOptionText">Mari</span>
+                                            </div>
+                                        </a>
+
+                                        <span class="title">Vilões</span>
+
+                                        <a href="/characters/boss">
+                                            <div class="subMenuOption">
+                                                <div class="image boss"></div>
+                                                <span class="subMenuOptionText">Boss</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/pluto">
+                                            <div class="subMenuOption">
+                                                <div class="image pluto"></div>
+                                                <span class="subMenuOptionText">Pluto</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="#">
+                                            <div class="subMenuOption subMenuSelected">
+                                                <div class="image sweetheart"></div>
+                                                <span class="subMenuOptionText">Sweet H.</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/jawsum">
+                                            <div class="subMenuOption">
+                                                <div class="image jawsum"></div>
+                                                <span class="subMenuOptionText">Mr. Jawsum</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/hooligans">
+                                            <div class="subMenuOption">
+                                                <div class="image hooligans"></div>
+                                                <span class="subMenuOptionText">Valentões</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/humphrey">
+                                            <div class="subMenuOption">
+                                                <div class="image humphrey"></div>
+                                                <span class="subMenuOptionText">Humphrey</span>
+                                            </div>
+                                        </a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menuOption hasSubmenu">
+                            <div class="info">
+                                <img src="../../src/img/menuoptions/history.png" class="icon" height="32px" />
+                                <span class="text">História</span>
+                            </div>
+
+                            <div class="innerSubmenu">
+                                <div class="subMenu">
+                                    <a href="/history/general">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/history/general.gif" height="32px" />
+                                            <span class="subMenuOptionText">Roteiro</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/history/secrets">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/history/questions.gif" height="32px" />
+                                            <span class="subMenuOptionText">Perguntas</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/history/secrets">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/history/secrets.gif" height="32px" />
+                                            <span class="subMenuOptionText">Segredos</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/history/mechanics">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/history/mechanics.gif" height="32px" />
+                                            <span class="subMenuOptionText">Emoções</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menuOption hasSubmenu">
+                            <div class="info">
+                                <img src="../../src/img/menuoptions/worlds.png" class="icon" height="32px" />
+                                <span class="text">Mundos</span>
+                            </div>
+
+                            <div class="innerSubmenu">
+                                <div class="subMenu">
+                                    <a href="/worlds/vastforest">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/worlds/VAST_FOREST_Logo.png"
+                                                height="64px" />
+                                            <span class="subMenuOptionText">Floresta Vasta</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/worlds/otherworld">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/worlds/OTHERWORLD_Logo.png"
+                                                height="64px" />
+                                            <span class="subMenuOptionText">Outro Mundo</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/worlds/orangeoasis">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/worlds/ORANGE_OASIS_Logo.png"
+                                                height="64px" />
+                                            <span class="subMenuOptionText">Oasis Laranja</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/worlds/raintown">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/worlds/RAIN_TOWN_Logo.png"
+                                                height="64px" />
+                                            <span class="subMenuOptionText">Cidade Chuvosa</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/worlds/pyreflyforest">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/worlds/PYREFLY_FOREST_Logo.png"
+                                                height="64px" />
+                                            <span class="subMenuOptionText">Floresta Pirefly</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/worlds/sweetheartcastle">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/worlds/SWEET_HEART_CASTLE.png"
+                                                height="64px" />
+                                            <span class="subMenuOptionText">Castelo da SweetHeart</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/worlds/underwaterhighway">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/worlds/UNDERWATER_HIGHWAY_Logo.png"
+                                                height="64px" />
+                                            <span class="subMenuOptionText">Rodovia embaixo d'água</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="/comments">
+                            <div class="menuOption">
+                                <div class="info">
+                                    <img src="../../src/img/menuoptions/something.png" class="icon" height="32px" />
+                                    <span class="text">Deixe seu comentário</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <span class="material-icons menuBTN" id="menuBTN">
+                        menu
+                    </span>
+
+                </div>
+                <img src="../../src/img/miau" class="miau">
+            </div>
+            <div class="mobileMenu">
+                <div class="btn"><a href="#">Inicio</a></div>
+                <div class="btn"><a href="characters.html">Personagens</a></div>
+                <div class="btn"><a href="history.html">Historia</a></div>
+                <div class="btn"><a href="secrets.html">Segredos</a></div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="block">
+                <div class="subblock" style="flex: 1;">
+                    <div class="alert spoiler">
+                        <img src="../../src/img/menuoptions/characters/basil_rw.png" height="96px">
+                        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: auto;">
+                            <span style="font-weight: 700;">ALERTA DE SPOILER</span>
+                            <span>Essa página possui spoilers importantes referentes ao "plot-twist" do jogo OMORI. </span>
+                        </div>
+                        <img src="../../src/img/menuoptions/characters/basil.webp" height="96px">
+                    </div>
+
+                    <div class="alert fandom">
+                        <img src="../../src/img/menuoptions/characters/aubreyhappy.webp" height="96px">
+                        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: auto;">
+                            <span style="font-weight: 700;">OMORI WIKI</span>
+                            <span>Boa parte do conteúdo de texto ou imagens foram retiradas da WIKI de fãs de OMORI.</span>
+                            <span>Se você gostar daqui, visite lá para mais detalhes em relação a história do jogo!</span>
+                            <a href="https://omori.fandom.com/wiki/" target="_blank">CLIQUE AQUI</a>
+                        </div>
+                        <img src="../../src/img/menuoptions/characters/aubreyhappy.webp" height="96px">
+                    </div>
+
+                    <h1 class="title">SWEETHEART</h1>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="subblock" style="flex: 80%">
+                    <p>
+                        <strong>SWEETHEART</strong> é um personagem e inimigo em OMORI. 
+                        Ela atua como uma grande antagonista que continuamente causa problemas para OMORI e amigos. 
+                    </p>
+
+                    <h2 class="title">PERFIL</h2>
+
+                    <div class="separatorline"></div>
+
+                    <h3 class="title">APARÊNCIA</h3>
+
+                    <p>
+                        SWEETHEART tem pele bronzeada e usa roupas femininas com babados (principalmente em rosa e vermelho) e se enfeita com corações, 
+                        laços e bolinhas. 
+                        Ela tem uma grande gravata borboleta rosa de bolinhas que usa na cabeça e longos rabos de cavalo rosa ondulados. 
+                        
+                    </p>
+
+                    <p>
+                        Na batalha, ela empunha um mangual rosa com uma cabeça marcante em forma de coração.
+                    </p>
+
+                    <h3 class="title">PERSONALIDADE</h3>
+                    
+                    <p>
+                        SWEETHEART é obcecada por si mesma e por sua imagem, gabando-se de seu comportamento e aparência com frequência. 
+                        Sua auto-obsessão é alimentada pela atenção constante que ela recebe dos SPROUT MOLES, 
+                        que constituem a maioria de sua vasta base de fãs. 
+                    </p>
+                    
+                    <p>
+                        Após seu término com o SPACE BOYFRIEND, ela começa a ficar hipnotizada pela ideia do amor verdadeiro e causa estragos ao tentar 
+                        encontrá-lo. 
+                        Ela é uma pessoa muito dramática e gosta de teatro, seguindo todos os seus impulsos e causando drama sem motivo aparente. 
+                    </p>
+
+                    <p>
+                        Ela também adora estar sob os holofotes e tem um forte desejo de ser adorada, apesar de mostrar desdém por seus fãs apaixonados. 
+                    </p>
+
+                    <p>
+                        Quando rejeitada ou prejudicada, ela está sujeita a explosões e demonstrações públicas de raiva ou fúria, devido a geralmente conseguir tudo o que deseja. 
+                        Seu estilo de vida fácil pode levá-la a ficar entediada, o que a incentiva a ficar louca com várias travessuras que causam caos para todos os envolvidos (e ocasionalmente para aqueles que não estão). 
+                    </p>
+
+                    <p>
+                        Ela também é implacável, evidenciado por sua grande masmorra, bem como a sala de tortura dentro dela. 
+                    </p>
+                </div>
+                <div class="subblock infosub" >
+                    <div class="info">
+                        <img src="../../src/img/menuoptions/characters/Sweetheartnormal.gif" height="128px">
+                        <div class="line">
+                            <div class="name">Sexo</div>
+                            <div class="values">
+                                <div class="value">Mulher</div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="name">Localizações</div>
+                            <div class="values">
+                                <div class="value">Outro Mundo</div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="name">Relações</div>
+                            <div class="values">
+                                <div class="value">DONUT GRANDMA</div>
+                                <div class="value">CAPT. SPACEBOY</div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="name">Vida</div>
+                            <div class="values">
+                                <div class="value">3300 (NORMAL)</div>
+                                <div class="value">7600 (BOSS RUSH)</div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="name">Suco</div>
+                            <div class="values">
+                                <div class="value">1650 (NORMAL)</div>
+                                <div class="value">3800 (BOSS RUSH)</div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="name">Ataque</div>
+                            <div class="values">
+                                <div class="value">30 (NORMAL)</div>
+                                <div class="value">90 (BOSS RUSH)</div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="name">Defesa</div>
+                            <div class="values">
+                                <div class="value">25 (NORMAL)</div>
+                                <div class="value">70 (BOSS RUSH)</div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="name">EXP</div>
+                            <div class="values">
+                                <div class="value">5800</div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="name">CLAMS</div>
+                            <div class="values">
+                                <div class="value">1376</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="subblock">
+                    <h2 class="title">HISTÓRIA</h2>
+
+                    <div class="separatorline"></div>
+
+                    <h3 class="title">COMO ELES SE CONHECERAM?</h3>
+
+                    <p>
+                        Quando ROCOCO era bebê, foi encontrado por um jovem DONUT de nome DOCE. 
+                        Ela a trouxe para sua família e eles o aceitaram como se fosse deles. 
+                    </p>
+
+                    <p>
+                        Ele e SWEETHEART cresceram juntos. Os dois lutaram com frequência, mas SWEETHEART sempre venceria. 
+                        Ele se tornou bom em correr e sabia que precisava sobreviver para repovoar sua espécie. 
+                    </p>
+
+                    <p>
+                        SWEETHEART veio até o DEPOSITÁRIO DO CASTELO há muito tempo, uma pobre garota do deserto que implorou de joelhos para tornar o castelo dela. 
+                        A DEPOSITORA DO CASTELO deu a ela o que ela desejava: um castelo cheio de riquezas, servos para ela comandar, 
+                        um palco para ela exibir seu poder. 
+                    </p>
+
+                    <p>
+                        No entanto... ela ainda quer mais. A única coisa que falta é um seu verdadeiro amor, a quem ela procura incansavelmente. 
+                        Eventualmente, ROCOCO e SWEETHEART se apaixonaram, ficaram noivos e se mudaram para SWEETHEART'S CASTLE. 
+                    </p>
+
+                    <p>
+                        SWEETHEART tem conexões com a maioria dos problemas que OMORI e seus amigos enfrentam no HEADSPACE 
+                        que não estão relacionados a ALGUMA COISA. 
+                    </p>
+                    
+                    <p>
+                        Os SPROUT MOLES que freqüentemente ameaçam o grupo, são seus servos. Seu término inicial com o CAPT. SPACEBOY 
+                        o torna um obstáculo para as crianças e, após sua derrota, quase os mata pelas SLIME GIRLS e HUMPHREY. 
+                        O único incidente que ela não tem uma mão é quando MR. JAWSUM força as crianças a fazerem contratos.
+                    </p>
+                    
+                    <p>
+                        Depois de ser derrotada pelo grupo, ela é cortejada pelo CAPT. SPACEBOY, com quem ela finalmente se casou... 
+                        e então se divorciou no dia seguinte, acreditando que só poderia amar outra versão de si mesma.
+                    </p>
+
+                    <p>
+                        Ela incumbe as SLIME GIRLS de criar tal cópia, apenas para rejeitar todas elas. 
+                        O karma finalmente a alcança quando as MENINAS SLIME exigem seu pagamento, que SWEETHEART se recusa a dar (e não poderia se ela quisesse, pois ela está falida depois de abandonar seu castelo), o que acaba levando ao seu fim sem cerimônia nas mãos de HUMPHREY. 
+                    </p>
+                    
+                    <p>
+                        Na ROTA OMORI, no entanto, é revelado que ela está viva, mas foi forçada a ser uma espécie de serva para a PERFECTHEART, sendo renomeada para SWEEPHEART para caber em sua posição. 
+                    </p>
+                    
+                    <p>
+                        O hábito de SWEETHEART de atrapalhar a jornada dos amigos enquanto eles procuram BASIL é estranho ao ponto da frustração - e muito invocado.
+                    </p>
+
+                    <p>
+                        Sabendo que o MUNDO DE SONHOS é a fuga de SUNNY da realidade e a verdade sobre MARI, 
+                        o papel de SWEETHEART na narrativa do MUNDO DE SONHOS é simplesmente distrair os amigos de seu objetivo, 
+                        dando-lhes um vilão para perseguir, já que BASIL é a maior dica para a verdade que o subconsciente de SUNNY está tentando reprimir. 
+                    </p>
+
+                    <p>
+                        Somente depois que SWEETHEART é removido da equação, SUNNY pode fazer algum progresso, 
+                        já que sua saída e a luta de chefe subsequente com as SLIME GIRLS e 
+                        HUMPHREY são seguidas para encontrar a última chave necessária para o jogo HANGMAN.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="subblock">
+                    <h2 class="title">IMAGENS</h2>
+
+                    <div class="separatorline"></div>
+
+                    <div class="imagecontainer">
+                        <img src="../../src/img/gamepics/SWEET_Jelly-filled_Donut.webp">
+
+                        <img src="../../src/img/gamepics/SW_Movie_(Sunset).webp">
+
+                        <img src="../../src/img/gamepics/Pessis_thing_no_bg.webp">
+                    </div>
+
+                    <h2 class="title">Referências</h3>
+
+                    <a href="https://omori.fandom.com/wiki/SWEETHEART" target="_blank">Omori Fandom</a>
+
+
+                </div>
+            </div>
+        </div>
+</body>
+
+<!-– scripts carregamento posterior -->
+<script src="../../src/js/dialogue.js"></script>
+    <script src="../../src/js/imageopener.js"></script>
+    <script src="../../src/js/global.js"></script>
+
+</html>

@@ -1,0 +1,557 @@
+<html>
+
+<head>
+    <title>VALENTÕES - OMORI</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-– estilos -->
+        <link href="../../src/css/config.css" type="text/css" rel="stylesheet" />
+        <link href="../../src/css/global.css" type="text/css" rel="stylesheet" />
+        <link href="../../src/css/wiki.css" type="text/css" rel="stylesheet" />
+        <link href="../../src/css/abridorImagem.css" type="text/css" rel="stylesheet" />
+        <link href="../../src/css/menu.css" type="text/css" rel="stylesheet" />
+        <link href="../../src/css/article.css" type="text/css" rel="stylesheet" />
+    <!-– jquery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-– fontes -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre&family=Roboto&display=swap" rel="stylesheet">
+    <!-– bibliotecas de animação -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body id="body">
+
+    <div class="cookiesWarn" style="display: none;">
+        <div class="mainDialogo">
+          <div class="dialogoNome">
+            <p class="dialogName"></p>
+          </div>
+          <div class="dialogo">
+            <p class="dialogName" id="dialogMessage">
+            </p>
+            <div id="setaBundle">
+              <p class="diagolSeta" id="diagolSetaTexto"> Pressione Enter para continuar</p>
+              <img src="../../src/img/seta.png" class="dialogSeta" id="dialogSeta" height="50px"></img>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <audio loop id="typing">
+        <source src="../../src/sounds/typing.ogg">
+    </audio>
+
+    <audio id="meow">
+        <source src="../../src/sounds/meow">
+    </audio>
+
+    <div class="abrirImagem">
+        <div class="panel">
+            <div class="permmenu" style="margin-left: auto;" id="openedImageBack">
+                Voltar
+            </div>
+            <div>
+                <div class="viewport">
+                    <img src="../../src/img/gamepics/1.jpg" id="openedImage">
+                </div>
+            </div>
+            <p class="comment" id="imageComment">"Omori e seus amigos no espaço branco."</p>
+        </div>
+    </div>
+
+    <div class="main" style="background: url('../../src/img/1148181.png')">
+        <div class="topmenus">
+            <div class="header">
+                <img src="../../src/img/OMORI_logo.png" class="logo">
+                <div class="headermenu">
+
+                    <div class="menu desktopMenu">
+                        <a href="/index.html?s">
+                            <div class="menuOption">
+                                <div class="info">
+                                    <img src="../../src/img/menuoptions/home.png" class="icon" height="32px" />
+                                    <span class="text">Início</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <div class="menuOption hasSubmenu">
+                            <div class="info">
+                                <img src="../../src/img/menuoptions/bed.png" class="icon" height="32px" />
+                                <span class="text">Personagens</span>
+                            </div>
+                            <div class="innerSubmenu">
+                                <div class="subMenu">
+                                    <span class="title">Principais</span>
+
+                                    <a href="/characters/sunny">
+                                        <div class="subMenuOption">
+                                            <div class="image omori"></div>
+                                            <span class="subMenuOptionText">OMORI</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/characters/aubrey/">
+                                        <div class="subMenuOption">
+                                            <div class="image aubrey"></div>
+                                            <span class="subMenuOptionText">Aubrey</span>
+                                        </div>
+
+                                        <a href="/characters/kel">
+                                            <div class="subMenuOption">
+                                                <div class="image kel"></div>
+                                                <span class="subMenuOptionText">Kel</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/hero">
+                                            <div class="subMenuOption">
+                                                <div class="image hero"></div>
+                                                <span class="subMenuOptionText">Hero</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/basil">
+                                            <div class="subMenuOption">
+                                                <div class="image basil"></div>
+                                                <span class="subMenuOptionText">Basil</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/mari">
+                                            <div class="subMenuOption">
+                                                <div class="image mari"></div>
+                                                <span class="subMenuOptionText">Mari</span>
+                                            </div>
+                                        </a>
+
+                                        <span class="title">Vilões</span>
+
+                                        <a href="/characters/boss">
+                                            <div class="subMenuOption">
+                                                <div class="image boss"></div>
+                                                <span class="subMenuOptionText">Boss</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/pluto">
+                                            <div class="subMenuOption">
+                                                <div class="image pluto"></div>
+                                                <span class="subMenuOptionText">Pluto</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/sweetheart">
+                                            <div class="subMenuOption">
+                                                <div class="image sweetheart"></div>
+                                                <span class="subMenuOptionText">Sweet H.</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/jawsum">
+                                            <div class="subMenuOption">
+                                                <div class="image jawsum"></div>
+                                                <span class="subMenuOptionText">Mr. Jawsum</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="#">
+                                            <div class="subMenuOption subMenuSelected">
+                                                <div class="image hooligans"></div>
+                                                <span class="subMenuOptionText">Valentões</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/humphrey">
+                                            <div class="subMenuOption">
+                                                <div class="image humphrey"></div>
+                                                <span class="subMenuOptionText">Humphrey</span>
+                                            </div>
+                                        </a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menuOption hasSubmenu">
+                            <div class="info">
+                                <img src="../../src/img/menuoptions/history.png" class="icon" height="32px" />
+                                <span class="text">História</span>
+                            </div>
+
+                            <div class="innerSubmenu">
+                                <div class="subMenu">
+                                    <a href="/history/general">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/history/general.gif" height="32px" />
+                                            <span class="subMenuOptionText">Roteiro</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/history/secrets">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/history/questions.gif" height="32px" />
+                                            <span class="subMenuOptionText">Perguntas</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/history/secrets">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/history/secrets.gif" height="32px" />
+                                            <span class="subMenuOptionText">Segredos</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/history/mechanics">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/history/mechanics.gif" height="32px" />
+                                            <span class="subMenuOptionText">Emoções</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menuOption hasSubmenu">
+                            <div class="info">
+                                <img src="../../src/img/menuoptions/worlds.png" class="icon" height="32px" />
+                                <span class="text">Mundos</span>
+                            </div>
+
+                            <div class="innerSubmenu">
+                                <div class="subMenu">
+                                    <a href="/worlds/vastforest">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/worlds/VAST_FOREST_Logo.png"
+                                                height="64px" />
+                                            <span class="subMenuOptionText">Floresta Vasta</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/worlds/otherworld">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/worlds/OTHERWORLD_Logo.png"
+                                                height="64px" />
+                                            <span class="subMenuOptionText">Outro Mundo</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/worlds/orangeoasis">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/worlds/ORANGE_OASIS_Logo.png"
+                                                height="64px" />
+                                            <span class="subMenuOptionText">Oasis Laranja</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/worlds/raintown">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/worlds/RAIN_TOWN_Logo.png"
+                                                height="64px" />
+                                            <span class="subMenuOptionText">Cidade Chuvosa</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/worlds/pyreflyforest">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/worlds/PYREFLY_FOREST_Logo.png"
+                                                height="64px" />
+                                            <span class="subMenuOptionText">Floresta Pirefly</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/worlds/sweetheartcastle">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/worlds/SWEET_HEART_CASTLE.png"
+                                                height="64px" />
+                                            <span class="subMenuOptionText">Castelo da SweetHeart</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/worlds/underwaterhighway">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/worlds/UNDERWATER_HIGHWAY_Logo.png"
+                                                height="64px" />
+                                            <span class="subMenuOptionText">Rodovia embaixo d'água</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="/comments">
+                            <div class="menuOption">
+                                <div class="info">
+                                    <img src="../../src/img/menuoptions/something.png" class="icon" height="32px" />
+                                    <span class="text">Deixe seu comentário</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <span class="material-icons menuBTN" id="menuBTN">
+                        menu
+                    </span>
+
+                </div>
+                <img src="../../src/img/miau" class="miau">
+            </div>
+            <div class="mobileMenu">
+                <div class="btn"><a href="#">Inicio</a></div>
+                <div class="btn"><a href="characters.html">Personagens</a></div>
+                <div class="btn"><a href="history.html">Historia</a></div>
+                <div class="btn"><a href="secrets.html">Segredos</a></div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="block">
+                <div class="subblock" style="flex: 1;">
+                    <div class="alert spoiler">
+                        <img src="../../src/img/menuoptions/characters/basil_rw.png" height="96px">
+                        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: auto;">
+                            <span style="font-weight: 700;">ALERTA DE SPOILER</span>
+                            <span>Essa página possui spoilers importantes referentes ao "plot-twist" do jogo OMORI. </span>
+                        </div>
+                        <img src="../../src/img/menuoptions/characters/basil.webp" height="96px">
+                    </div>
+
+                    <div class="alert fandom">
+                        <img src="../../src/img/menuoptions/characters/aubreyhappy.webp" height="96px">
+                        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: auto;">
+                            <span style="font-weight: 700;">OMORI WIKI</span>
+                            <span>Boa parte do conteúdo de texto ou imagens foram retiradas da WIKI de fãs de OMORI.</span>
+                            <span>Se você gostar daqui, visite lá para mais detalhes em relação a história do jogo!</span>
+                            <a href="https://omori.fandom.com/wiki/" target="_blank">CLIQUE AQUI</a>
+                        </div>
+                        <img src="../../src/img/menuoptions/characters/aubreyhappy.webp" height="96px">
+                    </div>
+
+                    <h1 class="title">VALENTÕES</h1>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="subblock" style="flex: 80%">
+                    <p>
+                        <strong>VALENTÕES</strong> são um inimigo em OMORI. 
+                        Eles são um grupo de delinquentes que servem como antagonistas menores para os segmentos do MUNDO REAL. 
+                    </p>
+
+                    <h2 class="title">PERFIL</h2>
+
+                    <div class="separatorline"></div>
+
+                    <p>
+                        Os VALENTÕES consiste em seu líder AUBREY, KIM, VANCE, ANGEL, CHARLENE e THE MAVERICK. 
+                        Eles geralmente tendem a causar problemas nas ruas da Cidade, 
+                        mas todos os membros são pessoas de bom coração ao conhecê-los melhor, como observou o próprio KEL.  
+                    </p>
+
+                    <p>
+                        Isso é evidentemente mostrado em "ONE DAY LEFT" e em um quadrinho oficial, 
+                        onde todos os membros genuinamente se preocupam com o bem-estar de AUBREY e 
+                        garantem que ela se sinta confortável com eles em seu aniversário.
+                    </p>
+
+                    <p>
+                        Interagir com cada membro no mesmo dia revela que eles não parecem guardar nenhum rancor em relação a SUNNY ou KEL, 
+                        apesar de tentarem lutar com eles nos "THREE DAYS LEFT". 
+                    </p>
+
+                    <h2 class="title">HISTÓRIA</h2>
+
+                    <div class="separatorline"></div>
+
+                    <p>
+                        OS VALENTÕES aparecem no FARAWAY PARK, junto com BASIL. 
+                        BASIL pede a KIM para pedir a alguém para dar algo em troca, mas KIM o chama de esquisito. 
+                        KEL intervém, mas o resto dos VALENTÕES chega. 
+                    </p>
+
+                    <p>
+                        KEL e AUBREY discutem sobre BASIL, o que leva o último a atacar o primeiro. 
+                        SUNNY, no entanto, revela ter uma faca, o que faz com que OS VALENTÕES recuem.
+                    </p>
+
+                    <p>
+                        Depois que SUNNY e KEL descobrem que AUBREY pegou o álbum de fotos de BASIL, 
+                        eles lutam com todos os membros dos VALENTÕES, menos AUBREY, para obter a localização de AUBREY, 
+                        que eles eventualmente obtêm de KIM.
+                    </p>
+
+                    <p>
+                        A dupla então confronta AUBREY uma segunda vez, mas AUBREY em lágrimas corre para fora da IGREJA 
+                        assim que os frequentadores começam a fofocar sobre sua história, bem como sua delinquência. 
+                        SUNNY e KEL testemunham AUBREY jogando o ÁLBUM DE FOTOS em seu lixo, que eles então obtêm.
+                    </p>
+
+                    <p>
+                        À noite, ANGEL, CHARLENE e THE MAVERICK vão para o HANGOUT SPOT, 
+                        com THE MAVERICK desafiando KEL para uma corrida e depois perdendo. 
+                        KIM e VANCE jantam em sua casa, com KIM dizendo em voz alta SUNNY e KEL para irem embora se baterem em sua porta. 
+                    </p>
+
+                    <p>
+                        FALTANDO DOIS DIAS PARA A MUDANÇA DE SUNNY, OS VALENTÕES são vistos no GINO'S, 
+                        discutindo planos para ir ao seu ponto de encontro, 
+                        mais tarde revelado ser o mesmo onde SUNNY, MARI, KEL, AUBREY, BASIL e HERO costumavam ir. 
+                        OS VALENTÕES então dirigem-se ao HANGOUT SPOT à noite e encontram BASIL lá também por razões desconhecidas. 
+                    </p>
+                    
+                    <p>
+                        Eles tentam forçar BASIL a sair, mas isso leva o último a gritar em voz alta por ajuda. 
+                        SUNNY e KEL chegam ao local, e enquanto KIM afirma que eles não fizeram nada para BASIL, 
+                        mas tentam forçá-lo a sair verbalmente, KEL não acredita neles e tenta impedi-los como de costume.
+                    </p>
+
+                    <p>
+                        AUBREY então decide lutar contra os dois, desta vez com os VALENTÕES apoiando-a. 
+                        Uma luta começa e não importa se o jogador ganha ou perde. 
+                        De qualquer forma, KEL diz a AUBREY que embora ela passe mais tempo com seus novos amigos, 
+                        ela ainda vai ao antigo ponto de encontro, o que significa que ela ainda se preocupa com seus velhos amigos. 
+                    </p>
+
+                    <p>
+                        Isso faz com que AUBREY recue em silêncio. Fartos de atormentar BASIL constantemente, 
+                        os VALENTÕES saem do ponto de encontro secreto, deixando AUBREY sozinha com seus antigos amigos.
+                    </p>
+
+                    <p>
+                        AUBREY então quebra emocionalmente, acidentalmente empurrando BASIL para o lago. 
+                        Enquanto KEL discute com ela, SUNNY tenta sem sucesso salvar BASIL. 
+                    </p>
+
+                    <p>
+                        Felizmente, HERO ouve a comoção e salva os dois de se afogarem. 
+                        Depois de recuperar os dois, o grupo sai, deixando AUBREY sozinho lá.
+                    </p>
+
+                    <p>
+                        KIM, CHARLENE, ANGEL e VANCE podem ser encontrados mais tarde em seus quartos, 
+                        enquanto THE MAVERICK pode ser encontrado fora de sua casa. 
+                    </p>
+
+                    <p>
+                        OS VALENTÕES chegam à AUBREY'S HOUSE para sair com ela, mas estão preocupados com sua falta de resposta, 
+                        bem como sua recusa em sair de casa. 
+                        KIM decide pedir ajuda a KEL, HERO e SUNNY, e enquanto KEL expressa relutância, HERO os convence a ir até lá. 
+                    </p>
+
+                    <p>
+                        Uma vez lá, eles conseguiram convencer AUBREY e KEL a fazer as pazes, 
+                        bem como persuadi-la a devolver as fotos roubadas do álbum de fotos. 
+                        AUBREY então sai de casa, mas diz ao resto dos VALENTÕES que ela vai sair com eles mais tarde. 
+                    </p>
+
+                    <p>
+                        AUBREY então sai com SUNNY, KEL e HERO pelo resto do dia. Na casa da árvore, ela se desculpou em lágrimas por suas ações, 
+                        e o grupo a confortou com um abraço coletivo. 
+                        Eles então vão para BASIL'S HOUSE para que AUBREY possa se desculpar com ele, mas acabam passando a noite. 
+                    </p>
+                </div>
+                <div class="subblock infosub" >
+                    <div class="info">
+                        <img src="../../src/img/menuoptions/characters/HOOLIGANS.gif" height="128px">
+                        <div class="line">
+                            <div class="name">Sexo</div>
+                            <div class="values">
+                                <div class="value">Homem</div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="name">Localizações</div>
+                            <div class="values">
+                                <div class="value">Last Resort</div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="name">Relações</div>
+                            <div class="values">
+                                <div class="value">Gator Guy</div>
+                                <div class="value">HERO</div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="name">Vida</div>
+                            <div class="values">
+                                <div class="value">500 (NORMAL)</div>
+                                <div class="value">3000 (BOSS RUSH)</div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="name">Suco</div>
+                            <div class="values">
+                                <div class="value">250 (NORMAL)</div>
+                                <div class="value">1000 (BOSS RUSH)</div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="name">Ataque</div>
+                            <div class="values">
+                                <div class="value">999 (NORMAL)</div>
+                                <div class="value">999 (BOSS RUSH)</div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="name">Defesa</div>
+                            <div class="values">
+                                <div class="value">20 (NORMAL)</div>
+                                <div class="value">60 (BOSS RUSH)</div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="name">EXP</div>
+                            <div class="values">
+                                <div class="value">4000</div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="name">CLAMS</div>
+                            <div class="values">
+                                <div class="value">6000</div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="name">ITENS</div>
+                            <div class="values">
+                                <div class="value">Contrato</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="subblock">
+                    <h2 class="title">IMAGENS</h2>
+
+                    <div class="separatorline"></div>
+
+                    <div class="imagecontainer">
+                        <img src="../../src/img/gamepics/Group_hug_fw.webp">
+
+                        <img src="../../src/img/gamepics/Hero_introl.webp">
+                    </div>
+
+                    <h2 class="title">Referências</h3>
+
+                    <a href="https://omori.fandom.com/wiki/THE_HOOLIGANS" target="_blank">Omori Fandom</a>
+
+
+                </div>
+            </div>
+        </div>
+</body>
+
+<!-– scripts carregamento posterior -->
+<script src="../../src/js/dialogue.js"></script>
+    <script src="../../src/js/imageopener.js"></script>
+    <script src="../../src/js/global.js"></script>
+
+</html>
