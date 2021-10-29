@@ -12,28 +12,22 @@ div.abrirImagem{
 }
 
 div.abrirImagem div.panel{
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     border-radius: 10px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 10px;
 }
 
 div.panel div.viewport{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 10px;
 }
 
 div.viewport img#openedImage{
-    width: 75%;
-    border-radius: 10px;
-    border-width: 4px;
-    border-color: rgba(0, 0, 0, 0.295);
-    border-bottom-style: solid;
-    border-right-style: solid;
+    width: 90%;
     max-height: 650px;
     max-width: 650px;
 }

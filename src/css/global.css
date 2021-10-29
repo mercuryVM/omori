@@ -137,6 +137,10 @@ img.handextra {
     display: block;
 }
 
+div.permmenu {
+    display: none;
+}
+
 img.miau {
     height: 64px;
     margin-right: 20px;

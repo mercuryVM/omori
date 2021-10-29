@@ -38,15 +38,4 @@ var skip = location.search.split('s')[0]
 
 Intro(skip ? true : false);
 
-EnableHandler($("#imageOne"), "src/img/gamepics/1.jpg", "OMORI e seus amigos.")
-
-EnableHandler($("#imageTwo"), "src/img/gamepics/2.jpg", "Uma batalha contra um inimigo.")
-
-EnableHandler($("#imageThree"), "src/img/gamepics/OMORI_playing_piano.gif", "OMORI tocando piano.")
-
-EnableHandler($("#tag1"), "src/img/gamepics/REALYOU_TAGGED_KEL.png", "Foto retirada de OMORI e Kel.")
-EnableHandler($("#tag2"), "src/img/gamepics/REALHERO_TAGGED_YOU.png", "Foto retirada de OMORI e Hero.")
-EnableHandler($("#tag3"), "src/img/gamepics/DW_ALBUM_06.png", "Foto do album retirada de OMORI e Basil.")
-EnableHandler($("#tag4"), "src/img/gamepics/TAG_AubreyOmori.png", "Foto retirada de OMORI e Aubrey.")
-
 AOS.init()

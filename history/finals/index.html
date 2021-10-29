@@ -1,0 +1,635 @@
+<html>
+
+<head>
+    <title>FINAIS DO JOGO - OMORI</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-– estilos -->
+        <link href="../../src/css/config.css" type="text/css" rel="stylesheet" />
+        <link href="../../src/css/global.css" type="text/css" rel="stylesheet" />
+        <link href="../../src/css/wiki.css" type="text/css" rel="stylesheet" />
+        <link href="../../src/css/abridorImagem.css" type="text/css" rel="stylesheet" />
+        <link href="../../src/css/menu.css" type="text/css" rel="stylesheet" />
+        <link href="../../src/css/article.css" type="text/css" rel="stylesheet" />
+    <!-– jquery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-– fontes -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre&family=Roboto&display=swap" rel="stylesheet">
+    <!-– bibliotecas de animação -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body id="body">
+
+    <div class="cookiesWarn" style="display: none;">
+        <div class="mainDialogo">
+          <div class="dialogoNome">
+            <p class="dialogName"></p>
+          </div>
+          <div class="dialogo">
+            <p class="dialogName" id="dialogMessage">
+            </p>
+            <div id="setaBundle">
+              <p class="diagolSeta" id="diagolSetaTexto"> Pressione Enter para continuar</p>
+              <img src="../../src/img/seta.png" class="dialogSeta" id="dialogSeta" height="50px"></img>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <audio loop id="typing">
+        <source src="../../src/sounds/typing.ogg">
+    </audio>
+
+    <audio id="meow">
+        <source src="../../src/sounds/meow">
+    </audio>
+
+    <div class="abrirImagem">
+        <div class="panel">
+            <div class="permmenu" style="margin-left: auto;" id="openedImageBack">
+                Voltar
+            </div>
+            <div>
+                <div class="viewport">
+                    <img src="../../src/img/gamepics/1.jpg" id="openedImage">
+                </div>
+            </div>
+            <p class="comment" id="imageComment">"Omori e seus amigos no espaço branco."</p>
+        </div>
+    </div>
+
+    <div class="main" style="background: url('../../src/img/1148181.png')">
+        <div class="topmenus">
+            <div class="header">
+                <img src="../../src/img/OMORI_logo.png" class="logo">
+                <div class="headermenu">
+
+                    <div class="menu desktopMenu">
+                        <a href="/index.html?s">
+                            <div class="menuOption">
+                                <div class="info">
+                                    <img src="../../src/img/menuoptions/home.png" class="icon" height="32px" />
+                                    <span class="text">Início</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <div class="menuOption hasSubmenu">
+                            <div class="info">
+                                <img src="../../src/img/menuoptions/bed.png" class="icon" height="32px" />
+                                <span class="text">Personagens</span>
+                            </div>
+                            <div class="innerSubmenu">
+                                <div class="subMenu">
+                                    <span class="title">Principais</span>
+
+                                    <a href="/characters/sunny">
+                                        <div class="subMenuOption">
+                                            <div class="image omori"></div>
+                                            <span class="subMenuOptionText">OMORI</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/characters/aubrey/">
+                                        <div class="subMenuOption">
+                                            <div class="image aubrey"></div>
+                                            <span class="subMenuOptionText">Aubrey</span>
+                                        </div>
+
+                                        <a href="/characters/kel">
+                                            <div class="subMenuOption">
+                                                <div class="image kel"></div>
+                                                <span class="subMenuOptionText">Kel</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/hero">
+                                            <div class="subMenuOption">
+                                                <div class="image hero"></div>
+                                                <span class="subMenuOptionText">Hero</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/basil">
+                                            <div class="subMenuOption">
+                                                <div class="image basil"></div>
+                                                <span class="subMenuOptionText">Basil</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/mari">
+                                            <div class="subMenuOption">
+                                                <div class="image mari"></div>
+                                                <span class="subMenuOptionText">Mari</span>
+                                            </div>
+                                        </a>
+
+                                        <span class="title">Vilões</span>
+
+                                        <a href="/characters/boss">
+                                            <div class="subMenuOption">
+                                                <div class="image boss"></div>
+                                                <span class="subMenuOptionText">Boss</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/pluto">
+                                            <div class="subMenuOption">
+                                                <div class="image pluto"></div>
+                                                <span class="subMenuOptionText">Pluto</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/sweetheart">
+                                            <div class="subMenuOption">
+                                                <div class="image sweetheart"></div>
+                                                <span class="subMenuOptionText">Sweet H.</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/jawsum">
+                                            <div class="subMenuOption">
+                                                <div class="image jawsum"></div>
+                                                <span class="subMenuOptionText">Mr. Jawsum</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/hooligans">
+                                            <div class="subMenuOption">
+                                                <div class="image hooligans"></div>
+                                                <span class="subMenuOptionText">Valentões</span>
+                                            </div>
+                                        </a>
+
+                                        <a href="/characters/humphrey">
+                                            <div class="subMenuOption">
+                                                <div class="image humphrey"></div>
+                                                <span class="subMenuOptionText">Humphrey</span>
+                                            </div>
+                                        </a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menuOption hasSubmenu">
+                            <div class="info">
+                                <img src="../../src/img/menuoptions/history.png" class="icon" height="32px" />
+                                <span class="text">História</span>
+                            </div>
+
+                            <div class="innerSubmenu">
+                                <div class="subMenu">
+                                    <a href="#">
+                                        <div class="subMenuOption subMenuSelected">
+                                            <img src="../../src/img/menuoptions/history/general.gif" height="32px" />
+                                            <span class="subMenuOptionText">Finais</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/history/secrets">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/history/questions.gif" height="32px" />
+                                            <span class="subMenuOptionText">Perguntas</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/history/secrets">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/history/secrets.gif" height="32px" />
+                                            <span class="subMenuOptionText">Segredos</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/history/mechanics">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/history/mechanics.gif" height="32px" />
+                                            <span class="subMenuOptionText">Emoções</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menuOption hasSubmenu">
+                            <div class="info">
+                                <img src="../../src/img/menuoptions/worlds.png" class="icon" height="32px" />
+                                <span class="text">Mundos</span>
+                            </div>
+
+                            <div class="innerSubmenu">
+                                <div class="subMenu">
+                                    <a href="/worlds/vastforest">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/worlds/VAST_FOREST_Logo.png"
+                                                height="64px" />
+                                            <span class="subMenuOptionText">Floresta Vasta</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/worlds/otherworld">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/worlds/OTHERWORLD_Logo.png"
+                                                height="64px" />
+                                            <span class="subMenuOptionText">Outro Mundo</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/worlds/orangeoasis">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/worlds/ORANGE_OASIS_Logo.png"
+                                                height="64px" />
+                                            <span class="subMenuOptionText">Oasis Laranja</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/worlds/raintown">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/worlds/RAIN_TOWN_Logo.png"
+                                                height="64px" />
+                                            <span class="subMenuOptionText">Cidade Chuvosa</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/worlds/pyreflyforest">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/worlds/PYREFLY_FOREST_Logo.png"
+                                                height="64px" />
+                                            <span class="subMenuOptionText">Floresta Pirefly</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/worlds/sweetheartcastle">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/worlds/SWEET_HEART_CASTLE.png"
+                                                height="64px" />
+                                            <span class="subMenuOptionText">Castelo da SweetHeart</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="/worlds/underwaterhighway">
+                                        <div class="subMenuOption">
+                                            <img src="../../src/img/menuoptions/worlds/UNDERWATER_HIGHWAY_Logo.png"
+                                                height="64px" />
+                                            <span class="subMenuOptionText">Rodovia embaixo d'água</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="/comments">
+                            <div class="menuOption">
+                                <div class="info">
+                                    <img src="../../src/img/menuoptions/something.png" class="icon" height="32px" />
+                                    <span class="text">Deixe seu comentário</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <span class="material-icons menuBTN" id="menuBTN">
+                        menu
+                    </span>
+
+                </div>
+                <img src="../../src/img/miau" class="miau">
+            </div>
+            <div class="mobileMenu">
+                <div class="btn"><a href="#">Inicio</a></div>
+                <div class="btn"><a href="characters.html">Personagens</a></div>
+                <div class="btn"><a href="history.html">Historia</a></div>
+                <div class="btn"><a href="secrets.html">Segredos</a></div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="block">
+                <div class="subblock" style="flex: 1;">
+                    <div class="alert spoiler">
+                        <img src="../../src/img/menuoptions/characters/basil_rw.png" height="96px">
+                        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: auto;">
+                            <span style="font-weight: 700;">ALERTA DE SPOILER</span>
+                            <span>Essa página possui spoilers importantes referentes ao "plot-twist" do jogo OMORI. </span>
+                        </div>
+                        <img src="../../src/img/menuoptions/characters/basil.webp" height="96px">
+                    </div>
+
+                    <div class="alert fandom">
+                        <img src="../../src/img/menuoptions/characters/aubreyhappy.webp" height="96px">
+                        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: auto;">
+                            <span style="font-weight: 700;">OMORI WIKI</span>
+                            <span>Boa parte do conteúdo de texto ou imagens foram retiradas da WIKI de fãs de OMORI.</span>
+                            <span>Se você gostar daqui, visite lá para mais detalhes em relação a história do jogo!</span>
+                            <a href="https://omori.fandom.com/wiki/" target="_blank">CLIQUE AQUI</a>
+                        </div>
+                        <img src="../../src/img/menuoptions/characters/aubreyhappy.webp" height="96px">
+                    </div>
+
+                    <h1 class="title">FINAIS DO JOGO</h1>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="subblock">
+                    <p>
+                        OMORI tem duas rotas completas com quatro finais conhecidos, com pequenas variações dependendo da rota.
+                    </p>
+                    
+                    <p>
+                        É melhor ver esta página depois de completar o jogo pela primeira vez.
+                    </p>
+
+                    <h1 class="title">VISÃO GERAL</h1>
+
+                    <div class="separatorline"></div>
+
+                    <p>
+                        A ROTA de SUNNY é o caminho principal do jogo. 
+                        O percurso tem efeito respondendo a todas as batidas na porta da casa de SUNNY e participando nos segmentos de jogo na Cidade.
+                        2 finais possíveis podem ser alcançados nesta rota, com ligeiras variações em cada um dependendo de escolhas menores.
+                    </p>
+
+                    <p>
+                        A ROTA OMORI é a rota alternativa onde SUNNY decide não responder à batida de KEL, 
+                        o que o leva a se tornar mais hikikomori do que antes. 
+                        Em vez disso, ele fará as tarefas dadas por sua mãe enquanto continua a lidar com ALGUMA COISA. 
+                        Esta rota expande notavelmente o Mundo Imaginário, mas não oferece uma conclusão adequada para a história, 
+                        já que SUNNY não é capaz de explorar a Cidade e se reconectar com seus antigos amigos.
+                    </p>
+
+                    <h1 class="title">ROTA DE SUNNY</h1>
+
+                    <div class="separatorline"></div>
+
+                    <img src="../../src/img/gamepics/Sunny_Good_Ending_Title_Screen.webp">
+
+                    <p>
+                        Se SUNNY optar por abrir a porta para KEL em todos os dias, isso o levará para a ROTA SUNNY, 
+                        também conhecida como ROTA VERDADEIRA nos dados do jogo. 
+                    </p>
+                    
+                    <p>
+                        Nesse percurso, a história gira principalmente em torno de SUNNY decidir enfrentar a realidade 
+                        depois de passar quatro anos como um hikikomori antes de se mudar em quatro dias. 
+                        A maior parte da história se passa em FARAWAY TOWN.
+                    </p>
+
+                    <p>
+                        Junto com isso, ele tenta se reconectar com seus ex-amigos enquanto tenta descobrir a verdade por trás da morte de MARI, 
+                        o que fez com que o grupo de amigos se separasse no passado. 
+                    </p>
+
+                    <p>
+                        Observe que, uma vez que o jogador está nesta rota, a história irá divergir dos segmentos do Mundo Imaginário
+                        e se tornar mais focada na jornada de SUNNY para seguir em frente.
+                    </p>
+
+                    <p>
+                        Os finais de SUNNY ROUTE podem ser alcançados lutando contra BASIL em seu quarto depois de acordar na casa de BASIL. 
+                        Depois da luta de SUNNY e BASIL, ambos são nocauteados e enviados para o hospital. 
+                        Enquanto inconsciente, SUNNY encontra OMORI no ESPAÇO BRANCO e luta com ele pelo controle pela última vez. 
+                    </p>
+
+                    <p>
+                        É impossível vencer a luta contra OMORI. No entanto, após OMORI conseguir dominar SUNNY, 
+                        isso resultará em uma tela única de game over, permitindo ao jogador continuar ou não. 
+                    </p>
+
+                    <h2 class="title">Final bom</h2>
+
+                    <img src="../../src/img/gamepics/ends/MariandSunnyrecital2.webp">
+
+                    <p>
+                        Se o jogador optar por continuar após morrer, a luta com OMORI continuará. 
+                        Os ataques de SUNNY serão substituídos pela opção PLAY, permitindo que SUNNY faça seu dueto com MARI, 
+                        que estava planejado para ser realizado no recital do dia de sua morte. 
+                        Após a apresentação, OMORI perde a batalha pelo controle da mente de SUNNY e desaparece. 
+                    </p>
+
+                    <p>
+                        SUNNY então acorda no hospital e começa a chorar, antes de se levantar em um quarto cercado por várias flores entregues 
+                        pelos habitantes da cidade. 
+                        Saindo da sala, SUNNY aparece com aparições fantasmagóricas de ambas as variantes de seus amigos do Mundo Imaginário 
+                        e a sombra de BASIL indo em direções opostas a eles. 
+                    </p>
+
+                    <p>
+                        Perseguir seus amigos leva a uma janela, na qual interagir com ele leva SUNNY a balançar a cabeça, 
+                        sugerindo que ele não quer cometer suicídio. 
+                    </p>
+
+                    <p>
+                        Perseguir a sombra de BASIL leva você ao quarto dele. 
+                        SUNNY está na porta antes de BASIL e seus amigos, finalmente sendo capaz de dizer a eles a verdade. 
+                        Os créditos rolam como uma visão da paisagem correndo do carro de SUNNY é sobreposta por letras. 
+                    </p>
+
+                    <h2 class="title">Final secreto</h2>
+
+                    <img src="../../src/img/gamepics/ends/Sunny_Smile.webp">
+
+                    <p>
+                        Se o jogador fez o esforço de regar as flores da BASIL consistentemente durante cada dia no Mundo Imaginário, 
+                        uma cena adicional é adicionada após os créditos. 
+                    </p>
+
+                    <p>
+                        BASIL acorda e encontra SUNNY olhando para ele. Os dois meninos olham um para o outro e sorriem enquanto suas ALGUMA COISA desaparecem, 
+                        mostrando que, independentemente de como todos os outros reagiram, 
+                        o fardo que eles carregaram por quatro anos foi removido e eles estão prontos para seguir em frente. 
+                    </p>
+
+                    <h2 class="title">Final ruim</h2>
+                    
+                    <img src="../../src/img/gamepics/ends/Bad_Ending_(Screenshot).webp">
+
+                    <p>
+                        Se o jogador escolher não continuar depois de morrer, OMORI vai ganhar o controle da mente de SUNNY. 
+                        A partir daí, OMORI acorda no ESPAÇO BRANCO mais uma vez. 
+                        Quando ele entra no QUARTO DO VIZINHO para se reunir com seus amigos, todos eles parecem estranhamente silenciosos. 
+                    </p>
+                    
+                    <p>
+                        No entanto, ao invés de partir para o Mundo Imaginário para outra aventura, OMORI se encontra no corpo de SUNNY, 
+                        parado na varanda do hospital. Incapaz de aceitar a verdade, a única opção é pular, 
+                        levando SUNNY a cair do prédio e despencar para sua morte presumida enquanto os créditos são reproduzidos. 
+                    </p>
+
+                    <h1 class="title">FINAIS NEUTROS</h1>
+
+                    <div class="separatorline"></div>
+
+                    <img src="../../src/img/gamepics/ends/Basil_Death_(Suicide).webp">
+                    
+                    <p>
+                        Os finais neutros só podem ser alcançadas escolhendo dormir depois que SUNNY despertar na casa de BASIL. 
+                        Depois de dormir, SUNNY entrará no ESPAÇO BRANCO como OMORI. 
+                        A porta do QUARTO DO VIZINHO não aparecerá, e a única forma de sair do ESPAÇO BRANCO é através da opção STAB. 
+                        BASIL sempre morrerá nas terminações Neutras. 
+                    </p>
+
+                    <p>
+                        Embora não afete os finais, se SUNNY voltar a dormir na casa de BASIL, 
+                        ele vai acordar mais uma vez para encontrar seus amigos e POLLY no corredor, perturbados com o suicídio de BASIL. 
+                        Abrindo a porta de BASIL revela seu cadáver caído contra a parede com um grande buraco em seu abdômen representado por ALGUMA COISA. 
+                    </p>
+
+                    <p>
+                        A única opção será voltar para casa. Ao fazer isso, uma versão sangrenta e mutilada de SUNNY fica no topo da escada. 
+                        Entrar no quarto de SUNNY revela uma marca preta sobre a cama. 
+                        O resto do jogo será executado dependendo se SUNNY pegar a faca ou não antes de dormir. 
+                    </p>
+
+                    <h2 class="title">Final de abandono</h2>
+
+                    <img src="../../src/img/gamepics/ends/Abandon_Ending.webp">
+
+                    <p>
+                        Se SUNNY decidir voltar a dormir em sua própria cama, isso levará a uma repetição da cena de introdução do WHITE SPACE desde o início do jogo. 
+                        OMORI aparece em WHITE SPACE normalmente, mas não há porta para HEADSPACE e a lâmpada ainda está faltando. 
+                    </p>
+
+                    <p>
+                        Tudo o que OMORI pode fazer é se STAB para acordar SUNNY. SUNNY silenciosamente encontra sua mãe em seu carro enquanto ALGUMA COISA o segue, deixando seus amigos perturbados para trás sem respostas. Sirenes da polícia tocam durante os créditos. 
+                    </p>
+
+                    <h2 class="title">Final da faca</h2>
+
+                    <img src="../../src/img/gamepics/ends/Knife_Ending.webp">
+
+                    <p>
+                        Se SUNNY pegar a faca no balcão da cozinha antes de ir para a cama, 
+                        usar a opção STAB em ESPAÇO BRANCO como OMORI fará com que os efeitos resultantes afetem o corpo físico de SUNNY. 
+                    </p>
+
+                    <p>
+                        A secretária eletrônica de SUNNY toca continuamente enquanto ele está deitado na cama, segurando uma faca contra o peito sangrando. 
+                    </p>
+
+                    <p>
+                        O toque de um telefone que nunca mais será atendido joga sobre os créditos. 
+                        Um final alternativo de faca ocorre se você escolher esfaquear depois de acordar no dia da mudança. 
+                    </p>
+
+                    <h1 class="title">ROTA DE OMORI</h1>
+
+                    <div class="separatorline"></div>
+
+                    <img src="../../src/img/gamepics/ends/Omori_Title_Screen_Normal.webp">
+                    
+                    <p>
+                        A ROTA OMORI, também conhecida como ROTA HIKIKOMORI, é um caminho alternativo desbloqueado ao se recusar a responder a qualquer um dos convites de KEL para sair no mundo real. 
+                        Ignore as batidas na porta e mande SUNNY de volta para a cama. 
+                        SUNNY vai tirar uma soneca, avançando parcialmente o dia, e as missões da Cidade a partir deste ponto serão substituídos por 
+                        SUNNY fazendo suas tarefas na lista de tarefas para avançar o enredo. Ele se recusará a sair de casa daqui em diante. 
+                    </p>
+
+                    <p>
+                        SUNNY ainda será forçado a enfrentar e superar seus medos, embora as alucinações se manifestem mais abruptamente do que na rota SUNNY. 
+                        Sunny desmaia e se depara com o confronto com ALGUMA COISA nas paredes quando sobram TRÊS DIAS, e no dia seguinte toma banho, adormece e se submerge na banheira para enfrentar ALGO NA ÁGUA. 
+                    </p>
+
+                    <p>
+                        As missões do Mundo Imaginário permanecem praticamente inalterados desde a ROTA SUNNY até faltarem dois dias. 
+                        KEL é quem cumprimenta OMORI no cais e o guia para LAST RESORT em vez de MARI, 
+                        e a viagem para DEEP WELL é muito mais curta porque OMORI não se guia pelo espírito de MARI. 
+                    </p>
+
+                    <img src="../../src/img/gamepics/ends/Sunny_Denial.webp">
+
+                    <p>
+                        Quando OMORI chega à IGREJA DE ALGO no final do ESPAÇO NEGRO, ele salva HEADSPACE BASIL enquanto o ESTRANGER o repreende por fugir da verdade mais uma vez. 
+                        SUNNY é puxado para o ESPAÇO NEGRO e o STRANGER o força a uma luta, e depois de uma luta inútil, 
+                    </p>
+
+                    <p>
+                        SUNNY sucumbe ao desespero e luta pelo ESPAÇO VERMELHO, onde OMORI desce de seu trono e "salva" SUNNY de sua angústia. 
+                        O ESTRANGER desiste e OMORI agarra BASIL e os dois escapam com a ajuda de uma MÃO. Eles sobem do ESPAÇO NEGRO para o QUARTO DO VIZINHO, 
+                        e OMORI vai dormir para reiniciar sua aventura.
+                    </p>
+
+                    <img src="../../src/img/gamepics/ends/Omori_saves_Sunny.webp">
+
+                    <p>
+                        OMORI assume SUNNY quando começa seu último dia cumprindo a última de suas tarefas antes do DIA DA MOVIMENTAÇÃO, sendo silenciosamente atormentado por ALGUMA COISA o tempo todo. 
+                        Se você decidir se esfaquear durante este tempo, uma variação do final da faca será reproduzida. 
+                    </p>
+                    
+                    <p>
+                        Assim que você começa o penúltimo dia no Mundo IMAGINÁRIO reconstruído, OMORI se reúne com seus amigos. 
+                        Eles repetem o mesmo diálogo desde o início do jogo, e OMORI segue para o PLAYGROUND vazio para cumprimentar MARI e BASIL. 
+                        Desta vez, BASIL permanece na santidade da toalha de piquenique de MARI, a salvo de descobrir o ESPAÇO NEGRO novamente. 
+                    </p>
+
+                    <p>
+                        Deste ponto em diante, todo o HEADSPACE é seu para explorar como quiser. Você pode revisitar áreas para encontrar novas coisas para fazer, novas missões secundárias para completar, 
+                        novos chefes para enfrentar e novos equipamentos para o grupo. 
+                        SNOWGLOBE MOUNTAIN e THE ABYSS são exclusivos desta rota, 
+                        e se você conquistar todas as três COISAS baseadas na fobia, você poderá explorar o ESPAÇO NEGRO 2. 
+                    </p>
+
+                    <p>
+                        Para finalizar a rota, apunhale enquanto estiver no ESPAÇO BRANCO para despertar na casa de SUNNY. 
+                        Você pode voltar para a sua cama e escolher dormir até o DIA DA MUDANÇA. 
+                        Apenas as terminações neutras estão disponíveis para você aqui. 
+                    </p>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="subblock">
+                    <h2 class="title">IMAGENS</h2>
+
+                    <div class="separatorline"></div>
+
+                    <div class="imagecontainer">
+                        <img src="../../src/img/gamepics/ends/Basilsmile.webp">
+
+                        <img src="../../src/img/gamepics/ends/Brand_new_violin.webp">
+
+                        <img src="../../src/img/gamepics/ends/Hospital_mirror_gif.webp">
+
+                        <img src="../../src/img/gamepics/ends/Omori_Mirror_(RW).webp">
+
+                        <img src="../../src/img/gamepics/ends/Sunny_Cries.webp">
+
+                        <img src="../../src/img/gamepics/ends/Sunny_Denial.webp">
+
+                        <img src="../../src/img/gamepics/ends/Sunny_refuses_to_give_up.webp">
+
+                        <img src="../../src/img/gamepics/ends/Sunny_Smile.webp">
+
+                        <img src="../../src/img/gamepics/ends/The_truth_(end_card).webp">
+
+                        <img src="../../src/img/gamepics/ends/The_truth_2.webp">
+
+                        <img src="../../src/img/gamepics/ends/The_truth_gif.webp">
+
+                        <img src="../../src/img/gamepics/ends/The_violin_1.webp">
+
+                        <img src="../../src/img/gamepics/ends/The_violin_2.webp">
+                    </div>
+
+                    <h2 class="title">Referências</h3>
+
+                    <a href="https://omori.fandom.com/wiki/ROUTES" target="_blank">Omori Fandom</a>
+
+
+                </div>
+            </div>
+        </div>
+</body>
+
+<!-– scripts carregamento posterior -->
+<script src="../../src/js/dialogue.js"></script>
+    <script src="../../src/js/imageopener.js"></script>
+    <script src="../../src/js/global.js"></script>
+
+</html>

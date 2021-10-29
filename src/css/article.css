@@ -100,6 +100,13 @@ div.subblock a {
     text-decoration: none;
 }
 
+div.subblock img {
+    height: 300px;
+    margin: 10px auto;
+    border-radius: 10px;
+    width: auto;
+}
+
 div.subblock div.alert {
     display: flex;
     align-items: center;
@@ -109,6 +116,10 @@ div.subblock div.alert {
     border-style: solid;
     border-radius: 5px;
     row-gap: 10px;
+}
+
+div.subblock div.alert img, div.subblock div.info img {
+    height: auto;
 }
 
 div.subblock div.alert span{

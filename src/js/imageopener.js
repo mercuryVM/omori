@@ -3,10 +3,11 @@ const imageSource = $("#openedImage");
 const textComment = $("#imageComment");
 
 function ShowImage(source, comment){
-    textComment.text("\"" + comment + "\"");
+    if(comment) textComment.text("\"" + comment + "\"");
+    else textComment.text("");
     imageSource.attr("src", source);
-    imageSource.attr("alt", comment);
-    imageSource.attr("title", comment);
+    imageSource.attr("alt", textComment.text());
+    imageSource.attr("title", textComment.text());
     abrirImagemPanel.css("display", "flex");
     abrirImagemPanel.animate({
         opacity: 1,
@@ -31,8 +32,8 @@ function EnableHandler(button, source, comment){
     button.unbind("click");
     button.css("cursor", "pointer");
     button.css("pointer-events", "all");
-    button.attr("alt", comment);
-    button.attr("title", comment);
+    if(comment) button.attr("alt", comment);
+    if(comment) button.attr("title", comment);
     button.click(() =>{
         ShowImage(source, comment);
     });

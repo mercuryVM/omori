@@ -58,6 +58,10 @@ div.sendingAComment div.characters div.selectCharacter {
     margin: 0 auto;
 }
 
+div.sendingAComment div.characters div.selectCharacter img {
+    height: auto;
+}
+
 div.sendingAComment div.characters div.selectCharacter:hover {
     background: gray;
 }
