@@ -48,4 +48,48 @@ $(".content").find($("img")).each(function(){
   }
 });
 
-console.log(images)
+async function Intro(skip) {  
+  if(skip){
+    $(".cookiesWarn").css("display", "none");
+    $("#body").css("overflow-y", "auto");
+    $("#ost")[0].play();
+    $("#ost")[0].volume = 0.25;
+    $(".content").animate({
+      opacity: 1
+    }, 500);
+    return;
+  }
+
+  if(!skip) MostrarDialogo("???", "");
+  $("#body").css("overflow-y", "hidden");
+  $(".cookiesWarn").css("display", "flex");
+  $(boxDialogo).animate({
+    opacity: 1,
+  }, 500, async function () {
+    if(!skip){
+      await MostrarDialogo("???", "Voce deseja aceitar nossas politicas de cookies, que no fim das contas nem existem?");
+      await MostrarDialogo("???", "");
+    }
+    $(".cookiesWarn").css("display", "none");
+    $("#body").css("overflow-y", "auto");
+    if($("#ost")[0]){
+      $("#ost")[0].play();
+      $("#ost")[0].volume = 0.25;
+    }
+    window.sessionStorage.setItem("skip", true)
+    $(".content").animate({
+      opacity: 1
+    }, 500);
+  });
+}
+
+function Musica(bool) {
+  if (bool) $("#ost")[0].play();
+  else $("#ost")[0].pause();
+}
+
+var skip = window.sessionStorage.getItem("skip");
+
+Intro(skip ? true : false);
+
+AOS.init()

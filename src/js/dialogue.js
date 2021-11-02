@@ -10,58 +10,67 @@ function sleep(ms) {
 
 var waitingEnter = false;
 
+let clicked = false;
+
 var dialogueResolve;
 
-function MostrarDialogo(enviou, mensagem){
+function MostrarDialogo(enviou, mensagem) {
     return new Promise(async function (resolve) {
         nameDialogo.innerHTML = enviou;
 
         $("#setaBundle").css("opacity", "0");
 
-        if(!mensagem){
+        if (!mensagem) {
             $(boxDialogo).animate({
                 opacity: 0,
-              }, 500, async function() {
+            }, 500, async function () {
                 resolve();
             });
             return;
         }
 
-        if(!enviou) document.getElementsByClassName("dialogoNome")[0].style.display = "none";
+        if (!enviou) document.getElementsByClassName("dialogoNome")[0].style.display = "none";
         else document.getElementsByClassName("dialogoNome")[0].style.display = "block";
 
-        function AnimateSeta(){
-            return new Promise((resolve) =>{
+        function AnimateSeta() {
+            return new Promise((resolve) => {
 
                 $(setaDialogo).animate({
                     marginRight: "20px"
-                  }, 500, async function() {
+                }, 500, async function () {
                     $(setaDialogo).animate({
                         marginRight: "0"
-                      }, 500, async function() {
+                    }, 500, async function () {
                         resolve();
                     });
                 });
             });
         }
 
-        async function AnimateAgain(){
-            if(!waitingEnter){
+        async function AnimateAgain() {
+            if (!waitingEnter) {
                 dialogueResolve();
                 return;
-            } 
+            }
 
             await AnimateSeta();
-            
+
             await AnimateAgain();
         }
 
-        function EscreverMensagem(texto, mensagem){
+        function EscreverMensagem(texto, mensagem) {
             return new Promise(async function (resolve, reject) {
-                if(texto && mensagem){
+                if (texto && mensagem) {
                     var actualMessage = "";
-        
-                    for(var i = 0; i < mensagem.length; i++){
+                    clicked = false;
+
+                    for (var i = 0; i < mensagem.length; i++) {
+                        if (clicked) {
+                            typing[0].pause();
+                            dialogueResolve = resolve;
+                            resolve()
+                            return;
+                        }
                         actualMessage += mensagem[i];
                         typing[0].volume = 0.25;
                         typing[0].play();
@@ -81,31 +90,35 @@ function MostrarDialogo(enviou, mensagem){
 
                     await AnimateAgain();
 
-                    if(!waitingEnter) resolve();
-                }else{
+                    if (!waitingEnter) resolve();
+                } else {
                     reject();
                 }
             });
         }
-    
+
         await EscreverMensagem(messageDialogo, mensagem);
         resolve();
     });
 }
 
-$(document).keypress(function(event){
-    
+$(document).keypress(function (event) {
+
     var keycode = (event.keyCode ? event.keyCode : event.which);
-    if(keycode == '13'){
-        if(waitingEnter){
+    if (keycode == '13') {
+        if (waitingEnter) {
             waitingEnter = false;
-        }	
+        } else {
+            clicked = true;
+        }
     }
-    
+
 });
 
-$(boxDialogo).click(() =>{
-    if(waitingEnter){
+$(boxDialogo).click(() => {
+    if (waitingEnter) {
         waitingEnter = false;
-    }	
+    }else {
+        clicked = true;
+    }
 })

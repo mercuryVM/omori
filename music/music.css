@@ -1,0 +1,118 @@
+div.musictable {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  overflow: hidden;
+  row-gap: 10px;
+}
+
+span.musicname {
+  margin: 5px 0px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  font-weight: 700;
+}
+
+span.musicname span.name {
+  font-size: 14px;
+  font-weight: 100;
+}
+
+div.musictable span.duration {
+  display: flex;
+  margin-left: auto;
+  font-size: 14px;
+}
+
+div.musictable div.music {
+  display: flex;
+  background-color: black;
+  padding: 10px;
+  color: white;
+  align-items: center;
+  column-gap: 5px;
+}
+
+div.musictable div.nextMusic {
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgb(114, 114, 114) 100%
+  );
+}
+
+button {
+  background-color: black;
+  color: white;
+  border: 0;
+  width: max-content;
+  margin: 8px auto;
+  padding: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+div.duet, div.cat {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  z-index: 10;
+  background-color: black;
+}
+
+div.cat img {
+    display: none;
+}
+
+div.duet div.bg {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../src/img/1148181.png");
+  background-position: 0%;
+  opacity: 0.1;
+}
+
+div.duet video {
+  width: 60%;
+  height: 60%;
+  border-radius: 75px;
+  pointer-events: none;
+}
+
+#skipDuet {
+  margin-top: 10px;
+}
+
+#player {
+  margin: 10px auto;
+  width: 75%;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 960px) {
+  #player {
+    width: 100%;
+  }
+
+  div.duet video {
+    width: 100%;
+    height: auto;
+    max-height: 75%;
+    object-fit: contain;
+    border-radius: 0;
+  }
+}
+
+div.musictable #playBtn {
+  cursor: pointer;
+}

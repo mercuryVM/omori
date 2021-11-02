@@ -5,7 +5,7 @@ div.headermenu div.menu {
   flex-wrap: wrap;
   row-gap: 10px;
 }
-div.menu div.menuOption {
+div.menuOption {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -47,15 +47,14 @@ div.innerSubmenu div.subMenu{
     max-height: calc(100vh - 100px);
 }
 
-div.menu div.menuOption div.selected{
+div.menuOption div.selected{
     background: #2f0c7a;
 }
-
-div.menu div.menuOption div.selected span.text{
+div.menuOption div.selected span.text{
     color: white;
 }
 
-div.menu div.menuOption div.selected:hover span.text{
+div.menuOption div.selected:hover span.text{
     color: black;
 }
 
@@ -69,7 +68,7 @@ div.hasSubMenu:hover div.subMenu{
     display: flex
 }
 
-div.menu div.menuOption:hover div.info{
+div.menuOption:hover div.info{
     background: rgb(240, 240, 240);
     border-bottom-width: 3px;
     border-right-width: 3px;
@@ -78,12 +77,12 @@ div.menu div.menuOption:hover div.info{
     cursor: pointer;
 }
 
-div.menu img.icon {
+div.menuOption img.icon {
   margin: 2px 10px;
   margin-left: 5px;
 }
 
-div.menu span.text {
+span.text {
   color: black;
   margin-right: 15px;
   font-family: 'Averia Sans Libre', cursive;
