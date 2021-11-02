@@ -138,6 +138,19 @@ div.left {
         min-height: 150px;
     }
 
+    div.box {
+        flex-direction: column-reverse;
+    }
+
+    div.invertedBox {
+        flex-direction: column !important;
+    }
+
+    div.box img.headImage{
+        width: 100%;
+        margin: auto;
+    }
+
     p.dialogName{
         font-size: 32px;
     }
@@ -162,7 +175,4 @@ div.left {
 /* correção para desktop */
 
 @media screen and (max-width: 1280px) {
-    div.box img.headImage {
-        width: 20vw;
-    }
 }

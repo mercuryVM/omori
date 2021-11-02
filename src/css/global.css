@@ -148,6 +148,8 @@ img.miau {
     cursor: pointer;
     margin-left: auto;
 }
+
+
 /* modificações para mobile */
 
 @media screen and (max-width: 960px) {
@@ -176,8 +178,13 @@ img.miau {
         display: none;
     }
 
+    div.imageandheader div.cards img {
+        height: 170px;
+        width: auto;
+    }
+
     div.content {
         margin: 0;
-        padding: 100px 50px !important;
+        padding: 100px 10% !important;
     }
 }
