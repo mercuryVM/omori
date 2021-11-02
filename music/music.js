@@ -98,6 +98,12 @@ function onPlayerStateChange(event) {
             let seconds = Math.floor(player.getCurrentTime());
 
             if (videoData.video_id === "ACon4txJiDA") {
+
+                if(!$("#duetVideo")[0].playing && isPlaying){
+                    $("#duetVideo")[0].currentTime = player.getCurrentTime()
+                    $("#duetVideo")[0].play()
+                }
+
                 if (seconds >= 11) {
                     const object = $(".duet")
                     if (object.css("display") === "none") {
