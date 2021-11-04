@@ -46,6 +46,7 @@ div.block div.subblock div.info {
 div.block div.subblock div.info img {
     padding: 10px;
     object-fit: contain;
+    max-width: 250px;
 }
 
 div.block div.subblock div.info div.line {

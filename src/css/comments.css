@@ -45,6 +45,7 @@ div.sendingAComment div.characters {
     margin: 10px 0px;
     column-gap: 10px;
     flex-wrap: wrap;
+    row-gap: 10px;
 }
 
 div.sendingAComment div.characters div.selectCharacter {
@@ -56,6 +57,13 @@ div.sendingAComment div.characters div.selectCharacter {
     width: min-content;
     cursor: pointer;
     margin: 0 auto;
+}
+
+div.sendingAComment form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    flex-wrap: wrap;
 }
 
 div.sendingAComment div.characters div.selectCharacter img {

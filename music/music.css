@@ -72,6 +72,12 @@ div.cat img {
     display: none;
 }
 
+div.loading{
+  margin: 8px auto;
+  font-weight: 700;
+  font-size: 18px;
+}
+
 div.duet div.bg {
   position: absolute;
   z-index: -1;

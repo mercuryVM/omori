@@ -12,9 +12,11 @@ let playerReady = false;
 
 let index = -1;
 
+$(".loading").css("display", "block");
+
 function onYouTubeIframeAPIReady() {
     playerReady = true;
-
+    $(".loading").css("display", "none");
     PlayNextMusic()
 }
 

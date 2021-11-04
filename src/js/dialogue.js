@@ -24,6 +24,7 @@ function MostrarDialogo(enviou, mensagem) {
             $(boxDialogo).animate({
                 opacity: 0,
             }, 500, async function () {
+                $(boxDialogo).css("opacity", 0)
                 resolve();
             });
             return;

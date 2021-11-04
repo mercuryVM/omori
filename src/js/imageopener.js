@@ -12,7 +12,7 @@ function ShowImage(source, comment){
     abrirImagemPanel.animate({
         opacity: 1,
       }, 500, async function() {
-        
+        abrirImagemPanel.css("opacity", 1)
     });
 }
 
@@ -21,6 +21,7 @@ function CloseMenu(){
         opacity: 0,
       }, 500, async function() {
         abrirImagemPanel.css("display", "none");
+        abrirImagemPanel.css("opacity", 0)
     });
 }
 

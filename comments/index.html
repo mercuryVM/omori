@@ -345,8 +345,6 @@
 
                         <form id="form">
                         <div class="characters">
-                            <input id="character" type="text" oninvalid="this.setCustomValidity('Selecione um personagem')" oninput="this.setCustomValidity('')" style="opacity: 0" id="selectedCharacter" required>
-
                             <div class="selectCharacter" id="omori">
                                 <img src="../src/img/menuoptions/characters/omori.gif" ignore=true>
                             </div>
@@ -371,6 +369,8 @@
                                 <img src="../src/img/menuoptions/characters/mari.png" ignore=true>
                             </div>
                         </div>
+
+                        <input id="character" type="text" oninvalid="this.setCustomValidity('Selecione um personagem')" oninput="this.setCustomValidity('')" style="opacity: 0; height: 0px; padding: 0px;" id="selectedCharacter" required>
 
                         <input maxlength="20" minlength="3" id="name" required type="text" placeholder="Digite o seu nome aqui..."/>
 
