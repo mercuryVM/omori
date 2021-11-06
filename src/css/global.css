@@ -168,6 +168,10 @@ img.miau {
         width: auto;
     }
 
+    div.imageandheader {
+        text-align: center;
+    }
+
     div.content {
         margin: 0;
         padding: 100px 10% !important;

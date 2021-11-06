@@ -46,7 +46,7 @@ $("#openworldsMobileMenu").click(() => {
 
 $(document).click(function (e) {
   var target = $(e.target);
-  if (!target.is('#menuBTN') && !target.attr("hassubmenu")) {
+  if (!target.is('#menuBTN') && !target.attr("hassubmenu") && !target.is(".mobileMenu") ) {
     $(".mobileMenu").css("display", "none");
     $("body").css("overflow", "auto");
     disableAllMenus()
