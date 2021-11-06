@@ -3,6 +3,7 @@ div.footer {
     display: flex;
     flex-direction: row;
     align-items: center;
+    column-gap: 10px;
 }
 
 div.header {
@@ -15,6 +16,7 @@ div.header {
     border-right-width: 0px;
     border-bottom-width: 3px;
     border-style: solid;
+    padding: 0px 20px;
 }
 
 div.topmenus{
@@ -23,26 +25,6 @@ div.topmenus{
     width: 100%;
     display: flex;
     flex-direction: column;
-}
-
-div.topmenus div.mobileMenu{
-    width: 100%;
-    display: none;
-}
-
-div.mobileMenu div.btn{
-    padding: 5px 20px;
-    text-align: center;
-    background-color: black;
-    color: white;
-    font-size: 36px;
-    font-family: 'OMORIGAME';
-}
-
-div.mobileMenu div.btn:hover{
-    background-color: rgb(85, 85, 85);
-    color: black;
-    cursor: pointer;
 }
 
 div.footer p {
@@ -101,10 +83,8 @@ div.content div.hands {
 }
 
 div.header img.logo {
-    height: 8vw;
-    min-height: 64px;
-    max-height: 90px;
-    margin-left: 15px;
+    width: 50%;
+    max-width: 200px;
 }
 
 div.headermenu{
@@ -116,7 +96,8 @@ div.headermenu{
 
 span.menuBTN {
     font-size: 0px;
-    margin: 0px 15px;
+    display: none;
+    transition: 1s;
 }
 
 a {
@@ -143,7 +124,6 @@ div.permmenu {
 
 img.miau {
     height: 64px;
-    margin-right: 20px;
     pointer-events: all;
     cursor: pointer;
     margin-left: auto;

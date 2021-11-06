@@ -4,11 +4,11 @@ div.headermenu div.menu {
   column-gap: 10px;
   flex-wrap: wrap;
   row-gap: 10px;
+  justify-content: center;
 }
 div.menuOption {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
 }
 
 div.menuOption div.info {
@@ -17,6 +17,8 @@ div.menuOption div.info {
     border-color: black;
     border-radius: 5px;
     border-style: solid;
+    margin-bottom: 3px;
+    margin-right: 3px;
     box-sizing: border-box;
     border-width: 1px;
     display: flex;
@@ -41,6 +43,7 @@ div.innerSubmenu div.subMenu{
     border-color: black;
     border-style: solid;
     border-radius: 5px;
+    box-sizing: content-box;
     border-width: 1px;
     overflow-y: auto;
     overflow-x: hidden;
@@ -74,6 +77,8 @@ div.menuOption:hover div.info{
     border-right-width: 3px;
     border-bottom-color: rgba(0, 0, 0, 0.75);
     border-right-color: rgba(0, 0, 0, 0.75);
+    margin-bottom: 0px;
+    margin-right: 0px;
     cursor: pointer;
 }
 
@@ -132,13 +137,88 @@ div.subMenu div.subMenuOption:hover span.subMenuOptionText{
     color: white;
 }
 
-div.subMenuOption div.image{
-    height: 50px;
-    width: 50px;
+div.subMenuOption div.image, div.btn div.image{
+    min-height: 50px;
+    min-width: 50px;
     background-size: contain;
 }
 
-div.subMenuOption div.omori {
+/* mobile config */
+
+div.mobileMenu div.btn {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+div.mobileMenu a {
+    width: 100%;
+}
+
+div.mobileMenu div.btn:hover {
+    border-width: 1px;
+    border-color: white;
+    border-style: solid;
+}
+
+div.mobileMenu div.btn:hover {
+    background-color: rgb(51, 51, 51);
+}
+
+div.mobileMenu div.btn span.text {
+    color: white;
+    font-family: 'Averia Sans Libre', cursive;
+    font-size: 18px;
+    text-align: left;
+    flex: 99%;
+    margin-left: 15px;
+    pointer-events: none;
+}
+
+div.mobileMenu div.selected {
+    background-color: #2f0c7a;
+}
+
+div.mobileMenu div.btn img.icon {
+    flex: 1%;
+    min-width: 32px;
+    min-height: 32px;
+    object-fit: contain;
+}
+
+div.mobileMenu { 
+    display: none;
+    flex-direction: column;
+    background-color: black;
+    align-items: center;
+    padding: 10px;
+    max-height: calc(100vh - 87px);
+    overflow: auto;
+    row-gap: 1px;
+}
+
+div.mobileMenu p{
+    color: white;
+    margin-right: auto;
+    font-size: 18px;
+    font-family: 'Averia Sans Libre', cursive;
+    margin: 5px auto 5px 5px;
+}
+
+@media screen and (max-width: 960px) {
+
+    div.header span.menuBTN {
+        display: flex;
+    }
+
+    div.header img.logo{
+        margin: auto;
+    }
+}
+
+div.mobileMenu div.btn div.omori, div.subMenuOption div.omori {
     background-image: url(../../src/img/menuoptions/characters/omori.gif)
 }
 
@@ -146,7 +226,7 @@ div.subMenu div.subMenuOption:hover div.omori {
     background-image: url(../../src/img/menuoptions/characters/sunny.gif)
 }
 
-div.subMenuOption div.aubrey {
+div.mobileMenu div.btn div.aubrey, div.subMenuOption div.aubrey {
     background-image: url(../../src/img/menuoptions/characters/aubrey.gif)
 }
 
@@ -154,7 +234,7 @@ div.subMenu div.subMenuOption:hover div.aubrey {
     background-image: url(../../src/img/menuoptions/characters/aubrey_rw.gif)
 }
 
-div.subMenuOption div.kel {
+div.mobileMenu div.btn div.kel ,div.subMenuOption div.kel {
     background-image: url(../../src/img/menuoptions/characters/kel.gif)
 }
 
@@ -162,7 +242,7 @@ div.subMenu div.subMenuOption:hover div.kel {
     background-image: url(../../src/img/menuoptions/characters/kel_rw.gif)
 }
 
-div.subMenuOption div.hero {
+div.mobileMenu div.btn div.hero ,div.subMenuOption div.hero {
     background-image: url(../../src/img/menuoptions/characters/hero.gif)
 }
 
@@ -170,7 +250,7 @@ div.subMenu div.subMenuOption:hover div.hero {
     background-image: url(../../src/img/menuoptions/characters/hero_rw.gif)
 }
 
-div.subMenuOption div.basil {
+div.mobileMenu div.btn div.basil ,div.subMenuOption div.basil {
     background-image: url(../../src/img/menuoptions/characters/basil.png)
 }
 
@@ -178,7 +258,7 @@ div.subMenu div.subMenuOption:hover div.basil {
     background-image: url(../../src/img/menuoptions/characters/basil_rw.png)
 }
 
-div.subMenuOption div.mari {
+div.mobileMenu div.btn div.mari ,div.subMenuOption div.mari {
     background-image: url(../../src/img/menuoptions/characters/mari.png)
 }
 
@@ -186,7 +266,7 @@ div.subMenu div.subMenuOption:hover div.mari {
     background-image: url(../../src/img/menuoptions/characters/FACE_SOMETHING.png)
 }
 
-div.subMenuOption div.boss {
+div.mobileMenu div.btn div.boss ,div.subMenuOption div.boss {
     background-image: url(../../src/img/menuoptions/characters/Boss_Sprite.gif);
     background-size: contain;
     background-position: center;
@@ -197,7 +277,7 @@ div.subMenu div.subMenuOption:hover div.boss {
     background-image: url(../../src/img/menuoptions/characters/BOSSdefeatedl.gif)
 }
 
-div.subMenuOption div.pluto {
+div.mobileMenu div.btn div.pluto ,div.subMenuOption div.pluto {
     background-image: url(../../src/img/menuoptions/characters/PLUTO_COMBINED.gif);
     background-size: contain;
     background-position: center;
@@ -208,7 +288,7 @@ div.subMenu  div.subMenuOption:hover div.pluto {
     background-image: url(../../src/img/menuoptions/characters/PLUTO_HAPPY.gif);
 }
 
-div.subMenuOption div.sweetheart {
+div.mobileMenu div.btn div.sweetheart ,div.subMenuOption div.sweetheart {
     background-image: url(../../src/img/menuoptions/characters/Sweetheartnormal.gif);
     background-size: contain;
     background-position: center;
@@ -219,7 +299,7 @@ div.subMenu  div.subMenuOption:hover div.sweetheart {
     background-image: url(../../src/img/menuoptions/characters/Sweetheart_HURT.gif);
 }
 
-div.subMenuOption div.jawsum {
+div.mobileMenu div.btn div.jawsum ,div.subMenuOption div.jawsum {
     background-image: url(../../src/img/menuoptions/characters/Jawsum.gif);
     background-size: contain;
     background-position: center;
@@ -230,14 +310,14 @@ div.subMenu  div.subMenuOption:hover div.hooligans {
     background-image: url(../../src/img/menuoptions/characters/Hooligans_Hurt.gif);
 }
 
-div.subMenuOption div.hooligans {
+div.mobileMenu div.btn div.hooligans ,div.subMenuOption div.hooligans {
     background-image: url(../../src/img/menuoptions/characters/HOOLIGANS.gif);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-div.subMenuOption div.humphrey {
+div.mobileMenu div.btn div.humphrey ,div.subMenuOption div.humphrey {
     background-image: url(../../src/img/menuoptions/characters/Humphrey_sprite_final.png);
     background-size: contain;
     background-position: center;

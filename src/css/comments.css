@@ -68,6 +68,7 @@ div.sendingAComment form {
 
 div.sendingAComment div.characters div.selectCharacter img {
     height: auto;
+    width: 110px;
 }
 
 div.sendingAComment div.characters div.selectCharacter:hover {

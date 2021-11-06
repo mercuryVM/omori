@@ -47,6 +47,7 @@ div.block div.subblock div.info img {
     padding: 10px;
     object-fit: contain;
     max-width: 250px;
+    width: auto;
 }
 
 div.block div.subblock div.info div.line {
@@ -70,7 +71,7 @@ div.block div.subblock div.imagecontainer {
 
 div.block div.subblock div.imagecontainer img {
     border-radius: 10px;
-    width:300px;
+    width: 450px;
     height: auto;
     margin: auto;
 }
@@ -102,10 +103,11 @@ div.subblock a {
 }
 
 div.subblock img {
-    height: 300px;
     margin: 10px auto;
     border-radius: 10px;
-    width: auto;
+    height: auto;
+    object-fit: cover;
+    width: 350px;
 }
 
 div.subblock div.alert {
@@ -121,6 +123,7 @@ div.subblock div.alert {
 
 div.subblock div.alert img, div.subblock div.info img {
     height: auto;
+    width: auto;
 }
 
 div.subblock div.alert span{
@@ -196,5 +199,16 @@ div.block div.subblock div.separatorline {
 
     div.block div.alert span {
         font-size: 13px !important;
+    }
+
+    div.subblock img {
+        margin: 10px 0px;
+        height: auto;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    div.block div.subblock div.imagecontainer img {
+        width: 100%;
     }
 }

@@ -147,7 +147,7 @@ div.left {
     }
 
     div.box img.headImage{
-        width: 100%;
+        width: calc(100% - 50px);
         margin: auto;
     }
 
@@ -166,13 +166,4 @@ div.left {
     div.content div.hands {
         overflow: hidden;
     }
-
-    div.header img.logo{
-        min-height: 46px;
-    }
-}
-
-/* correção para desktop */
-
-@media screen and (max-width: 1280px) {
 }
