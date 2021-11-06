@@ -158,6 +158,11 @@ img.miau {
         display: none;
     }
 
+    div.content {
+        border-left-width: 0px;
+    border-right-width: 0px;
+    }
+
     div.imageandheader div.cards img {
         height: 170px;
         width: auto;
