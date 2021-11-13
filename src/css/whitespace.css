@@ -19,6 +19,11 @@ div.intro div.whitespace .tissuebox {
   grid-column: 4;
 }
 
+div.intro div.whitespace .knife {
+  grid-row: 3;
+  grid-column: 1;
+}
+
 div.intro div.whitespace .omori {
   grid-row: 3;
   grid-column: 2;
@@ -31,7 +36,8 @@ div.intro div.whitespace .tissuebox,
 div.intro div.whitespace .laptop,
 div.intro div.whitespace .mewo,
 div.intro div.whitespace .sketchbook,
-div.intro div.whitespace .omori {
+div.intro div.whitespace .omori,
+div.intro div.whitespace .knife {
   width: auto;
   place-self: center;
 }

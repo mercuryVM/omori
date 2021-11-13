@@ -69,6 +69,10 @@
     <source src="/src/sounds/omori title.mp3">
   </audio>
 
+  <audio id="quest">
+    <source src="/src/sounds/SYS_quest_complete.ogg">
+  </audio>
+
   <audio id="meow">
     <source src="/src/sounds/meow">
   </audio>
@@ -477,6 +481,7 @@
           <img src="/src/img/whitespace/sketchbook.png" ignore=true class="sketchbook" />
           <img src="/src/img/whitespace/mewo.gif" ignore=true class="mewo" />
           <img src="/src/img/whitespace/laptop.gif" ignore=true class="laptop" />
+          <img src="/src/img/whitespace/knife.png" ignore=true class="knife" id="knifeItem" />
           <img src="/src/img/whitespace/tissuebox.png" ignore=true class="tissuebox" />
           <img src="/src/img/whitespace/omori walk/bottom/omori_idle.png" id="character" ignore=true class="omori" />
         </div>
@@ -648,5 +653,70 @@
   <script src="/src/js/intro.js"></script>
   <script src="/src/js/global.js"></script>
   <script src="/src/js/minigame.js"></script>
+
+<!--preload-->
+
+<link rel="preload" as="image" href="/src/img/whitespace/omori walk/bottom/omori_idle.png">
+<link rel="preload" as="image" href="/src/img/whitespace/omori walk/bottom/omori_walk_1.png">
+<link rel="preload" as="image" href="/src/img/whitespace/omori walk/bottom/omori_walk_2.png">
+
+<link rel="preload" as="image" href="/src/img/whitespace/omori walk/up/omori_idle.png">
+<link rel="preload" as="image" href="/src/img/whitespace/omori walk/up/omori_walk_1.png">
+<link rel="preload" as="image" href="/src/img/whitespace/omori walk/up/omori_walk_2.png">
+
+<link rel="preload" as="image" href="/src/img/whitespace/omori walk/left/omori_idle.png">
+<link rel="preload" as="image" href="/src/img/whitespace/omori walk/left/omori_walk_1.png">
+<link rel="preload" as="image" href="/src/img/whitespace/omori walk/left/omori_walk_2.png">
+
+<link rel="preload" as="image" href="/src/img/whitespace/omori walk/right/omori_idle.png">
+<link rel="preload" as="image" href="/src/img/whitespace/omori walk/right/omori_walk_1.png">
+<link rel="preload" as="image" href="/src/img/whitespace/omori walk/right/omori_walk_2.png">
+
+<link rel="preload" as="image" href="/src/img/whitespace/omori_stab/1.png">
+<link rel="preload" as="image" href="/src/img/whitespace/omori_stab/2.png">
+<link rel="preload" as="image" href="/src/img/whitespace/omori_stab/3.png">
+<link rel="preload" as="image" href="/src/img/whitespace/omori_stab/4.png">
+<link rel="preload" as="image" href="/src/img/whitespace/omori_stab/5.png">
+<link rel="preload" as="image" href="/src/img/whitespace/omori_stab/6.png">
+<link rel="preload" as="image" href="/src/img/whitespace/omori_stab/7.png">
+<link rel="preload" as="image" href="/src/img/whitespace/omori_stab/8.png">
+<link rel="preload" as="image" href="/src/img/whitespace/omori_stab/9.png">
+<link rel="preload" as="image" href="/src/img/whitespace/omori_stab/10.png">
+<link rel="preload" as="image" href="/src/img/whitespace/omori_stab/11.png">
+<link rel="preload" as="image" href="/src/img/whitespace/omori_stab/12.png">
+
+<link rel="preload" as="image" href="/src/img/basilhelp/player_please_help_1_01.gif">
+<link rel="preload" as="image" href="/src/img/basilhelp/player_please_help_1_02.gif">
+<link rel="preload" as="image" href="/src/img/basilhelp/player_please_help_1_03.gif">
+<link rel="preload" as="image" href="/src/img/basilhelp/player_please_help_1_04.gif">
+<link rel="preload" as="image" href="/src/img/basilhelp/player_please_help_1_05.gif">
+<link rel="preload" as="image" href="/src/img/basilhelp/player_please_help_1_06.gif">
+<link rel="preload" as="image" href="/src/img/basilhelp/player_please_help_1_07.gif">
+<link rel="preload" as="image" href="/src/img/basilhelp/player_please_help_1_08.gif">
+<link rel="preload" as="image" href="/src/img/basilhelp/player_please_help_1_09.gif">
+
+<link rel="preload" as="image" href="/src/img/basilhelp2/player_please_help_2_01.gif">
+<link rel="preload" as="image" href="/src/img/basilhelp2/player_please_help_2_02.gif">
+<link rel="preload" as="image" href="/src/img/basilhelp2/player_please_help_2_03.gif">
+<link rel="preload" as="image" href="/src/img/basilhelp2/player_please_help_2_04.gif">
+<link rel="preload" as="image" href="/src/img/basilhelp2/player_please_help_2_05.gif">
+<link rel="preload" as="image" href="/src/img/basilhelp2/player_please_help_2_06.gif">
+<link rel="preload" as="image" href="/src/img/basilhelp2/player_please_help_2_07.gif">
+<link rel="preload" as="image" href="/src/img/basilhelp2/player_please_help_2_08.gif">
+<link rel="preload" as="image" href="/src/img/basilhelp2/player_please_help_2_08.gif">
+<link rel="preload" as="image" href="/src/img/basilhelp2/player_please_help_2_09.gif">
+
+<link rel="preload" as="image" href="/src/img/blackspace/fa_horror_2_01.png">
+<link rel="preload" as="image" href="/src/img/blackspace/fa_horror_2_02.png">
+<link rel="preload" as="image" href="/src/img/blackspace/fa_horror_2_03.png">
+<link rel="preload" as="image" href="/src/img/blackspace/fa_horror_2_04.png">
+<link rel="preload" as="image" href="/src/img/blackspace/fa_horror_2_05.png">
+<link rel="preload" as="image" href="/src/img/blackspace/fa_horror_2_06.png">
+<link rel="preload" as="image" href="/src/img/blackspace/fa_horror_2_07.png">
+<link rel="preload" as="image" href="/src/img/blackspace/fa_horror_2_08.png">
+<link rel="preload" as="image" href="/src/img/blackspace/fa_horror_2_09.png">
+
+<link rel="preload" as="font" href="/src/css/fonts/OMORI_GAME.ttf">
+<link rel="preload" as="font" href="/src/css/fonts/OMORI_GAME2.ttf">
 
 </html>

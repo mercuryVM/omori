@@ -6,6 +6,8 @@ const itemSpace = new Map();
 let playerOrientation = "up";
 let stabbing = false;
 
+let inventory = [];
+
 let actualPosition = {
     x: 0,
     y: 0
@@ -56,6 +58,7 @@ function AddOccupiedSpace(x, y) {
 AddOccupiedSpace(2, 1);
 AddOccupiedSpace(4, 1);
 AddOccupiedSpace(4, 3);
+AddOccupiedSpace(1,3);
 
 function GetCharacterPosition() {
     const actualX = Math.floor(Number(character.css("grid-column") ? character.css("grid-column").replaceAll("/ auto", "").trim() : 0));
@@ -339,8 +342,6 @@ function Interact(){
 
     const {x,y} = GetCharacterPosition();
 
-    console.log(x, y)
-
     if(playerOrientation === "left"){
         if(x === 1 && y === 3){
             interacting = true;
@@ -354,6 +355,19 @@ function Interact(){
             interacting = true;
             ShowDialogues(
                 getLaptop
+              );
+        }else if(x === 2 && y === 3 && !inventory.includes("knife")){
+            ShowDialogues(
+                async () => {
+                  inventory.push("knife");
+                  await MostrarDialogo(false, "Você pegou uma faca.")
+                  await MostrarDialogo(false, "")
+                  interacting = false;
+                  $("#knifeItem").css("display", "none");
+                  $("#quest")[0].volume = 0.75;
+                  $("#quest")[0].play();
+                  itemSpace.delete(JSON.stringify({x:1, y: 3}));
+                }
               );
         }
     }else if(playerOrientation === "right"){
@@ -408,11 +422,26 @@ function Interact(){
                   interacting = false;
                 }
               );
+        }else if(x === 1 && y === 2 && !inventory.includes("knife")){
+            ShowDialogues(
+                async () => {
+                  inventory.push("knife");
+                  await MostrarDialogo(false, "Você pegou uma faca.")
+                  await MostrarDialogo(false, "")
+                  interacting = false;
+                  $("#knifeItem").css("display", "none");
+                  $("#quest")[0].volume = 0.75;
+                  $("#quest")[0].play();
+                  itemSpace.delete(JSON.stringify({x:1, y: 3}));
+                }
+              );
         }
     }
 }
 
 async function Stab(){
+    if(!inventory.includes("knife")) return;
+
     playerOrientation = "stab";
     animationFrame = 0;
     stabbing = true;

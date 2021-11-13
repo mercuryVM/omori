@@ -159,6 +159,7 @@ async function Intro(skip) {
       $("#ost")[0].volume = 0.25;
     }
     window.sessionStorage.setItem("skip", true)
+    FixContentHeader()
     $(".content").animate({
       opacity: 1
     }, 500);
@@ -185,3 +186,6 @@ Intro(skip ? true : false);
 AOS.init()
 
 FixContentHeader()
+setTimeout(() => {
+  FixContentHeader()
+}, 1000)

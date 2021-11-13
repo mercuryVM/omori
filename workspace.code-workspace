@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "../omori backend"
+		},
+		{
+			"path": "../omori-backend"
 		}
 	],
 	"settings": {
