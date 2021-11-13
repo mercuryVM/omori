@@ -274,6 +274,11 @@ img.miau {
         font-size: 8vw;
     }
 
+    div.header, div.footer {
+        column-gap: 10px;
+        padding: 10px;
+    }
+
     div.footer div.separator div.list a {
         font-size: 6vw;
     }

@@ -60,6 +60,8 @@ function VerificarMenu() {
     $(".mobileMenu").css("display", "none");
     $("body").css("overflow", "auto");
     disableAllMenus()
+
+    FixContentHeader()
   }
 }
 
@@ -168,8 +170,18 @@ function Musica(bool) {
   else $("#ost")[0].pause();
 }
 
+function FixContentHeader(){
+  const height = $(".header")[0].clientHeight;
+
+  if(!isNaN(height)){
+    $(".content").css("padding-top", height + "px");
+  }
+}
+
 var skip = window.sessionStorage.getItem("skip");
 
 Intro(skip ? true : false);
 
 AOS.init()
+
+FixContentHeader()

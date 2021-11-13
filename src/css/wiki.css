@@ -192,11 +192,6 @@ div.left {
         font-size: 32px;
     }
 
-    div.header, div.footer {
-        column-gap: 10px;
-        padding: 0px 10px;
-    }
-
     p.dialogName {
         font-size: 24px;
     }
@@ -217,11 +212,6 @@ div.left {
 
     div.imageandheader p {
         font-size: 14px;
-    }
-
-    div.header, div.footer {
-        column-gap: 5px;
-        padding: 0px 5px;
     }
 
     img.miau {

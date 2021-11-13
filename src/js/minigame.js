@@ -588,7 +588,7 @@ keyMap.set("s", MoveDown)
 keyMap.set("d", MoveRight)
 keyMap.set("a", MoveLeft)
 keyMap.set("z", Interact)
-keyMap.set("x", Stab)
+keyMap.set("escape", Stab)
 keyMap.set("enter", Interact)
 
 $(".whitespace").on('keydown', function (event) {
