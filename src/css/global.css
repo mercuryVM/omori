@@ -251,7 +251,7 @@ img.miau {
 
     div.content {
         border-left-width: 0px;
-    border-right-width: 0px;
+        border-right-width: 0px;
     }
 
     div.imageandheader div.cards img {
@@ -265,7 +265,7 @@ img.miau {
 
     div.content {
         margin: 0;
-        padding: 100px 10% !important;
+        padding: 100px 5% !important;
     }
 }
 

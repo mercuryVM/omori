@@ -357,6 +357,7 @@ function Interact(){
                 getLaptop
               );
         }else if(x === 2 && y === 3 && !inventory.includes("knife")){
+            interacting = true;
             ShowDialogues(
                 async () => {
                   inventory.push("knife");
@@ -423,6 +424,7 @@ function Interact(){
                 }
               );
         }else if(x === 1 && y === 2 && !inventory.includes("knife")){
+            interacting = true;
             ShowDialogues(
                 async () => {
                   inventory.push("knife");
@@ -633,8 +635,8 @@ $(".whitespace").on('keydown', function (event) {
         }
     }
 
-    if(!isWalking)     animationFrame = -1;
-
+    if(!isWalking) animationFrame = -1;
+    if(interacting) return;
     $("#walkTip").css("display", "none")
     keyMap.get(key)()
     isPressing = key;

@@ -1,0 +1,1248 @@
+<html>
+
+<head>
+    <title>Armas - OMORI</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-– estilos -->
+        <link href="../../src/css/config.css" type="text/css" rel="stylesheet" />
+        <link href="../../src/css/global.css" type="text/css" rel="stylesheet" />
+        <link href="../../src/css/wiki.css" type="text/css" rel="stylesheet" />
+        <link href="../../src/css/abridorImagem.css" type="text/css" rel="stylesheet" />
+        <link href="../../src/css/menu.css" type="text/css" rel="stylesheet" />
+        <link href="../../src/css/article.css" type="text/css" rel="stylesheet" />
+        <link href="./weapons.css" type="text/css" rel="stylesheet">
+    <!-– jquery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-– fontes -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre&family=Roboto&display=swap" rel="stylesheet">
+    <!-– bibliotecas de animação -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body id="body">
+
+    <div class="cookiesWarn" style="display: none;">
+        <div class="mainDialogo">
+          <div class="dialogoNome">
+            <p class="dialogName"></p>
+          </div>
+          <div class="dialogo">
+            <p class="dialogName" id="dialogMessage">
+            </p>
+            <div id="setaBundle">
+              <p class="diagolSeta" id="diagolSetaTexto"> Pressione Enter para continuar</p>
+              <img src="../../src/img/seta.png" class="dialogSeta" id="dialogSeta" height="50px"></img>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <audio loop id="typing">
+        <source src="../../src/sounds/typing.ogg">
+    </audio>
+
+    <audio id="meow">
+        <source src="../../src/sounds/meow">
+    </audio>
+
+    <div class="abrirImagem">
+        <div class="panel">
+            <div class="permmenu" style="margin-left: auto;" id="openedImageBack">
+                Voltar
+            </div>
+            <div>
+                <div class="viewport">
+                    <img src="../../src/img/gamepics/1.jpg" id="openedImage">
+                </div>
+            </div>
+            <p class="comment" id="imageComment">"Omori e seus amigos no espaço branco."</p>
+        </div>
+    </div>
+
+    <div class="main" style="background: url('../../src/img/1148181.png')">
+        <div class="topmenus">
+            <div class="header">
+      
+              <span class="material-icons menuBTN" id="menuBTN">
+                menu
+              </span>
+      
+              <img src="/src/img/OMORI_logo.png" class="logo">
+              <div class="headermenu">
+      
+                <div class="menu desktopMenu">
+                  <a href="/">
+                    <div class="menuOption">
+                      <div class="info">
+                        <img src="/src/img/menuoptions/home.png" class="icon" height="32px" />
+                        <span class="text">Início</span>
+                      </div>
+                    </div>
+                  </a>
+      
+                  <div class="menuOption hasSubmenu">
+                    <div class="info">
+                      <img src="/src/img/menuoptions/bed.png" class="icon" height="32px" />
+                      <span class="text">Personagens</span>
+                    </div>
+                    <div class="innerSubmenu">
+                      <div class="subMenu">
+                        <span class="title">Principais</span>
+      
+                        <a href="/characters/sunny">
+                          <div class="subMenuOption">
+                            <div class="image omori"></div>
+                            <span class="subMenuOptionText">OMORI</span>
+                          </div>
+                        </a>
+      
+                        <a href="/characters/aubrey">
+                          <div class="subMenuOption">
+                            <div class="image aubrey"></div>
+                            <span class="subMenuOptionText">Aubrey</span>
+                          </div>
+      
+                          <a href="/characters/kel">
+                            <div class="subMenuOption">
+                              <div class="image kel"></div>
+                              <span class="subMenuOptionText">Kel</span>
+                            </div>
+                          </a>
+      
+                          <a href="/characters/hero">
+                            <div class="subMenuOption">
+                              <div class="image hero"></div>
+                              <span class="subMenuOptionText">Hero</span>
+                            </div>
+                          </a>
+      
+                          <a href="/characters/basil">
+                            <div class="subMenuOption">
+                              <div class="image basil"></div>
+                              <span class="subMenuOptionText">Basil</span>
+                            </div>
+                          </a>
+      
+                          <a href="/characters/mari">
+                            <div class="subMenuOption">
+                              <div class="image mari"></div>
+                              <span class="subMenuOptionText">Mari</span>
+                            </div>
+                          </a>
+      
+                          <span class="title">Vilões</span>
+      
+                          <a href="/characters/boss">
+                            <div class="subMenuOption">
+                              <div class="image boss"></div>
+                              <span class="subMenuOptionText">Boss</span>
+                            </div>
+                          </a>
+      
+                          <a href="/characters/pluto">
+                            <div class="subMenuOption">
+                              <div class="image pluto"></div>
+                              <span class="subMenuOptionText">Pluto</span>
+                            </div>
+                          </a>
+      
+                          <a href="/characters/sweetheart">
+                            <div class="subMenuOption">
+                              <div class="image sweetheart"></div>
+                              <span class="subMenuOptionText">Sweet H.</span>
+                            </div>
+                          </a>
+      
+                          <a href="/characters/jawsum">
+                            <div class="subMenuOption">
+                              <div class="image jawsum"></div>
+                              <span class="subMenuOptionText">Mr. Jawsum</span>
+                            </div>
+                          </a>
+      
+                          <a href="/characters/hooligans">
+                            <div class="subMenuOption">
+                              <div class="image hooligans"></div>
+                              <span class="subMenuOptionText">Valentões</span>
+                            </div>
+                          </a>
+      
+                          <a href="/characters/humphrey">
+                            <div class="subMenuOption">
+                              <div class="image humphrey"></div>
+                              <span class="subMenuOptionText">Humphrey</span>
+                            </div>
+                          </a>
+      
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="menuOption hasSubmenu">
+                    <div class="info">
+                      <img src="/src/img/menuoptions/history.png" class="icon" height="32px" />
+                      <span class="text">História</span>
+                    </div>
+      
+                    <div class="innerSubmenu">
+                      <div class="subMenu">
+                        <a href="/history/finals">
+                                              <div class="subMenuOption">
+                                                  <img src="../..//src/img/menuoptions/history/general.gif" height="32px" />
+                                                  <span class="subMenuOptionText">Finais</span>
+                                              </div>
+                                          </a>
+      
+                        <a href="/history/tagging">
+                          <div class="subMenuOption">
+                            <img src="/src/img/menuoptions/history/questions.gif" height="32px" />
+                            <span class="subMenuOptionText">Tagging</span>
+                          </div>
+                        </a>
+      
+                        <a href="/history/secrets">
+                          <div class="subMenuOption">
+                            <img src="/src/img/menuoptions/history/secrets.gif" height="32px" />
+                            <span class="subMenuOptionText">Segredos</span>
+                          </div>
+                        </a>
+      
+                        <a href="/history/mechanics">
+                          <div class="subMenuOption">
+                            <img src="/src/img/menuoptions/history/mechanics.gif" height="32px" />
+                            <span class="subMenuOptionText">Emoções</span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="menuOption hasSubmenu">
+                    <div class="info">
+                      <img src="/src/img/menuoptions/worlds.png" class="icon" height="32px" />
+                      <span class="text">Mundos</span>
+                    </div>
+      
+                    <div class="innerSubmenu">
+                      <div class="subMenu">
+                        <a href="/worlds/headspace">
+                          <div class="subMenuOption">
+                            <img src="/src/img/menuoptions/Dream_World.png" height="64px" />
+                            <span class="subMenuOptionText">Mundo Imaginário</span>
+                          </div>
+                        </a>
+      
+                        <a href="/worlds/faraway">
+                          <div class="subMenuOption">
+                            <img src="/src/img/menuoptions/GOOD_DOG.png" height="64px" />
+                            <span class="subMenuOptionText">Mundo Real</span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <a href="/music">
+                    <div class="menuOption">
+                        <div class="info">
+                            <img src="../..//src/img/menuoptions/characters/Spiritmariwalk.webp" class="icon" height="32px" />
+                            <span class="text">Música</span>
+                        </div>
+                    </div>
+                </a>
+      
+                  <a href="/comments">
+                    <div class="menuOption">
+                      <div class="info">
+                        <img src="/src/img/menuoptions/something.png" class="icon" height="32px" />
+                        <span class="text">Deixe seu comentário</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+      
+              </div>
+              <img src="/src/img/miau" class="miau">
+            </div>
+      
+            <div class="mobileMenu" id="mobileMenu">
+              <a href="/">
+                <div class="btn">
+                  <img src="/src/img/menuoptions/home.png" class="icon" height="32px" />
+                  <span class="text">Inicio</span>
+                </div>
+              </a>
+              <a href="#">
+                <div class="btn" id="opencharactersMobileMenu" hassubmenu=true>
+                  <img src="/src/img/menuoptions/bed.png" class="icon" height="32px" />
+                  <span class="text">Personagens</span>
+                </div>
+              </a>
+              <a href="#">
+                <div class="btn" id="openhistoryMobileMenu" hassubmenu=true>
+                  <img src="/src/img/menuoptions/history.png" class="icon" height="32px" />
+                  <span class="text">História</span>
+                </div>
+              </a>
+              <a href="#">
+                <div class="btn" id="openworldsMobileMenu" hassubmenu=true>
+                  <img src="/src/img/menuoptions/worlds.png" class="icon" height="32px" />
+                  <span class="text">Mundos</span>
+                </div>
+              </a>
+              <a href="/music/">
+                <div class="btn">
+                  <img src="/src/img/menuoptions/characters/Spiritmariwalk.webp" class="icon" height="32px" />
+                  <span class="text">Música</span>
+                </div>
+              </a>
+              <a href="/comments/">
+                <div class="btn">
+                  <img src="/src/img/menuoptions/something.png" class="icon" height="32px" />
+                  <span class="text">Deixe seu comentário</span>
+                </div>
+              </a>
+            </div>
+      
+            <div class="mobileMenu" id="charactersMobileMenu">
+              <p>Principais</p>
+      
+              <a href="/characters/sunny/">
+                <div class="btn">
+                  <div class="image omori"></div>
+                  <span class="text">OMORI</span>
+                </div>
+              </a>
+              <a href="/characters/aubrey/">
+                <div class="btn">
+                  <div class="image aubrey"></div>
+                  <span class="text">Aubrey</span>
+                </div>
+              </a>
+              <a href="/characters/kel/">
+                <div class="btn">
+                  <div class="image kel"></div>
+                  <span class="text">Kel</span>
+                </div>
+              </a>
+              <a href="/characters/hero/">
+                <div class="btn">
+                  <div class="image hero"></div>
+                  <span class="text">Hero</span>
+                </div>
+              </a>
+              <a href="/characters/basil/">
+                <div class="btn">
+                  <div class="image basil"></div>
+                  <span class="text">Basil</span>
+                </div>
+              </a>
+              <a href="/characters/mari/">
+                <div class="btn">
+                  <div class="image mari"></div>
+                  <span class="text">Mari</span>
+                </div>
+              </a>
+      
+              <p>Vilões</p>
+      
+              <a href="/characters/boss/">
+                <div class="btn">
+                  <div class="image boss"></div>
+                  <span class="text">Boss</span>
+                </div>
+              </a>
+      
+      
+              <a href="/characters/pluto/">
+                <div class="btn">
+                  <div class="image pluto"></div>
+                  <span class="text">Pluto</span>
+                </div>
+              </a>
+      
+              <a href="/characters/sweetheart/">
+                <div class="btn">
+                  <div class="image sweetheart"></div>
+                  <span class="text">Sweet Heart</span>
+                </div>
+              </a>
+      
+              <a href="/characters/jawsum/">
+                <div class="btn">
+                  <div class="image jawsum"></div>
+                  <span class="text">Mr. Jawsum</span>
+                </div>
+              </a>
+              
+              <a href="/characters/hooligans/">
+                <div class="btn">
+                  <div class="image hooligans"></div>
+                  <span class="text">Valentões</span>
+                </div>
+              </a>
+      
+              <a href="/characters/humphrey/">
+                <div class="btn">
+                  <div class="image humphrey"></div>
+                  <span class="text">Humphrey</span>
+                </div>
+              </a>
+            </div>
+      
+            <div class="mobileMenu" id="historyMobileMenu">
+              <a href="/history/finals/">
+                <div class="btn">
+                  <img src="/src/img/menuoptions/history/general.gif" class="icon" height="32px" />
+                  <span class="text">Finais</span>
+                </div>
+              </a>
+              <a href="/history/tagging">
+                <div class="btn">
+                  <img src="/src/img/menuoptions/history/questions.gif" class="icon" height="32px" />
+                  <span class="text">Tagging</span>
+                </div>
+              </a>
+              <a href="/history/secrets">
+                <div class="btn">
+                  <img src="/src/img/menuoptions/history/secrets.gif" class="icon" height="32px" />
+                  <span class="text">Segredos</span>
+                </div>
+              </a>
+            
+              <a href="/history/emotions/">
+                <div class="btn">
+                  <img src="/src/img/menuoptions/history/mechanics.gif" class="icon" height="32px" />
+                  <span class="text">Emoções</span>
+                </div>
+              </a>
+            </div>
+      
+            <div class="mobileMenu" id="worldsMobileMenu">
+              <a href="/worlds/headspace/">
+                <div class="btn">
+                  <img src="/src/img/menuoptions/Dream_World.png" class="icon" height="32px" />
+                  <span class="text">Mundo Imaginário</span>
+                </div>
+              </a>
+              <a href="/worlds/faraway">
+                <div class="btn">
+                  <img src="/src/img/menuoptions/GOOD_DOG.png" class="icon" height="32px" />
+                  <span class="text">Mundo Real</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+        <div class="content">
+            <div class="block">
+                <div class="subblock" style="flex: 1;">
+                    <div class="alert fandom">
+                        <img src="../../src/img/menuoptions/characters/aubreyhappy.webp" height="96px">
+                        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: auto;">
+                            <span style="font-weight: 700;">OMORI WIKI</span>
+                            <span>Boa parte do conteúdo de texto ou imagens foram retiradas da WIKI de fãs de OMORI.</span>
+                            <span>Se você gostar daqui, visite lá para mais detalhes em relação a história do jogo!</span>
+                            <a href="https://omori.fandom.com/wiki/" target="_blank">CLIQUE AQUI</a>
+                        </div>
+                        <img src="../../src/img/menuoptions/characters/aubreyhappy.webp" height="96px">
+                    </div>
+
+                    <h1 class="title">ARMAS</h1>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="subblock">
+                    <p>
+                      As ARMAS são itens que são equipáveis na guia EQUIP e aumentam as estatísticas para um personagem específico. 
+                    </p>
+                    
+                    <p>
+                      A menos que estejam usando encantos específicos que aumentam a classificação, é impossível acertar qualquer alvo sem o uso de armas. 
+                      Cada personagem empunha armas exclusivas para eles, facas para OMORI, brinquedos para AUBREY, bolas para KEL, utensílios de cozinha para HERO.
+                    </p>
+
+                    <h2 class="title"><a href="/worlds/headspace/">MUNDO IMAGINÁRIO</a></h2>
+
+                    <div class="separatorline"></div>
+
+                    <table>
+
+                      <tr>
+                        <th>Arma</th>
+                        <th>Nome</th>
+                        <th>Coração <img src="/src/img/weapons/HP.png" style="height: 16px; width: 16px; margin: 0px;"></th>
+                        <th>Suco <img src="/src/img/weapons/MP.png" style="height: 16px; width: 16px; margin: 0px;"></th>
+                        <th>ATK</th>
+                        <th>DEF</th>
+                        <th>VEL</th>
+                        <th>Sorte</th>
+                        <th>Hit</th>
+                        <th>Utilizador</th>
+                        <th>Informação</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/RED_KNIFE.png">
+                        </th>
+                        <th>
+                          FACA BRILHANTE
+                        </th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>+5</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>100</th>
+                        <th><a href="/characters/sunny">OMORI</a></th>
+                        <th>Uma faca nova e brilhante. Você pode ver seu reflexo na lâmina.</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/KNIFE.png">
+                        </th>
+                        <th>
+                          FACA
+                        </th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>+7</th>
+                        <th>0</th>
+                        <th>+2</th>
+                        <th>0</th>
+                        <th>100</th>
+                        <th><a href="/characters/sunny">OMORI</a></th>
+                        <th>Uma faca bem afiada. Já foi usado algumas vezes.</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/CHIPPED_KNIFE.png">
+                        </th>
+                        <th>
+                          FACA MAÇNATE
+                        </th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>+9</th>
+                        <th>0</th>
+                        <th>+4</th>
+                        <th>+2</th>
+                        <th>100</th>
+                        <th><a href="/characters/sunny">OMORI</a></th>
+                        <th>Desgastado e mais difícil de usar. Você não pode mais ver seu reflexo.</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/RUSTY_KNIFE.png">
+                        </th>
+                        <th>
+                          FACA ENFERRUJADA
+                        </th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>+11</th>
+                        <th>+2</th>
+                        <th>+6</th>
+                        <th>+4</th>
+                        <th>100</th>
+                        <th><a href="/characters/sunny">OMORI</a></th>
+                        <th>Ficando um pouco marrom. Não é mais o que costumava ser.</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/RED_KNIFE.png">
+                        </th>
+                        <th>
+                          FACA VERMELHA
+                        </th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>+13</th>
+                        <th>+6</th>
+                        <th>+6</th>
+                        <th>+6</th>
+                        <th>100</th>
+                        <th><a href="/characters/sunny">OMORI</a></th>
+                        <th>Uma faca nova e brilhante. Você pode ver algo na lâmina.</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/STUFFED_TOY.png">
+                        </th>
+                        <th>
+                          BRINQUEDO RECHEADO
+                        </th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>+4</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>100</th>
+                        <th><a href="/characters/aubrey/">AUBREY</a></th>
+                        <th>"Sr. Berinjela". Faz um barulho estranho quando você soca.</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/COMET_HAMMER.png">
+                        </th>
+                        <th>
+                          MARTELO DE COMETA
+                        </th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>+6</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>+2</th>
+                        <th>100</th>
+                        <th><a href="/characters/aubrey/">AUBREY</a></th>
+                        <th>Um martelo feito de meteoros! Que sorte encontrar!</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/BODY_PILLOW.png">
+                        </th>
+                        <th>
+                          TRAVESSEIRO CORPORAL
+                        </th>
+                        <th>+10</th>
+                        <th>0</th>
+                        <th>+8</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>100</th>
+                        <th><a href="/characters/aubrey/">AUBREY</a></th>
+                        <th>Em tamanho real e abraços, mas desconfiados.</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/MAILBOX.png">
+                        </th>
+                        <th>
+                          CAIXA DE CORREIO
+                        </th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>+12</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>100</th>
+                        <th><a href="/characters/aubrey/">AUBREY</a></th>
+                        <th>Você tem uma caixa... de correio</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/SWEETHEART_BUST.png">
+                        </th>
+                        <th>
+                          BUSTO DE SWEET HEART
+                        </th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>+20</th>
+                        <th>0</th>
+                        <th>-30</th>
+                        <th>0</th>
+                        <th>75</th>
+                        <th><a href="/characters/aubrey/">AUBREY</a></th>
+                        <th>Um busto de <a href="/characters/sweetheart/">SWEET HEART</a>. É muito pesado. Muito, muito pesado.</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/POOL_NOODLE.png">
+                        </th>
+                        <th>
+                          MACARRÃO DE PISCINA
+                        </th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>-5</th>
+                        <th>-5</th>
+                        <th>-5</th>
+                        <th>-5</th>
+                        <th>100</th>
+                        <th><a href="/characters/aubrey/">AUBREY</a></th>
+                        <th>É completamente inútil. Quem inventou isso, afinal?</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/COOL_NOODLE.png">
+                        </th>
+                        <th>
+                          MACARRÃO LEGAL
+                        </th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>+15</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>100</th>
+                        <th><a href="/characters/aubrey/">AUBREY</a></th>
+                        <th>É um macarrão de piscina. Mas mais legal.</th>
+                      </tr>
+                      
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/BASEBALL_BAT.png">
+                        </th>
+                        <th>
+                          BASTÃO DE BEISEBOL
+                        </th>
+                        <th>+10</th>
+                        <th>0</th>
+                        <th>+20</th>
+                        <th>0</th>
+                        <th>+10</th>
+                        <th>+10</th>
+                        <th>100</th>
+                        <th><a href="/characters/aubrey/">AUBREY</a></th>
+                        <th>A arma final de AUBREY.</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/RUBBER_BALL.png">
+                        </th>
+                        <th>
+                          BOLA DE BORRACHA
+                        </th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>+3</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>100</th>
+                        <th><a href="/characters/kel/">KEL</a></th>
+                        <th>Testado no playground, aprovado para crianças.</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/METEOR_BALL.png">
+                        </th>
+                        <th>
+                          BOLA DE METEORO
+                        </th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>+4</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>+2</th>
+                        <th>100</th>
+                        <th><a href="/characters/kel/">KEL</a></th>
+                        <th>Literalmente um meteoro! Quais são as chances?</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/BLOOD_ORANGE.png">
+                        </th>
+                        <th>
+                          LARANJA DA CHINA
+                        </th>
+                        <th>0</th>
+                        <th>+30</th>
+                        <th>+6</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>100</th>
+                        <th><a href="/characters/kel/">KEL</a></th>
+                        <th>Uma laranja vermelha.</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/JACK.png">
+                        </th>
+                        <th>
+                          VALETE
+                        </th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>+12</th>
+                        <th>-6</th>
+                        <th>0</th>
+                        <th>-6</th>
+                        <th>100</th>
+                        <th><a href="/characters/kel/">KEL</a></th>
+                        <th>"Por favor, me chame de Jack. Lanterna é o nome do meu pai." - Jack</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/BEACH_BALL.png">
+                        </th>
+                        <th>
+                          BOLA DE PRAIA
+                        </th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>+10</th>
+                        <th>0</th>
+                        <th>+25</th>
+                        <th>0</th>
+                        <th>100</th>
+                        <th><a href="/characters/kel/">KEL</a></th>
+                        <th>Diversão ao sol para todos!</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/COCONUT.png">
+                        </th>
+                        <th>
+                          COCO
+                        </th>
+                        <th>0</th>
+                        <th>+50</th>
+                        <th>+8</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>100</th>
+                        <th><a href="/characters/kel/">KEL</a></th>
+                        <th>Marrom, peludo e cheio de SUCO.</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/GLOBE.png">
+                        </th>
+                        <th>
+                          GLOBO
+                        </th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>+10</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>1000</th>
+                        <th><a href="/characters/kel/">KEL</a></th>
+                        <th>A TERRA, mas menor. É um pouco difícil driblar.</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/SNOWBALL.png">
+                        </th>
+                        <th>
+                          BOLA DE NEVE
+                        </th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>+13</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>1000</th>
+                        <th><a href="/characters/kel/">KEL</a></th>
+                        <th>É gelada porquê é feita de neve.</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/CHICKEN_BALL.png">
+                        </th>
+                        <th>
+                          BOLA DE FRANGO
+                        </th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>+200</th>
+                        <th>0</th>
+                        <th>100</th>
+                        <th><a href="/characters/kel/">KEL</a></th>
+                        <th>UMA BOLA DE GALINHA. O que mais seria?</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/BASKETBALL.png">
+                        </th>
+                        <th>
+                          BOLA DE BASQUETE
+                        </th>
+                        <th>0</th>
+                        <th>+50</th>
+                        <th>+10</th>
+                        <th>0</th>
+                        <th>+100</th>
+                        <th>+15</th>
+                        <th>100</th>
+                        <th><a href="/characters/kel/">KEL</a></th>
+                        <th>A arma final do KEL.</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/SPATULA.png">
+                        </th>
+                        <th>
+                          ESPÁTULA
+                        </th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>+4</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>100</th>
+                        <th><a href="/characters/hero/">HERO</a></th>
+                        <th>Bom para virar hambúrgueres.</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/TEAPOT.png">
+                        </th>
+                        <th>
+                          BULE
+                        </th>
+                        <th>0</th>
+                        <th>+30</th>
+                        <th>+6</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>100</th>
+                        <th><a href="/characters/hero/">HERO</a></th>
+                        <th>Equipada com uma alça e bico.</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/FRYING_PAN.png">
+                        </th>
+                        <th>
+                          FRIGIDEIRA
+                        </th>
+                        <th>+30</th>
+                        <th>0</th>
+                        <th>+7</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>100</th>
+                        <th><a href="/characters/hero/">HERO</a></th>
+                        <th>Menos eficaz que um micro-ondas. Lanches restaurarão mais corações durante batalhas.</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/BLENDER.png">
+                        </th>
+                        <th>
+                          LIQUIDIFCADOR
+                        </th>
+                        <th>0</th>
+                        <th>+30</th>
+                        <th>+7</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>100</th>
+                        <th><a href="/characters/hero/">HERO</a></th>
+                        <th>Transforma qualquer sólido em líquido. Lanches restaurarão mais SUCO durante batalhas.</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/SHUCKER.png">
+                        </th>
+                        <th>
+                          SHUCKER
+                        </th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>+10</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>100</th>
+                        <th><a href="/characters/hero/">HERO</a></th>
+                        <th>Bom para abrir MESSELS.</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/LOL_SWORD.png">
+                        </th>
+                        <th>
+                          ESPADA LOL
+                        </th>
+                        <th>0</th>
+                        <th>+10</th>
+                        <th>+14</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>100</th>
+                        <th><a href="/characters/hero/">HERO</a></th>
+                        <th>xD</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/TENDERIZER.png">
+                        </th>
+                        <th>
+                          MARTELO
+                        </th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>+30</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>100</th>
+                        <th><a href="/characters/hero/">HERO</a></th>
+                        <th>A ferramenta mais perigosa da cozinha.</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/OL_RELIABLE.png">
+                        </th>
+                        <th>
+                          ESPÁTULA CONFIÁVEL
+                        </th>
+                        <th>+20</th>
+                        <th>+20</th>
+                        <th>+20</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>100</th>
+                        <th><a href="/characters/hero/">HERO</a></th>
+                        <th>A arma final de HERO. Lanches restaurarão mais corações e suco durante batalhas.</th>
+                      </tr>
+
+                    </table>
+
+                    <h2 class="title"><a href="/worlds/faraway/">MUNDO REAL</a></h2>
+
+                    <div class="separatorline"></div>
+
+                    <table>
+
+                      <tr>
+                        <th>Arma</th>
+                        <th>Nome</th>
+                        <th>Coração <img src="/src/img/weapons/HP.png" style="height: 16px; width: 16px; margin: 0px;"></th>
+                        <th>Suco <img src="/src/img/weapons/MP.png" style="height: 16px; width: 16px; margin: 0px;"></th>
+                        <th>ATK</th>
+                        <th>DEF</th>
+                        <th>VEL</th>
+                        <th>Sorte</th>
+                        <th>Hit</th>
+                        <th>Utilizador</th>
+                        <th>Informação</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/HANDS.png">
+                        </th>
+                        <th>
+                          MÃOS
+                        </th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>+2</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>95</th>
+                        <th><a href="/characters/sunny">SUNNY</a></th>
+                        <th>Isso é tudo que você tem.</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/KNIFE.png">
+                        </th>
+                        <th>
+                          FACA
+                        </th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>+30</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>25</th>
+                        <th><a href="/characters/sunny">SUNNY</a></th>
+                        <th>Bom para cortar carne.</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/SMASHED_VIOLIN.png">
+                        </th>
+                        <th>
+                          VIOLINO DESTRUÍDO
+                        </th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>+1</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>1000</th>
+                        <th><a href="/characters/sunny">SUNNY</a></th>
+                        <th>Não pode ser tocado.</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/BROKEN_VIOLIN.png">
+                        </th>
+                        <th>
+                          VIOLINO QUEBRADO
+                        </th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>+8</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>1000</th>
+                        <th><a href="/characters/sunny">SUNNY</a></th>
+                        <th>Isso é tudo que você tem.</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/VIOLIN.png">
+                        </th>
+                        <th>
+                          VIOLINO
+                        </th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>+14</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>1000</th>
+                        <th><a href="/characters/sunny">SUNNY</a></th>
+                        <th>Não pode ser destruído.</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/FLY_SWATTER.png">
+                        </th>
+                        <th>
+                          RAQUETE PARA MOSCAS
+                        </th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>+1</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>1000</th>
+                        <th><a href="/characters/sunny">SUNNY</a></th>
+                        <th>Bem-vindos à equipe da SWAT.</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/BASKETBALL.png">
+                        </th>
+                        <th>
+                          BOLA DE BASQUETE
+                        </th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>+2</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>95</th>
+                        <th><a href="/characters/kel/">KEL</a></th>
+                        <th>A arma escolhida pelo KEL. Surpreendentemente eficaz.</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/NAIL_BAT.png">
+                        </th>
+                        <th>
+                          BASTÃO DE PREGOS
+                        </th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>+3</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>95</th>
+                        <th><a href="/characters/aubrey/">AUBREY</a></th>
+                        <th>A arma escolhida por AUBREY. Mais perigoso que uma faca de carne.</th>
+                      </tr>
+
+                      <tr>
+                        <th>
+                          <img src="/src/img/weapons/FIST.png">
+                        </th>
+                        <th>
+                          PUNHO
+                        </th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>+1</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>0</th>
+                        <th>95</th>
+                        <th><a href="/characters/hero/">HERO</a></th>
+                        <th>Faz o trabalho.</th>
+                      </tr>
+                    </table>
+
+                    <h2 class="title">Referências</h3>
+
+                      <a href="https://omori.fandom.com/wiki/WEAPONS" target="_blank">Omori Fandom</a>
+  
+                </div>
+            </div>
+        </div>
+</body>
+
+<!-– scripts carregamento posterior -->
+<script src="../../src/js/dialogue.js"></script>
+    <script src="../../src/js/imageopener.js"></script>
+    <script src="../../src/js/global.js"></script>
+
+</html>
