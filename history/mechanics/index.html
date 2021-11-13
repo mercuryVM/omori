@@ -1,0 +1,764 @@
+<html>
+
+<head>
+    <title>EMOÇÕES - OMORI</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-– estilos -->
+        <link href="../../src/css/config.css" type="text/css" rel="stylesheet" />
+        <link href="../../src/css/global.css" type="text/css" rel="stylesheet" />
+        <link href="../../src/css/wiki.css" type="text/css" rel="stylesheet" />
+        <link href="../../src/css/abridorImagem.css" type="text/css" rel="stylesheet" />
+        <link href="../../src/css/menu.css" type="text/css" rel="stylesheet" />
+        <link href="../../src/css/article.css" type="text/css" rel="stylesheet" />
+    <!-– jquery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-– fontes -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre&family=Roboto&display=swap" rel="stylesheet">
+    <!-– bibliotecas de animação -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body id="body">
+
+    <div class="cookiesWarn" style="display: none;">
+        <div class="mainDialogo">
+          <div class="dialogoNome">
+            <p class="dialogName"></p>
+          </div>
+          <div class="dialogo">
+            <p class="dialogName" id="dialogMessage">
+            </p>
+            <div id="setaBundle">
+              <p class="diagolSeta" id="diagolSetaTexto"> Pressione Enter para continuar</p>
+              <img src="../../src/img/seta.png" class="dialogSeta" id="dialogSeta" height="50px"></img>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <audio loop id="typing">
+        <source src="../../src/sounds/typing.ogg">
+    </audio>
+
+    <audio id="meow">
+        <source src="../../src/sounds/meow">
+    </audio>
+
+    <div class="abrirImagem">
+        <div class="panel">
+            <div class="permmenu" style="margin-left: auto;" id="openedImageBack">
+                Voltar
+            </div>
+            <div>
+                <div class="viewport">
+                    <img src="../../src/img/gamepics/1.jpg" id="openedImage">
+                </div>
+            </div>
+            <p class="comment" id="imageComment">"Omori e seus amigos no espaço branco."</p>
+        </div>
+    </div>
+
+    <div class="main" style="background: url('../../src/img/1148181.png')">
+        <div class="topmenus">
+            <div class="header">
+      
+              <span class="material-icons menuBTN" id="menuBTN">
+                menu
+              </span>
+      
+              <img src="/src/img/OMORI_logo.png" class="logo">
+              <div class="headermenu">
+      
+                <div class="menu desktopMenu">
+                  <a href="/">
+                    <div class="menuOption">
+                      <div class="info">
+                        <img src="/src/img/menuoptions/home.png" class="icon" height="32px" />
+                        <span class="text">Início</span>
+                      </div>
+                    </div>
+                  </a>
+      
+                  <div class="menuOption hasSubmenu">
+                    <div class="info">
+                      <img src="/src/img/menuoptions/bed.png" class="icon" height="32px" />
+                      <span class="text">Personagens</span>
+                    </div>
+                    <div class="innerSubmenu">
+                      <div class="subMenu">
+                        <span class="title">Principais</span>
+      
+                        <a href="/characters/sunny">
+                          <div class="subMenuOption">
+                            <div class="image omori"></div>
+                            <span class="subMenuOptionText">OMORI</span>
+                          </div>
+                        </a>
+      
+                        <a href="/characters/aubrey">
+                          <div class="subMenuOption">
+                            <div class="image aubrey"></div>
+                            <span class="subMenuOptionText">Aubrey</span>
+                          </div>
+      
+                          <a href="/characters/kel">
+                            <div class="subMenuOption">
+                              <div class="image kel"></div>
+                              <span class="subMenuOptionText">Kel</span>
+                            </div>
+                          </a>
+      
+                          <a href="/characters/hero">
+                            <div class="subMenuOption">
+                              <div class="image hero"></div>
+                              <span class="subMenuOptionText">Hero</span>
+                            </div>
+                          </a>
+      
+                          <a href="/characters/basil">
+                            <div class="subMenuOption">
+                              <div class="image basil"></div>
+                              <span class="subMenuOptionText">Basil</span>
+                            </div>
+                          </a>
+      
+                          <a href="/characters/mari">
+                            <div class="subMenuOption">
+                              <div class="image mari"></div>
+                              <span class="subMenuOptionText">Mari</span>
+                            </div>
+                          </a>
+      
+                          <span class="title">Vilões</span>
+      
+                          <a href="/characters/boss">
+                            <div class="subMenuOption">
+                              <div class="image boss"></div>
+                              <span class="subMenuOptionText">Boss</span>
+                            </div>
+                          </a>
+      
+                          <a href="/characters/pluto">
+                            <div class="subMenuOption">
+                              <div class="image pluto"></div>
+                              <span class="subMenuOptionText">Pluto</span>
+                            </div>
+                          </a>
+      
+                          <a href="/characters/sweetheart">
+                            <div class="subMenuOption">
+                              <div class="image sweetheart"></div>
+                              <span class="subMenuOptionText">Sweet H.</span>
+                            </div>
+                          </a>
+      
+                          <a href="/characters/jawsum">
+                            <div class="subMenuOption">
+                              <div class="image jawsum"></div>
+                              <span class="subMenuOptionText">Mr. Jawsum</span>
+                            </div>
+                          </a>
+      
+                          <a href="/characters/hooligans">
+                            <div class="subMenuOption">
+                              <div class="image hooligans"></div>
+                              <span class="subMenuOptionText">Valentões</span>
+                            </div>
+                          </a>
+      
+                          <a href="/characters/humphrey">
+                            <div class="subMenuOption">
+                              <div class="image humphrey"></div>
+                              <span class="subMenuOptionText">Humphrey</span>
+                            </div>
+                          </a>
+      
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="menuOption hasSubmenu">
+                    <div class="info">
+                      <img src="/src/img/menuoptions/history.png" class="icon" height="32px" />
+                      <span class="text">História</span>
+                    </div>
+      
+                    <div class="innerSubmenu">
+                      <div class="subMenu">
+                        <a href="/history/finals">
+                                              <div class="subMenuOption">
+                                                  <img src="../..//src/img/menuoptions/history/general.gif" height="32px" />
+                                                  <span class="subMenuOptionText">Finais</span>
+                                              </div>
+                                          </a>
+      
+                        <a href="/history/tagging">
+                          <div class="subMenuOption">
+                            <img src="/src/img/menuoptions/history/questions.gif" height="32px" />
+                            <span class="subMenuOptionText">Tagging</span>
+                          </div>
+                        </a>
+      
+                        <a href="/history/secrets">
+                          <div class="subMenuOption">
+                            <img src="/src/img/menuoptions/history/secrets.gif" height="32px" />
+                            <span class="subMenuOptionText">Segredos</span>
+                          </div>
+                        </a>
+      
+                        <a href="/history/mechanics">
+                          <div class="subMenuOption">
+                            <img src="/src/img/menuoptions/history/mechanics.gif" height="32px" />
+                            <span class="subMenuOptionText">Emoções</span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="menuOption hasSubmenu">
+                    <div class="info">
+                      <img src="/src/img/menuoptions/worlds.png" class="icon" height="32px" />
+                      <span class="text">Mundos</span>
+                    </div>
+      
+                    <div class="innerSubmenu">
+                      <div class="subMenu">
+                        <a href="/worlds/headspace">
+                          <div class="subMenuOption">
+                            <img src="/src/img/menuoptions/Dream_World.png" height="64px" />
+                            <span class="subMenuOptionText">Mundo Imaginário</span>
+                          </div>
+                        </a>
+      
+                        <a href="/worlds/faraway">
+                          <div class="subMenuOption">
+                            <img src="/src/img/menuoptions/GOOD_DOG.png" height="64px" />
+                            <span class="subMenuOptionText">Mundo Real</span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <a href="/music">
+                    <div class="menuOption">
+                        <div class="info">
+                            <img src="../..//src/img/menuoptions/characters/Spiritmariwalk.webp" class="icon" height="32px" />
+                            <span class="text">Música</span>
+                        </div>
+                    </div>
+                </a>
+      
+                  <a href="/comments">
+                    <div class="menuOption">
+                      <div class="info">
+                        <img src="/src/img/menuoptions/something.png" class="icon" height="32px" />
+                        <span class="text">Deixe seu comentário</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+      
+              </div>
+              <img src="/src/img/miau" class="miau">
+            </div>
+      
+            <div class="mobileMenu" id="mobileMenu">
+              <a href="/">
+                <div class="btn">
+                  <img src="/src/img/menuoptions/home.png" class="icon" height="32px" />
+                  <span class="text">Inicio</span>
+                </div>
+              </a>
+              <a href="#">
+                <div class="btn" id="opencharactersMobileMenu" hassubmenu=true>
+                  <img src="/src/img/menuoptions/bed.png" class="icon" height="32px" />
+                  <span class="text">Personagens</span>
+                </div>
+              </a>
+              <a href="#">
+                <div class="btn" id="openhistoryMobileMenu" hassubmenu=true>
+                  <img src="/src/img/menuoptions/history.png" class="icon" height="32px" />
+                  <span class="text">História</span>
+                </div>
+              </a>
+              <a href="#">
+                <div class="btn" id="openworldsMobileMenu" hassubmenu=true>
+                  <img src="/src/img/menuoptions/worlds.png" class="icon" height="32px" />
+                  <span class="text">Mundos</span>
+                </div>
+              </a>
+              <a href="/music/">
+                <div class="btn">
+                  <img src="/src/img/menuoptions/characters/Spiritmariwalk.webp" class="icon" height="32px" />
+                  <span class="text">Música</span>
+                </div>
+              </a>
+              <a href="/comments/">
+                <div class="btn">
+                  <img src="/src/img/menuoptions/something.png" class="icon" height="32px" />
+                  <span class="text">Deixe seu comentário</span>
+                </div>
+              </a>
+            </div>
+      
+            <div class="mobileMenu" id="charactersMobileMenu">
+              <p>Principais</p>
+      
+              <a href="/characters/sunny/">
+                <div class="btn">
+                  <div class="image omori"></div>
+                  <span class="text">OMORI</span>
+                </div>
+              </a>
+              <a href="/characters/aubrey/">
+                <div class="btn">
+                  <div class="image aubrey"></div>
+                  <span class="text">Aubrey</span>
+                </div>
+              </a>
+              <a href="/characters/kel/">
+                <div class="btn">
+                  <div class="image kel"></div>
+                  <span class="text">Kel</span>
+                </div>
+              </a>
+              <a href="/characters/hero/">
+                <div class="btn">
+                  <div class="image hero"></div>
+                  <span class="text">Hero</span>
+                </div>
+              </a>
+              <a href="/characters/basil/">
+                <div class="btn">
+                  <div class="image basil"></div>
+                  <span class="text">Basil</span>
+                </div>
+              </a>
+              <a href="/characters/mari/">
+                <div class="btn">
+                  <div class="image mari"></div>
+                  <span class="text">Mari</span>
+                </div>
+              </a>
+      
+              <p>Vilões</p>
+      
+              <a href="/characters/boss/">
+                <div class="btn">
+                  <div class="image boss"></div>
+                  <span class="text">Boss</span>
+                </div>
+              </a>
+      
+      
+              <a href="/characters/pluto/">
+                <div class="btn">
+                  <div class="image pluto"></div>
+                  <span class="text">Pluto</span>
+                </div>
+              </a>
+      
+              <a href="/characters/sweetheart/">
+                <div class="btn">
+                  <div class="image sweetheart"></div>
+                  <span class="text">Sweet Heart</span>
+                </div>
+              </a>
+      
+              <a href="/characters/jawsum/">
+                <div class="btn">
+                  <div class="image jawsum"></div>
+                  <span class="text">Mr. Jawsum</span>
+                </div>
+              </a>
+              
+              <a href="/characters/hooligans/">
+                <div class="btn">
+                  <div class="image hooligans"></div>
+                  <span class="text">Valentões</span>
+                </div>
+              </a>
+      
+              <a href="/characters/humphrey/">
+                <div class="btn">
+                  <div class="image humphrey"></div>
+                  <span class="text">Humphrey</span>
+                </div>
+              </a>
+            </div>
+      
+            <div class="mobileMenu" id="historyMobileMenu">
+              <a href="/history/finals/">
+                <div class="btn">
+                  <img src="/src/img/menuoptions/history/general.gif" class="icon" height="32px" />
+                  <span class="text">Finais</span>
+                </div>
+              </a>
+              <a href="/history/tagging">
+                <div class="btn">
+                  <img src="/src/img/menuoptions/history/questions.gif" class="icon" height="32px" />
+                  <span class="text">Tagging</span>
+                </div>
+              </a>
+              <a href="/history/secrets">
+                <div class="btn">
+                  <img src="/src/img/menuoptions/history/secrets.gif" class="icon" height="32px" />
+                  <span class="text">Segredos</span>
+                </div>
+              </a>
+            
+              <a href="/history/emotions/">
+                <div class="btn">
+                  <img src="/src/img/menuoptions/history/mechanics.gif" class="icon" height="32px" />
+                  <span class="text">Emoções</span>
+                </div>
+              </a>
+            </div>
+      
+            <div class="mobileMenu" id="worldsMobileMenu">
+              <a href="/worlds/headspace/">
+                <div class="btn">
+                  <img src="/src/img/menuoptions/Dream_World.png" class="icon" height="32px" />
+                  <span class="text">Mundo Imaginário</span>
+                </div>
+              </a>
+              <a href="/worlds/faraway">
+                <div class="btn">
+                  <img src="/src/img/menuoptions/GOOD_DOG.png" class="icon" height="32px" />
+                  <span class="text">Mundo Real</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+        <div class="content">
+            <div class="block">
+                <div class="subblock" style="flex: 1;">
+                    <div class="alert fandom">
+                        <img src="../../src/img/menuoptions/characters/aubreyhappy.webp" height="96px">
+                        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: auto;">
+                            <span style="font-weight: 700;">OMORI WIKI</span>
+                            <span>Boa parte do conteúdo de texto ou imagens foram retiradas da WIKI de fãs de OMORI.</span>
+                            <span>Se você gostar daqui, visite lá para mais detalhes em relação a história do jogo!</span>
+                            <a href="https://omori.fandom.com/wiki/" target="_blank">CLIQUE AQUI</a>
+                        </div>
+                        <img src="../../src/img/menuoptions/characters/aubreyhappy.webp" height="96px">
+                    </div>
+
+                    <h1 class="title">EMOÇÕES</h1>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="subblock">
+                    <p>
+                      EMOÇÕES é uma mecânica de jogo apresentada no OMORI.
+                    </p>
+                    
+                    <p>
+                      Eles determinam a eficácia dos ataques de um personagem contra um inimigo, além de aplicar modificadores especiais aos ataques e estatísticas do personagem.
+                    </p>
+
+                    <img src="/src/img/emotions/Emotions_guide.png">
+
+                    <h1 class="title">VISÃO GERAL</h1>
+
+                    <div class="separatorline"></div>
+
+                    <p>
+                      O sistema de Emoções funciona de maneira semelhante a pedra-papel-tesoura, com cada EMOÇÃO tendo uma contrapartida eficaz e ineficaz. 
+                    </p>
+
+                    <p>
+                      Quando um personagem ataca, seu ataque pode ter aumentado ou reduzido o dano dependendo da eficácia de sua EMOÇÃO atual contra a EMOÇÃO do(s) alvo(s) do ataque. 
+                    </p>
+
+                    <p>
+                      EMOÇÕES podem ser infligidas a amigos / inimigos por meio de ATAQUES, HABILIDADES, FOLLOW-UPS, o uso de ITENS ou eventos com script.
+                    </p>
+
+                    <p>
+                      O jogador deve se concentrar em decidir que emoção um personagem deve ter para ganhar vantagem sobre qualquer inimigo que encontrar.
+                      Conforme observado pelo próprio HERO, FELIZ vence BRAVO, BRAVO vence TRISTE e TRISTE vence FELIZ!
+                    </p>
+
+                    <p>
+                      Algumas EMOÇÕES também afetam diferentes stats para amigos e inimigos, além de fornecer modificadores exclusivos.
+                    </p>
+
+                    <p>
+                      Além disso, as EMOÇÕES de inimigos derrotados podem conceder efeitos de bônus. 
+                    </p>
+
+                    <p>
+                      Inimigos HAPPY têm um item e taxa de drop CLAM maiores, enquanto inimigos ANGRY darão mais EXP. 
+                      Inimigos do SAD são a exceção, dando CLAMS e EX reduzidos
+                    </p>
+
+                    <p>
+                      As EMOÇÕES podem ser "empilhadas" até três vezes, com cada pilha aumentando a potência dos efeitos da emoção.
+                      Por exemplo, se um amigo/inimigo FELIZ é afetado por algo que o tornaria FELIZ, ele se torna ECSTÁTICO e, se repetido, MANÍACO.
+                    </p>
+
+                    <p>
+                      Diferentes EMOÇÕES geralmente aplicam efeitos visuais exclusivos enquanto também alteram a aparência dos amigos / inimigos afetados.
+                    </p>
+
+                    <h1 class="title">LISTA DE EMOÇÕES</h1>
+
+                    <div class="separatorline"></div>
+                    
+                    <h2 class="title">NEUTRO</h2>
+
+                    <img src="/src/img/emotions/OMORI_NEUTRAL.gif" style="width: 100px">
+                   
+                    <p>
+                      O grupo sempre aparecerá como NEUTRO no início da batalha, exceto se afetado por um CHARME como o SACOLA DE PUNCHES ou ao encontrar um inimigo que invoque a emoção ASSUSTADO.
+                    </p>
+
+                    <p>
+                      Estar neutro não afeta o jogo de forma alguma; todas as estatísticas de um amigo/inimigo NEUTRO são normais, e todos os ataques contra personagens NEUTROS causam danos normais e não têm efeitos especiais.
+                    </p>
+
+                    <h2 class="title">FELIZ</h2>
+
+                    <img src="../../src/img/emotions/KEL_ECSTATIC.gif" style="width: 100px">
+
+                    <p>
+                      Um amigo/inimigo FELIZ possui mais SORTE e a VELOCIDADE, mas menos taxa de hits.
+                    </p>
+
+                    <p>
+                      Além das alterações visuais, HAPPY é geralmente indicado por um fundo gradiente amarelo-magenta para amigos e uma aura amarela para inimigos.
+                    </p>
+
+                    <p>
+                      Quando um amigo/inimigo está ainda mais FELIZ, ele se torna ECSTÁTICO e, subsequentemente, MANÍACO.
+                    </p>
+
+                    <p>
+                      Inimigos FELIZES têm uma chance maior de largar itens após a batalha. Eles também recompensam 50% mais CLAMS do que inimigos NEUTROS.
+                    </p>
+
+                    <table>
+                      <tr>
+                        <th></th>
+                        <th>Taxa de Hit</th>
+                        <th>Sorte</th>
+                        <th>Velocidade</th>
+                        <th>vs Bravo</th>
+                        <th>vs Triste</th>
+                      </tr>
+                      <tr>
+                        <td>Feliz</td>
+                        <td>-10%</td>
+                        <td>200%</td>
+                        <td>125%</td>
+                        <td>80%</td>
+                        <td>150%</td>
+                      </tr>
+                      <tr>
+                        <td>Ecstático</td>
+                        <td>-20%</td>
+                        <td>300%</td>
+                        <td>150%</td>
+                        <td>65%</td>
+                        <td>200%</td>
+                      </tr>
+                      <tr>
+                        <td>Maníaco</td>
+                        <td>-30%</td>
+                        <td>400%</td>
+                        <td>200%</td>
+                        <td>50%</td>
+                        <td>250%</td>
+                      </tr>
+                    </table>
+
+                    <h5>*A taxa de hit é subtrativa, o resto é multiplicativo.</h5>
+
+                    <h2 class="title">TRISTE</h2>
+
+                    <img src="../../src/img/emotions/Herodepressed.gif" style="width: 100px">
+
+                    <p>
+                      Um amigo/inimigo TRISTE terá aumentado a DEFESA, mas diminuído a VELOCIDADE. 
+                      Parte do dano que seria causado ao CORAÇÃO é causado ao SUCO.
+                    </p>
+
+                    <p>
+                      Além das alterações visuais, o TRISTE é geralmente indicado por um fundo gradiente azul-turquesa para amigos e uma aura azul para inimigos.
+                    </p>
+
+                    <p>
+                      Quando um amigo/inimigo é ainda mais TRISTE, ele se torna DEPRIMIDO e, subsequentemente, MISERÁVEL.
+                    </p>
+                    
+                    <p>
+                      Inimigos TRISTES recompensam 25% menos EXPERIÊNCIA e 20% menos CLAMS do que inimigos NEUTROS.
+                    </p>
+
+                    <table>
+                      <tr>
+                        <th></th>
+                        <th>Defesa</th>
+                        <th>Velocidade</th>
+                        <th>Dano convertido para Suco</th>
+                        <th>vs Feliz</th>
+                        <th>vs Bravo</th>
+                      </tr>
+                      <tr>
+                        <td>Triste</td>
+                        <td>125%</td>
+                        <td>80%</td>
+                        <td>30%</td>
+                        <td>80%</td>
+                        <td>150%</td>
+                      </tr>
+                      <tr>
+                        <td>Depressivo</td>
+                        <td>135%</td>
+                        <td>65%</td>
+                        <td>50%</td>
+                        <td>65%</td>
+                        <td>200%</td>
+                      </tr>
+                      <tr>
+                        <td>Miserável</td>
+                        <td>150%</td>
+                        <td>50%</td>
+                        <td>100%</td>
+                        <td>50%</td>
+                        <td>250%</td>
+                      </tr>
+                    </table>
+
+                    <h2 class="title">BRAVO</h2>
+
+                    <img src="../../src/img/emotions/AUBREY_ENRAGED.gif" style="width: 100px">
+
+                    <p>
+                      Um amigo/inimigo BRAVO terá aumentado o ATAQUE, mas diminuído a DEFESA. 
+                      Isso é eficaz contra aqueles que estão tristes, mas fraco contra aqueles que estão FELIZES.
+                    </p>
+                    
+                    <p>
+                      Além das alterações visuais, ANGRY é geralmente indicado por um fundo gradiente laranja-vermelho para amigos e uma aura vermelha para inimigos.
+                    </p>
+
+                    <p>
+                      Quando um amigo/inimigo está ainda mais ANGRY, eles ficam ENRAGADOS e, subsequentemente, FURIOSOS.
+                    </p>
+
+                    <p>
+                      Inimigos ANGRY recompensam 66% mais EXPERIÊNCIA do que oponentes NEUTROS.
+                    </p>
+
+                    <table>
+                      <tr>
+                        <th></th>
+                        <th>Dano</th>
+                        <th>Defesa</th>
+                        <th>vs Triste</th>
+                        <th>vs Feliz</th>
+                      </tr>
+                      <tr>
+                        <td>Bravo</td>
+                        <td>130%</td>
+                        <td>50%</td>
+                        <td>80%</td>
+                        <td>150%</td>
+                      </tr>
+                      <tr>
+                        <td>Enfurecido</td>
+                        <td>150%</td>
+                        <td>30%</td>
+                        <td>65%</td>
+                        <td>200%</td>
+                      </tr>
+                      <tr>
+                        <td>Furioso</td>
+                        <td>200%</td>
+                        <td>15%</td>
+                        <td>50%</td>
+                        <td>250%</td>
+                      </tr>
+                    </table>
+
+                    <h2 class="title">ASSUSTADO</h2>
+
+                    <img src="../../src/img/emotions/SunnyStressedOut.gif" style="width: 100px">
+
+                    <p>
+                      Ao contrário de outras EMOÇÕES, ASSUSTADO não está listado na TABELA DE EMOÇÕES do HERO e não pode ser infligido por meios normais, como ITENS ou HABILIDADES. Também não pode ser infligido a inimigos.
+                    </p>
+
+                    <p>
+                      Um amigo AFRAID não pode executar FOLLOW-UPS ou usar outras habilidades além de GUARD e CALM DOWN. AFRAID também aumenta o dano recebido em <strong>1,5 vezes</strong>.
+                    </p>
+
+                    <p>
+                      Esta EMOÇÃO é normalmente reservada para batalhas especiais relacionadas à trama (variantes de ALGO, ANGI, ABBI, BASIL, ESTRANGER e OMORI), embora também possa ser infligida pelos inimigos regulares CREEPYPASTA e HUSHPUPPY. 
+                      Além disso, em qualquer batalha com inimigos de aranha, HERO começará AFRAID por padrão.
+                    </p>
+
+                    <p>
+                      AFRAID normalmente não tem estágios superiores. No entanto, exclusivo para a luta BASIL, SUNNY chega a um ponto de ruptura e fica STRESSED, 
+                      uma emoção única vista em nenhum outro lugar em todo o jogo.
+                    </p>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="subblock">
+                    <h2 class="title">TRIVIA</h2>
+
+                    <div class="separatorline"></div>
+
+                    <ul>
+                      <li>O gráfico de emoção prevê como o grupo principal lidou com a morte de MARI no MUNDO REAL:</li>
+                      <ul>
+                        <li>SUNNY ficou profundamente traumatizado a ponto de ser incapaz de expressar plenamente suas emoções, pois o evento o levou a passar quatro anos sozinho como um hikikomori recluso.</li>
+                        <li>AUBREY desenvolveu sentimentos de raiva em relação aos seus velhos amigos, pois ela pensou que eles a tinham abandonado e seguiu em frente muito rapidamente da morte de MARI. Isso a levou a se tornar uma violenta delinquente de temperamento curto no presente.</li>
+                        <li>KEL ainda manteve seu comportamento feliz e otimista fazendo novos amigos praticando esportes e tentando encontrar felicidade nos outros.</li>
+                        <li>HERO entrou em um longo estado de depressão por um ano, fechando-se e sendo incapaz de fazer nada até kel conseguiu ajudá-lo a colocar sua vida de volta nos trilhos.</li>
+                        <li>Basil tornou-se um naufrágio nervoso, e ainda mais na presença de Sunny, aterrorizado que a verdade da morte de Mari iria de alguma forma ressurgir.</li>
+                      </ul>
+                      <li>OMORI é o único personagem jogável com emoções de 3 estágios (MANIC, MISERABLE e FURIOUS), já que os outros membros do partido só têm emoções de dois estágios. Isso é compartilhado com alguns dos chefes do HEADSPACE, como SPACE EX-BOYFRIEND, SWEETHEARTe UNBREAD TWINS.</li>
+                      <li>
+                        OMORI foi originalmente destinado a ter uma emoção medo, mas isso foi descartado provavelmente devido ao primeiro ser incapaz de expressar totalmente o medo.
+                        <ul>
+                          <li>Isso foi dado a SUNNY em vez disso. No entanto, a codificação da demonstração ainda contém dados da emoção medo do OMORI.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        Nos dados do jogo, há uma variante não usoda de segundo estágio para a emoção medo chamada <strong>PÂNICO</strong>, o que significa que <strong>STRESSED OUT</strong> é a variante do terceiro estágio da emoção MEDO. Ele não tem gráficos associados a ele e não tem nenhuma taxa de elemento definida, o que significa que os danos recebidos não serão aumentados como AFRAID. No entanto, isso ainda vai impedi-lo de usar habilidades. Suas categorias são EMOÇÃO e PÂNICO, como seria de esperar. Estranhamente, porém, STRESSED OUT também está na categoria PÂNICO.
+                      </li>
+                      <li>
+                        A partir da versão 1.0.7 do jogo e em diante, se HERO tem uma vantagem emocional sobre outro personagem, sua cura (tanto para HEART quanto JUICE) torna-se mais eficaz.
+                      </li>
+                    </ul>
+
+                    <h2 class="title">Referências</h3>
+
+                    <a href="https://omori.fandom.com/wiki/EMOTIONS" target="_blank">Omori Fandom</a>
+
+
+                </div>
+            </div>
+        </div>
+</body>
+
+<!-– scripts carregamento posterior -->
+<script src="../../src/js/dialogue.js"></script>
+    <script src="../../src/js/imageopener.js"></script>
+    <script src="../../src/js/global.js"></script>
+
+</html>

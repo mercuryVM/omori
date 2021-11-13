@@ -14,11 +14,22 @@ let clicked = false;
 
 var dialogueResolve;
 
+function ClearDialogo(){
+    nameDialogo.innerHTML = "";
+    messageDialogo.innerHTML = "";
+    $("div#dialogoNome").css("display", "none");
+    $("#setaBundle").css("opacity", "0");
+}
+
 function MostrarDialogo(enviou, mensagem) {
     return new Promise(async function (resolve) {
-        nameDialogo.innerHTML = enviou;
+        if(enviou)nameDialogo.innerHTML = enviou;
+        else nameDialogo.innerHTML = "";
 
         $("#setaBundle").css("opacity", "0");
+
+        if (!enviou) $("div#dialogoNome").css("display", "none");
+        else $("div#dialogoNome").css("display", "block");
 
         if (!mensagem) {
             $(boxDialogo).animate({
@@ -30,8 +41,7 @@ function MostrarDialogo(enviou, mensagem) {
             return;
         }
 
-        if (!enviou) document.getElementsByClassName("dialogoNome")[0].style.display = "none";
-        else document.getElementsByClassName("dialogoNome")[0].style.display = "block";
+        messageDialogo.innerHTML = "";
 
         function AnimateSeta() {
             return new Promise((resolve) => {
@@ -73,9 +83,9 @@ function MostrarDialogo(enviou, mensagem) {
                             return;
                         }
                         actualMessage += mensagem[i];
-                        typing[0].volume = 0.25;
+                        typing[0].volume = 0.5;
                         typing[0].play();
-                        await sleep(20);
+                        await sleep(10);
                         texto.innerHTML = actualMessage;
                     }
 

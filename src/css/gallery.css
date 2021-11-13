@@ -1,0 +1,63 @@
+div.block div.subblock div.imagecontainer div.galleryPhoto img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0px;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+div.block div.subblock div.imagecontainer div.galleryPhoto {
+    display: flex;
+    margin: auto;
+    background-color: rgb(219 213 196);
+    border-radius: 5px;
+    padding: 5px 5px 32px 5px;
+}
+
+div.block div.subblock div.imagecontainer span#loading {
+    color: white;
+    font-size: 24px;
+    padding: 10px 0px;
+}
+
+div.block div.subblock div.imagecontainer div#loading  {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+div.block div.subblock div.imagecontainer div#loading img {
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+
+div.block div.subblock div.imagecontainer{
+    background-color: black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 1280px) {
+    div.block div.subblock div.imagecontainer div.galleryPhoto img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    div.block div.subblock div.imagecontainer div.galleryPhoto img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    div.block div.subblock div.imagecontainer div.galleryPhoto img {
+        width: 64px;
+        height: 64px;
+    }
+}

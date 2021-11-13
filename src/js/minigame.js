@@ -4,6 +4,7 @@ let isWalking = false;
 let nextMovement = false;
 const itemSpace = new Map();
 let playerOrientation = "up";
+let stabbing = false;
 
 let actualPosition = {
     x: 0,
@@ -25,8 +26,28 @@ const animations = {
         idle: "/src/img/whitespace/omori walk/right/omori_idle.png",
         walk1: "/src/img/whitespace/omori walk/right/omori_walk_1.png",
         walk2: "/src/img/whitespace/omori walk/right/omori_walk_2.png",
+    },
+    left: {
+        idle: "/src/img/whitespace/omori walk/left/omori_idle.png",
+        walk1: "/src/img/whitespace/omori walk/left/omori_walk_1.png",
+        walk2: "/src/img/whitespace/omori walk/left/omori_walk_2.png",
     }
 }
+
+const stabAnim = [
+    "/src/img/whitespace/omori_stab/1.png",
+    "/src/img/whitespace/omori_stab/2.png",
+    "/src/img/whitespace/omori_stab/3.png",
+    "/src/img/whitespace/omori_stab/4.png",
+    "/src/img/whitespace/omori_stab/5.png",
+    "/src/img/whitespace/omori_stab/6.png",
+    "/src/img/whitespace/omori_stab/7.png",
+    "/src/img/whitespace/omori_stab/8.png",
+    "/src/img/whitespace/omori_stab/9.png",
+    "/src/img/whitespace/omori_stab/10.png",
+    "/src/img/whitespace/omori_stab/11.png",
+    "/src/img/whitespace/omori_stab/12.png",
+]
 
 function AddOccupiedSpace(x, y) {
     itemSpace.set(JSON.stringify({ x, y }), true);
@@ -55,9 +76,10 @@ function CanWalk(x, y) {
 function PlayQueriedMovements(context) {
     const { y, x } = GetCharacterPosition()
 
-    if ((y - 1) <= 0 || (y - 1) >= 4 || (x + 1) > 4 || (x - 1) <= 0) {
+    if(stabbing) return;
+
+    if ((y - 1) <= 0 || (y + 1) >= 4 || (x + 1) > 4 || (x - 1) <= 0) {
         StopAnimation();
-        console.log("is stoping")
         return;
     }
 
@@ -65,7 +87,7 @@ function PlayQueriedMovements(context) {
         if (context) {
             context(true);
         }
-        else  StopAnimation();
+        else StopAnimation();
         return;
     }
 
@@ -82,6 +104,8 @@ function PlayQueriedMovements(context) {
 function MoveUp(isNext) {
     const { x, y } = actualPosition
 
+    playerOrientation = "up";
+
     if (!CanWalk(x, y - 1)) {
         animationEnded = true;
         StopAnimation()
@@ -89,6 +113,7 @@ function MoveUp(isNext) {
     }
 
     if ((y - 1) <= 0) {
+        if(!isWalking) StopAnimation()
         return;
     }
 
@@ -101,8 +126,6 @@ function MoveUp(isNext) {
     character.css("transform", "translate(0px, -6px)")
 
     actualPosition.y--;
-
-    playerOrientation = "up";
 
     animationFrame++;
     if (animationFrame >= 4) animationFrame = 0;
@@ -127,7 +150,10 @@ function StopAnimation() {
     isWalking = false;
     animationEnded = true;
     animationFrame = 1;
+    isPressing = false;
+    nextMovement = false;
     PlayFrame();
+    animationFrame = -1;
 }
 
 function PlayFrame() {
@@ -150,11 +176,22 @@ function PlayFrame() {
             else if (animationFrame === 2) character.attr("src", animations.right.walk2);
             else if (animationFrame === 3) character.attr("src", animations.right.idle);
             break;
+        case "left":
+            if (animationFrame === 0) character.attr("src", animations.left.walk1);
+            else if (animationFrame === 1) character.attr("src", animations.left.idle);
+            else if (animationFrame === 2) character.attr("src", animations.left.walk2);
+            else if (animationFrame === 3) character.attr("src", animations.left.idle);
+            break;
+        case "stab": 
+            character.attr("src", stabAnim[animationFrame]);
+        break;
     }
 }
 
 function MoveDown(isNext) {
     const { x, y } = actualPosition
+
+    playerOrientation = "down";
 
     if (!CanWalk(x, y + 1)) {
         animationEnded = true;
@@ -163,6 +200,7 @@ function MoveDown(isNext) {
     }
 
     if ((y + 1) >= 4) {
+        if(!isWalking) StopAnimation()
         return;
     }
 
@@ -179,7 +217,6 @@ function MoveDown(isNext) {
 
     actualPosition.y++;
 
-    playerOrientation = "down";
     animationFrame++;
     if (animationFrame >= 4) animationFrame = 0;
 
@@ -200,6 +237,8 @@ function MoveDown(isNext) {
 function MoveRight(isNext) {
     const { x, y } = actualPosition;
 
+    playerOrientation = "right";
+
     if (!CanWalk(x + 1, y)) {
         animationEnded = true;
         StopAnimation()
@@ -207,6 +246,7 @@ function MoveRight(isNext) {
     }
 
     if ((x + 1) > 4) {
+        if(!isWalking) StopAnimation()
         return;
     }
 
@@ -220,7 +260,6 @@ function MoveRight(isNext) {
     character.css("transform", "translate(0px, -6px)")
 
     actualPosition.x++;
-    playerOrientation = "right";
 
     animationFrame = animationFrame += 1;
     if (animationFrame >= 4) animationFrame = 0;
@@ -242,6 +281,8 @@ function MoveRight(isNext) {
 function MoveLeft(isNext) {
     const { x, y } = actualPosition
 
+    playerOrientation = "left";
+
     if (!CanWalk(x - 1, y)) {
         animationEnded = true;
         StopAnimation()
@@ -249,6 +290,7 @@ function MoveLeft(isNext) {
     }
 
     if ((x - 1) < 1) {
+        if(!isWalking) StopAnimation()
         return;
     }
 
@@ -267,6 +309,11 @@ function MoveLeft(isNext) {
 
     animationEnded = false;
 
+    animationFrame++;
+    if (animationFrame >= 4) animationFrame = 0;
+
+    PlayFrame();
+
     character.transition(
         { transform: "translate(-32px, -6px);" }
         , 350, "linear", () => {
@@ -277,19 +324,180 @@ function MoveLeft(isNext) {
         })
 }
 
+let interacting = false;
+
+const getLaptop = async () => {
+    $("#laptop")[0].play();
+    $("#laptop")[0].volume = 0.3;
+    await MostrarDialogo(false, "O calor do notebook aqueceu seu colo.")
+    await MostrarDialogo(false, "Foi bom...")
+    interacting = false;
+  }
+
+function Interact(){
+    if(interacting) return;
+
+    const {x,y} = GetCharacterPosition();
+
+    console.log(x, y)
+
+    if(playerOrientation === "left"){
+        if(x === 1 && y === 3){
+            interacting = true;
+            ShowDialogues(
+                async () => {
+                    await getMewo();
+                    interacting = false;
+                }
+            )
+        }else if(x === 3 && y == 1){
+            interacting = true;
+            ShowDialogues(
+                getLaptop
+              );
+        }
+    }else if(playerOrientation === "right"){
+        if(x === 3 && y === 3){
+            interacting = true;
+            ShowDialogues(
+                async () => {
+                  await MostrarDialogo(false, "Uma caixa de lenços para enxugar suas tristezas...")
+                  await MostrarDialogo(false, "")
+                  interacting = false;
+                }
+              );
+        }else if(x === 3 && y === 1){
+            interacting = true;
+            ShowDialogues(
+                async () => {
+                  await MostrarDialogo(false, "Seu caderno de desenho...")
+                  await MostrarDialogo(false, "")
+                  interacting = false;
+                }
+              );
+        }
+        else if(x === 1 && y == 1){
+            interacting = true;
+            ShowDialogues(
+                getLaptop
+              );
+        }
+    }else if(playerOrientation === "up"){
+        if(x === 2 && y === 2){
+            interacting = true;
+            ShowDialogues(
+                getLaptop
+              );
+        }else if(x === 4 && y === 2){
+            interacting = true;
+            ShowDialogues(
+                async () => {
+                  await MostrarDialogo(false, "Seu caderno de desenho...")
+                  await MostrarDialogo(false, "")
+                  interacting = false;
+                }
+              );
+        }
+    }else if(playerOrientation === "down"){
+        if(x === 4 && y === 2){
+            interacting = true;
+            ShowDialogues(
+                async () => {
+                  await MostrarDialogo(false, "Uma caixa de lenços para enxugar suas tristezas...")
+                  await MostrarDialogo(false, "")
+                  interacting = false;
+                }
+              );
+        }
+    }
+}
+
+async function Stab(){
+    playerOrientation = "stab";
+    animationFrame = 0;
+    stabbing = true;
+    PlayFrame();
+    $("")
+    for(;animationFrame < 5; animationFrame++){
+        await sleep(200);
+        PlayFrame();
+    }
+    await sleep(2000);
+    for(;animationFrame < 9; animationFrame++){
+        await sleep(200);
+        PlayFrame();
+    }
+    $("#ost")[0].pause()
+    $("#stab")[0].play()
+    $("#stab")[0].volume = 0.5;
+    await sleep(5000);
+
+    for(;animationFrame < 13; animationFrame++){
+        await sleep(200);
+        PlayFrame();
+    }
+
+    await sleep(5000);
+
+    $("#ost").attr("src", "/src/music/acrophobia.mp3")
+    $("#ost")[0].play();
+
+    $("#body").css("overflow", "hidden");
+    $("#body").css("background-color", "black")
+
+    $(".main").animate({
+        opacity: 0,
+    }, 10000, async () => {
+        $(".something").css("display", "flex");
+
+        const messages = [
+            "Você matou Mari. Ela amava você e você matou ela.",
+            "HERO amava ela e você matou ela",
+            "AUBREY amava ela e você matou ela",
+            "KEL amava ela e você matou ela",
+            "BASIL amava ela e você matou ela",
+            "Você amava ela e você matou ela",
+        ]
+
+        let messageNow = 0;
+
+        ShowDialogues(async () => {
+            for(;;) {
+                $("#body").css("overflow", "hidden");
+                $("#body")[0].scrollTop = 0;
+                await MostrarDialogo("???", messages[messageNow]);
+                if(messageNow + 1 != messages.length) messageNow++;
+            }
+        });
+        await sleep(20000);
+        window.location.reload();
+    })
+}
 
 keyMap.set("w", MoveUp)
 keyMap.set("s", MoveDown)
 keyMap.set("d", MoveRight)
 keyMap.set("a", MoveLeft)
+keyMap.set("z", Interact)
+keyMap.set("x", Stab)
+keyMap.set("enter", Interact)
 
 $(".whitespace").on('keydown', function (event) {
     if (!event.key) return;
+    if(stabbing) return;
+
     const key = event.key.toLowerCase()
+    
     if (!keyMap.has(key)) return;
     if (isPressing !== false) {
-        if (isPressing != key) return;
+        if (isPressing != key) {
+            return;
+        }
     }
+
+    if(!isWalking)     animationFrame = -1;
+
+    $("#walkTip").css("display", "none")
     keyMap.get(key)()
     isPressing = key;
 })
@@ -299,6 +507,7 @@ let animationEnded = true;
 
 $(".whitespace").on('keyup', function (event) {
     if (!event.key) return;
+    if(stabbing) return;
     const key = event.key.toLowerCase()
     if (!keyMap.has(key)) return;
     if (isPressing == key) {

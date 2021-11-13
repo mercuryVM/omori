@@ -116,6 +116,7 @@ div.content {
     border-style: solid;
     border-color: black;
     overflow: hidden;
+    min-height: calc(100vh - 203px);
 }
 
 div.hands img.hand {
@@ -198,6 +199,10 @@ img.miau {
 
     span.menuBTN:hover{
         cursor: pointer;
+    }
+
+    #walkTip {
+        display: none;
     }
 
     div.footer {

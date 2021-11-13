@@ -27,9 +27,14 @@
 
 <body id="body">
   <!-- welcome warn -->
+
+  <div class="something">
+    <img src="/src/img/menuoptions/something.png" />
+  </div>
+
   <div class="cookiesWarn">
     <div class="mainDialogo">
-      <div class="dialogoNome">
+      <div class="dialogoNome" id="dialogoNome">
         <p class="dialogName"></p>
       </div>
       <div class="dialogo">
@@ -43,9 +48,18 @@
     </div>
   </div>
 
-  <audio loop id="typing">
+  <audio id="typing">
     <source src="/src/sounds/typing.ogg">
   </audio>
+  
+  <audio id="stab">
+    <source src="/src/sounds/GEN_stab.ogg">
+  </audio>
+
+  <audio id="laptop">
+    <source src="/src/sounds/SE_Laptop.ogg">
+  </audio>
+
 
   <audio loop id="ost">
     <source src="/src/sounds/omori title.mp3">
@@ -255,8 +269,17 @@
             <a href="/music">
               <div class="menuOption">
                 <div class="info">
-                  <img src="../..//src/img/menuoptions/characters/Spiritmariwalk.webp" class="icon" height="32px" />
+                  <img src="../../src/img/menuoptions/characters/Spiritmariwalk.webp" class="icon" height="32px" />
                   <span class="text">Música</span>
+                </div>
+              </div>
+            </a>
+
+            <a href="/gallery">
+              <div class="menuOption">
+                <div class="info">
+                  <img src="../../src/img/menuoptions/gallery.png" class="icon" height="32px" />
+                  <span class="text">Galeria</span>
                 </div>
               </div>
             </a>
@@ -451,8 +474,9 @@
           <img src="/src/img/whitespace/mewo.gif" ignore=true class="mewo" />
           <img src="/src/img/whitespace/laptop.gif" ignore=true class="laptop" />
           <img src="/src/img/whitespace/tissuebox.png" ignore=true class="tissuebox" />
-          <img src="/src/img/whitespace/omori walk/omori_idle.png" id="character" ignore=true class="omori" />
+          <img src="/src/img/whitespace/omori walk/bottom/omori_idle.png" id="character" ignore=true class="omori" />
         </div>
+        <span class="walk" id="walkTip">Pressione WASD para andar.</span>
         <div class="introDialogo">
           <div class="dialogoNome">
             <p class="dialogName">OMORI</p>
@@ -557,8 +581,9 @@
     <div class="footer">
       <div class="separator">
         <img class="logo" src="/src/img/OMOCAT_Logo.png" ignore=true />
-        <span class="copyright">OMORI é uma propiedade de <span style="color: gray;">OMOCAT, LLC</span>.</span>
-        <span class="copyright">Projeto de <span style="color: gray;">Gabriel Luís da Silva</span></span>
+        <span class="copyright"><a href="https://omori-game.com/" target="_blank" style="font-size: 24px;">OMORI</a> é propiedade de <a href="https://www.omocat-shop.com/" target="_blank" style="font-size: 20px;">OMOCAT LLC.</a>.</span>
+        <span class="copyright">Esse site é um projeto de fim de ano de <span style="color: gray;">Gabriel Luís da Silva</span></span>
+        <span class="copyright">1°DS</span>
       </div>
 
 
@@ -602,6 +627,7 @@
         <span class="title">Extras</span>
         <div class="list">
           <a href="/music">Músicas</a>
+          <a href="/gallery">Galeria</a>
           <a href="/comments/">Feedback</a>
         </div>
       </div>

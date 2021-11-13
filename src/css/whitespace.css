@@ -1,47 +1,65 @@
 div.intro div.whitespace .sketchbook {
-    grid-row: 1;
-    grid-column: 4;
+  grid-row: 1;
+  grid-column: 4;
 }
 
 div.intro div.whitespace .mewo {
-    grid-row: 3;
-    grid-column: 1;
-    transform: translateX(-38px);
+  grid-row: 3;
+  grid-column: 1;
+  transform: translateX(-38px);
 }
 
 div.intro div.whitespace .laptop {
-    grid-row: 1;
-    grid-column: 2;
+  grid-row: 1;
+  grid-column: 2;
 }
 
 div.intro div.whitespace .tissuebox {
-    grid-row: 3;
-    grid-column: 4;
+  grid-row: 3;
+  grid-column: 4;
 }
 
 div.intro div.whitespace .omori {
-    grid-row: 3;
-    grid-column: 2;
-    height: 30px;
-    min-height: auto;
-    transform: translateY(-6px);
+  grid-row: 3;
+  grid-column: 2;
+  height: 30px;
+  min-height: auto;
+  transform: translateY(-6px);
 }
 
-div.intro div.whitespace .tissuebox, div.intro div.whitespace .laptop, div.intro div.whitespace .mewo,  div.intro div.whitespace .sketchbook, div.intro div.whitespace .omori {
-    width: auto;
-    place-self: center;
+div.intro div.whitespace .tissuebox,
+div.intro div.whitespace .laptop,
+div.intro div.whitespace .mewo,
+div.intro div.whitespace .sketchbook,
+div.intro div.whitespace .omori {
+  width: auto;
+  place-self: center;
 }
 
-div.intro div.whitespace{
-    display: grid;
-    gap: 0;
-    grid-template-columns: repeat(4,minmax(0,1fr));
-    grid-template-rows: repeat(3,minmax(0,1fr));
-    --tw-border-opacity: 1;
-    border-color: rgba(0,0,0,var(--tw-border-opacity));
-    border-style: solid;
-    border-width: 1px;
-    width: 128px;
-    height: 84px;
-    outline: none;
+div.intro div.whitespace {
+  display: grid;
+  gap: 0;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  --tw-border-opacity: 1;
+  border-color: rgba(0, 0, 0, var(--tw-border-opacity));
+  border-style: solid;
+  border-width: 1px;
+  width: 128px;
+  height: 84px;
+  outline: none;
+}
+
+@keyframes fadeinoff {
+    0% {color: white};
+    100% {color: black;};
+}
+
+div.intro span.walk {
+  transform: translate(200px, -55px);
+  color: gray;
+  font-family: sans-serif;
+  font-weight: 700;
+  animation: fadeinoff 3s linear infinite;
+  animation-direction: alternate;
 }

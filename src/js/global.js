@@ -46,7 +46,7 @@ $("#openworldsMobileMenu").click(() => {
 
 $(document).click(function (e) {
   var target = $(e.target);
-  if (!target.is('#menuBTN') && !target.attr("hassubmenu") && !target.is(".mobileMenu") ) {
+  if (!target.is('#menuBTN') && !target.attr("hassubmenu") && !target.is(".mobileMenu")) {
     $(".mobileMenu").css("display", "none");
     $("body").css("overflow", "auto");
     disableAllMenus()
@@ -63,20 +63,30 @@ function VerificarMenu() {
   }
 }
 
-$(".miau").click(() => {
+async function ShowDialogues(toCall) {
   $(".cookiesWarn").css("display", "flex");
   $("#body").css("overflow-y", "hidden");
-  MostrarDialogo("MEWO", " ");
+  ClearDialogo();
   $(boxDialogo).animate({
     opacity: 1,
   }, 500, async function () {
-    $("#meow")[0].play();
-    $("#meow")[0].volume = 0.25;
-    await MostrarDialogo("MEWO", "MEOW? (Esperando por algo acontecer?)")
-    await MostrarDialogo("MEWO", "");
+    await toCall();
     $(".cookiesWarn").css("display", "none");
     $("#body").css("overflow-y", "auto");
-  });
+  })
+}
+
+const getMewo = async () => {
+  $("#meow")[0].play();
+    $("#meow")[0].volume = 0.5;
+    await MostrarDialogo("MEWO", "MEOW? (Esperando por algo acontecer?)")
+    await MostrarDialogo("MEWO", "");
+}
+
+$(".miau").click(() => {
+  ShowDialogues(
+    getMewo
+  );
 });
 
 window.onresize = VerificarMenu;

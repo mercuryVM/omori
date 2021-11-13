@@ -151,6 +151,20 @@ div.block div.subblock div.separatorline {
     background: rgba(0,0,0,0.3);
 }
 
+table, th, td {
+    border: 1px solid rgb(117, 117, 117);
+    border-collapse: collapse;
+    padding: 10px;
+  }
+
+table {
+    margin: 10px 0px;
+}
+
+ul li {
+    margin: 10px 0px;
+}
+
 @media screen and (max-width: 1460px) {
     div.block div.infosub {
         flex: 50%
@@ -185,6 +199,11 @@ div.block div.subblock div.separatorline {
         flex: 90%;
     }
 
+    table, th, td {
+        font-size: 14px;
+        padding:4px;
+      }
+
     div.block {
         flex-direction: column-reverse;
         justify-content: center;
@@ -211,6 +230,13 @@ div.block div.subblock div.separatorline {
     div.block div.subblock div.imagecontainer img {
         width: 100%;
     }
+}
+
+@media screen and (max-width: 340px) {
+    table, th, td {
+        font-size: 4vw;
+        padding: 2px;
+      }
 }
 
 @media screen and (max-width: 240px) {
