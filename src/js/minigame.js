@@ -447,7 +447,7 @@ async function Stab(){
 
     $(".main").animate({
         opacity: 0,
-    }, 10000, async () => {
+    }, 2000, async () => {
         $(".something").css("display", "flex");
 
         const messages = [
@@ -457,6 +457,12 @@ async function Stab(){
             "KEL amava ela e você matou ela",
             "BASIL amava ela e você matou ela",
             "Você amava ela e você matou ela",
+        ]
+
+        let basilAnimation = [
+            "/src/img/basilhelp/player_please_help_1_01.gif",
+            "/src/img/basilhelp/player_please_help_1_02.gif",
+            "/src/img/basilhelp/player_please_help_1_03.gif",
         ]
 
         let messageNow = 0;
@@ -469,7 +475,110 @@ async function Stab(){
                 if(messageNow + 1 != messages.length) messageNow++;
             }
         });
-        await sleep(20000);
+
+        let animation = 0;
+
+        for(var i = 0; i < 32; i++){
+            await sleep(175);
+            animation++;
+            if(animation === basilAnimation.length) animation = 0;
+            $("#something").attr("src", basilAnimation[animation]);
+        }
+
+        basilAnimation = [
+            "/src/img/basilhelp/player_please_help_1_04.gif",
+            "/src/img/basilhelp/player_please_help_1_05.gif",
+            "/src/img/basilhelp/player_please_help_1_06.gif",
+        ]
+
+        for(var i = 0; i < 32; i++){
+            await sleep(175);
+            animation++;
+            if(animation >= basilAnimation.length) animation = 0;
+            $("#something").attr("src", basilAnimation[animation]);
+        }
+
+        basilAnimation = [
+            "/src/img/basilhelp/player_please_help_1_07.gif",
+            "/src/img/basilhelp/player_please_help_1_08.gif",
+            "/src/img/basilhelp/player_please_help_1_09.gif",
+        ]
+
+        for(var i = 0; i < 32; i++){
+            await sleep(175);
+            animation++;
+            if(animation >= basilAnimation.length) animation = 0;
+            $("#something").attr("src", basilAnimation[animation]);
+        }
+
+        basilAnimation = [
+            "/src/img/basilhelp2/player_please_help_2_04.gif",
+            "/src/img/basilhelp2/player_please_help_2_05.gif",
+            "/src/img/basilhelp2/player_please_help_2_06.gif",
+        ]
+
+        for(var i = 0; i < 32; i++){
+            await sleep(175);
+            animation++;
+            if(animation >= basilAnimation.length) animation = 0;
+            $("#something").attr("src", basilAnimation[animation]);
+        }
+
+        basilAnimation = [
+            "/src/img/basilhelp2/player_please_help_2_07.gif",
+            "/src/img/basilhelp2/player_please_help_2_08.gif",
+            "/src/img/basilhelp2/player_please_help_2_09.gif",
+        ]
+
+        for(var i = 0; i < 16; i++){
+            await sleep(175);
+            animation++;
+            if(animation >= basilAnimation.length) animation = 0;
+            $("#something").attr("src", basilAnimation[animation]);
+        }
+
+        basilAnimation = [
+            "/src/img/blackspace/fa_horror_2_01.png",
+            "/src/img/blackspace/fa_horror_2_02.png",
+            "/src/img/blackspace/fa_horror_2_03.png",
+        ]
+
+        for(var i = 0; i < 8; i++){
+            await sleep(175);
+            animation++;
+            if(animation >= basilAnimation.length) animation = 0;
+            $("#something").attr("src", basilAnimation[animation]);
+        }
+
+        $(".cookiesWarn").css("display", "none");
+
+        $("#somethingDS")[0].play();
+
+        $("#ost")[0].pause();
+
+        basilAnimation = [
+            "/src/img/blackspace/fa_horror_2_04.png",
+            "/src/img/blackspace/fa_horror_2_05.png",
+            "/src/img/blackspace/fa_horror_2_06.png",
+            "/src/img/blackspace/fa_horror_2_07.png",
+            "/src/img/blackspace/fa_horror_2_08.png",
+            "/src/img/blackspace/fa_horror_2_09.png",
+        ]
+
+        animation = 0;
+
+        for(;;){
+            await sleep(100);
+            animation++;
+            if(animation >= basilAnimation.length) {
+                break;
+            }
+            $("#something").attr("src", basilAnimation[animation]);
+        }
+
+        $(".something").css("display", "none");
+
+        await sleep(5000);
         window.location.reload();
     })
 }

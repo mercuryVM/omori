@@ -93,7 +93,6 @@ div.something {
     position: fixed;
     width: 100vw;
     height: 100vh;
-    z-index: 1000;
     display: none;
     align-items: center;
     justify-content: center;
