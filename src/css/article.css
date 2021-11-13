@@ -212,3 +212,29 @@ div.block div.subblock div.separatorline {
         width: 100%;
     }
 }
+
+@media screen and (max-width: 240px) {
+    div.subblock div.alert {
+        flex-direction: column;
+    }
+
+    div.subblock div.alert img {
+        display: none;
+    }
+
+    div.block div.subblock p {
+        font-size: 8vw;
+    }
+
+    div.block div.subblock div.info img {
+        height: 48vw;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+}

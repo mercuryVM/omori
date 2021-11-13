@@ -84,6 +84,7 @@ div.footer span {
 div.footer span.copyright{
     font-size: 16px;
     color: white;
+    text-align: center;
 }
 
 div.footer div.separator span.title {
@@ -260,5 +261,15 @@ img.miau {
     div.content {
         margin: 0;
         padding: 100px 10% !important;
+    }
+}
+
+@media screen and (max-width: 250px) {
+    div.footer div.separator span.title {
+        font-size: 8vw;
+    }
+
+    div.footer div.separator div.list a {
+        font-size: 6vw;
     }
 }

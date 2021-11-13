@@ -63,7 +63,7 @@ div.box img.headImage {
     border-style: solid;
     object-fit: cover;
     max-width: 600px;
-    width: 30vw;
+    width: calc(30vw - 100px);
     height: auto;
     -webkit-transition: all .25s ease;
     -moz-transition: all .25s ease;
@@ -115,6 +115,20 @@ div.left {
     border-style: solid;
 }
 
+@media screen and (max-width: 1280px) {
+    div.box {
+        flex-direction: column-reverse;
+    }
+
+    div.invertedBox {
+        flex-direction: column !important;
+    }
+
+    div.box img.headImage{
+        width: calc(100% - 50px);
+        margin: auto;
+    }
+}
 /* modificações para mobile */
 
 @media screen and (max-width: 960px) {
@@ -138,19 +152,6 @@ div.left {
         min-height: 150px;
     }
 
-    div.box {
-        flex-direction: column-reverse;
-    }
-
-    div.invertedBox {
-        flex-direction: column !important;
-    }
-
-    div.box img.headImage{
-        width: calc(100% - 50px);
-        margin: auto;
-    }
-
     p.dialogName{
         font-size: 32px;
     }
@@ -165,5 +166,59 @@ div.left {
 
     div.content div.hands {
         overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    div.imageandheader div.cards img {
+        height: 125px;
+    }
+
+    div.experience span.header, div.trailer span.header {
+        font-size: 20px;
+    }
+
+    span.menuBTN {
+        font-size: 32px;
+    }
+
+    div.header, div.footer {
+        column-gap: 10px;
+        padding: 0px 10px;
+    }
+
+    p.dialogName {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 250px) {
+    div.imageandheader div.cards img {
+        height: 44vw;
+    }
+
+    div.experience span.header, div.trailer span.header {
+        font-size: 20px;
+    }
+
+    span.menuBTN {
+        font-size: 16vw;
+    }
+
+    div.imageandheader p {
+        font-size: 14px;
+    }
+
+    div.header, div.footer {
+        column-gap: 5px;
+        padding: 0px 5px;
+    }
+
+    img.miau {
+        height: 23vw;
+    }
+
+    p.dialogName {
+        font-size: 24px;
     }
 }

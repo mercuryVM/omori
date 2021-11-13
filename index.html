@@ -6,12 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-– estilos -->
     <link href="/src/css/config.css" type="text/css" rel="stylesheet" />
+    <link href="/src/css/whitespace.css" type="text/css" rel="stylesheet" />
     <link href="/src/css/global.css" type="text/css" rel="stylesheet" />
     <link href="/src/css/wiki.css" type="text/css" rel="stylesheet" />
     <link href="/src/css/abridorImagem.css" type="text/css" rel="stylesheet" />
     <link href="/src/css/menu.css" type="text/css" rel="stylesheet" />
     <!-– jquery -->
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="./src/js/jquery.transit.min.js"></script>
       <!-– fontes -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -444,7 +446,13 @@
 
     <div class="content" style="opacity: 0">
       <div class="intro" data-aos="fade-down">
-        <img src="/src/img/omori_gif.gif" class="omori" ignore=true>
+        <div class="whitespace" tabindex="1">
+          <img src="/src/img/whitespace/sketchbook.png" ignore=true class="sketchbook" />
+          <img src="/src/img/whitespace/mewo.gif" ignore=true class="mewo" />
+          <img src="/src/img/whitespace/laptop.gif" ignore=true class="laptop" />
+          <img src="/src/img/whitespace/tissuebox.png" ignore=true class="tissuebox" />
+          <img src="/src/img/whitespace/omori walk/omori_idle.png" id="character" ignore=true class="omori" />
+        </div>
         <div class="introDialogo">
           <div class="dialogoNome">
             <p class="dialogName">OMORI</p>
@@ -609,5 +617,6 @@
   <script src="/src/js/imageopener.js"></script>
   <script src="/src/js/intro.js"></script>
   <script src="/src/js/global.js"></script>
+  <script src="/src/js/minigame.js"></script>
 
 </html>
