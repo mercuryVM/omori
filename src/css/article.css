@@ -82,6 +82,7 @@ div.block div.subblock div.info div.line div.values {
   flex-direction: column;
   margin-right: auto;
   flex: 50%;
+  row-gap: 12px;
 }
 
 div.block div.subblock div.info div.line div.name {
@@ -169,13 +170,53 @@ ul li {
 }
 
 div.block div.subblock table img.icon {
-    height: 16px;
-    width: 16px;
-    margin: 0px;
-    cursor: pointer;
-    pointer-events: all;
-    max-width: 16px;
-    max-height: 16px;
+  height: 16px;
+  width: 16px;
+  margin: 0px;
+  cursor: pointer;
+  pointer-events: all;
+  max-width: 16px;
+  max-height: 16px;
+}
+
+div.block div.subblock div.contentsub {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  row-gap: 5px;
+}
+
+div.block div.subblock div.contentsub div.insidelist {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+div.block div.subblock div.contentsub span.contentButton {
+  padding: 5px;
+  display: flex;
+}
+
+div.block div.subblock div.contentsub span.contentButton a {
+  width: 100%;
+}
+
+div.block div.subblock div.contentsub span.contentButton:hover {
+  background-color: #aa96c9;
+  color: rgb(34 9 72);
+  border-radius: 5px;
+}
+
+div.block div.subblock div.info div.line div.values div.value {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  row-gap: 5px;
+}
+
+div.block div.subblock div.info div.line div.values div.value span.it {
+  text-align: left;
+  color: gray;
 }
 
 @media screen and (max-width: 1460px) {
@@ -225,7 +266,7 @@ div.block div.subblock table img.icon {
     margin: 0px;
     cursor: pointer;
     pointer-events: all;
-}
+  }
 
   div.block {
     flex-direction: column-reverse;
@@ -282,19 +323,20 @@ div.block div.subblock table img.icon {
   }
 
   div.block div.alert span {
-      font-size: 7vw !important;
+    font-size: 7vw !important;
   }
 
   div.subblock a {
-      font-size: 7vw;
+    font-size: 7vw;
   }
 
   div.block div.subblock div.info div.line div.name {
-      font-size: 5.5vw;
+    font-size: 5.5vw;
   }
 
-  div.block div.subblock div.info div.line div.values div.value, div.block div.subblock div.info div.line {
-      font-size: 5.5vw;
+  div.block div.subblock div.info div.line div.values div.value,
+  div.block div.subblock div.info div.line {
+    font-size: 5.5vw;
   }
 
   div.block div.subblock p {
