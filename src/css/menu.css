@@ -248,8 +248,8 @@ div.mobileMenu p {
   }
 
   div.mobileMenu div.btn img.icon {
-    min-width: 16px;
-    min-height: 16px;
+    min-width: 12vw;
+    min-height: 12vw;
     height: 24px;
   }
 }
@@ -260,13 +260,12 @@ div.mobileMenu p {
     margin-left: 4vw;
   }
 
-  div.mobileMenu p {
-    font-size: 12vw;
+  div.mobileMenu {
+    padding: 4vw;
   }
 
-  div.subMenuOption div.image, div.btn div.image {
-    min-width: 30vw;
-    min-height: 30vw;
+  div.mobileMenu p {
+    font-size: 12vw;
   }
 
   div.mobileMenu div.btn img.icon {
