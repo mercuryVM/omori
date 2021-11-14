@@ -1,12 +1,137 @@
-body{
-    margin: 0;
+body {
+  margin: 0;
+}
+
+@font-face {
+  font-family: "OMORIGAME";
+  src: url("fonts/OMORI_GAME2.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OMORI";
+  src: url("fonts/OMORI_GAME1.ttf") format("truetype");
+}
+
+div.cookiesWarn {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+div#setaBundle {
+  display: flex;
+  flex-direction: row;
+  opacity: 0;
+  margin-top: auto;
+}
+
+div.dialogo {
+  height: 95%;
+  background-color: black;
+  border-width: 5px;
+  border-color: white;
+  border-style: double;
+  margin: 5px 0px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+p.diagolSeta {
+  color: black;
+  margin-top: auto;
+  margin-bottom: 0;
+  font-family: "OMORIGAME";
+  font-size: 30px;
+  font-weight: 700;
+  text-shadow: #fff 0px 0px 2px, #fff 0px 0px 2px, #fff 0px 0px 2px,
+    #fff 0px 0px 2px, #fff 0px 0px 2px, #fff 0px 0px 2px;
+  flex: 50%;
+}
+
+div.dialogoNome {
+  padding: 5px 20px;
+  background-color: black;
+  border-width: 5px;
+  border-color: white;
+  border-style: double;
+  margin: 5px 0px;
+  width: fit-content;
+  margin-right: auto;
+  text-align: center;
+}
+
+div.dialogoPersonagem {
+  padding: 5px 20px;
+  background-color: black;
+  border-width: 3px;
+  border-color: white;
+  border-style: solid;
+  margin: 5px 0px;
+  width: fit-content;
+  margin-right: auto;
+  text-align: center;
+}
+
+div.mainDialogo {
+  opacity: 0;
+  width: 80vw;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 10px;
+}
+
+div.content {
+  margin: 0 15%;
+}
+
+img.dialogSeta {
+  height: 28px;
+}
+
+p.dialogName {
+  font-family: "OMORIGAME", "OMORIGAME2";
+  font-size: 40px;
+  color: white;
+  margin: 0;
 }
 
 /* ===== Scrollbar CSS ===== */
+/* Firefox */
+body {
+  scrollbar-width: auto;
+  scrollbar-color: #ffffff #6c0eff;
+}
+
+/* Chrome, Edge, and Safari */
+body::-webkit-scrollbar {
+  width: 16px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border: 5px solid #1a1a1a;
+  border-radius: 10px;;
+}
+
+@media screen and (max-width: 960px) {
+  /* ===== Scrollbar CSS ===== */
   /* Firefox */
   body {
     scrollbar-width: auto;
-    scrollbar-color: #000 #fff;
+    scrollbar-color: #1a1a1a #fff;
   }
 
   /* Chrome, Edge, and Safari */
@@ -23,105 +148,4 @@ body{
     border-radius: 14px;
     border: 5px solid #fff;
   }
-
-@font-face {
-    font-family:"OMORIGAME";
-    src: url("fonts/OMORI_GAME2.ttf") format("truetype");
-}
-
-@font-face {
-    font-family:"OMORI";
-    src: url("fonts/OMORI_GAME1.ttf") format("truetype");
-}
-
-div.cookiesWarn{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: fixed;
-    z-index: 10;
-    background-color: rgba(0,0,0,0.5);
-}
-
-div#setaBundle{
-    display: flex;
-    flex-direction: row;
-    opacity: 0;
-    margin-top: auto;
-}
-
-div.dialogo{
-    height: 95%;
-    background-color: black;
-    border-width: 5px;
-    border-color: white;
-    border-style: double;
-    margin: 5px 0px;
-    padding: 10px 20px;
-    display: flex;
-    flex-direction: column;
-}
-
-p.diagolSeta{
-    color: black;
-    margin-top: auto;
-    margin-bottom: 0;
-    font-family: 'OMORIGAME';
-    font-size: 30px;
-    font-weight: 700;
-    text-shadow: #fff 0px 0px 2px, #fff 0px 0px 2px, #fff 0px 0px 2px, #fff 0px 0px 2px, #fff 0px 0px 2px, #fff 0px 0px 2px;
-    flex: 50%;
-}
-
-div.dialogoNome{
-    padding: 5px 20px;
-    background-color: black;
-    border-width: 5px;
-    border-color: white;
-    border-style: double;
-    margin: 5px 0px;
-    width: fit-content;
-    margin-right: auto;
-    text-align: center;
-}
-
-div.dialogoPersonagem{
-    padding: 5px 20px;
-    background-color: black;
-    border-width: 3px;
-    border-color: white;
-    border-style: solid;
-    margin: 5px 0px;
-    width: fit-content;
-    margin-right: auto;
-    text-align: center;
-}
-
-div.mainDialogo{
-    opacity: 0;
-    width: 80vw;
-    max-width: 800px;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    bottom: 10px;
-}
-
-div.content{
-    margin: 0 15%;
-}
-
-img.dialogSeta{
-    height: 28px;
-}
-
-p.dialogName{
-    font-family: "OMORIGAME","OMORIGAME2";
-    font-size: 40px;
-    color: white;
-    margin: 0;
-    
 }

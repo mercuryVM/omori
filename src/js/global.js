@@ -108,8 +108,9 @@ $(".header").find($("a")).each(function () {
   if ($(this).attr("href")) {
     const href = $(this).attr("href");
 
-    if (window.location.pathname === href || (href === "/" && window.location.pathname === "/index.html") || (window.location.pathname === href + "/")) {
-      console.log("equals")
+    const path = window.location.pathname.replace("index.html", "");
+
+    if (path === href || (href === "/" && path === "/index.html") || (path=== href + "/")) {
       $(this).find(".info").addClass("selected");
       $(this).find(".subMenuOption").addClass("subMenuSelected")
 

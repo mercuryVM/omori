@@ -4,9 +4,6 @@
 			"path": "."
 		},
 		{
-			"path": "../omori backend"
-		},
-		{
 			"path": "../omori-backend"
 		}
 	],
