@@ -95,6 +95,7 @@ div.content {
 
 img.dialogSeta {
   height: 28px;
+  max-height: 28px;
 }
 
 p.dialogName {

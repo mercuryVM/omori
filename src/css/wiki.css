@@ -184,6 +184,10 @@ div.left {
         height: 125px;
     }
 
+    div.box div.imageandheader {
+        padding: 10px;
+    }
+
     div.experience span.header, div.trailer span.header {
         font-size: 20px;
     }
@@ -195,15 +199,45 @@ div.left {
     p.dialogName {
         font-size: 24px;
     }
+
+    p.diagolSeta {
+        display: none;
+    }
+
+    img.dialogSeta {
+        height: 8vw;
+        margin-left: auto;
+    }
+}
+
+@media screen and (max-width: 180px) {
+    div.box div.imageandheader p iframe {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 250px) {
-    div.imageandheader div.cards img {
-        height: 44vw;
+    div.imageandheader div.cards {
+        display: none;
+    }
+    
+    div.hands img.hand {
+        margin: 0px 5vw;
+    }
+
+    div.box img.headImage {
+        border-width: 2px;
+        border-radius: 5px;
+        width: 100%;
+    }
+
+    div.experience div.box{
+        margin: 2vw 0px;
     }
 
     div.experience span.header, div.trailer span.header {
-        font-size: 20px;
+        font-size: 10vw;
+        margin: 0;
     }
 
     span.menuBTN {
@@ -211,7 +245,7 @@ div.left {
     }
 
     div.imageandheader p {
-        font-size: 14px;
+        font-size: 6.5vw;
     }
 
     img.miau {
@@ -219,6 +253,18 @@ div.left {
     }
 
     p.dialogName {
-        font-size: 24px;
+        font-size: 9.5vw;
+    }
+
+    div.dialogoNome {
+        padding: 3vw 6vw;
+    }
+
+    div.dialogo {
+        padding: 3vw 6vw;
+    }
+
+    div.introDialogo {
+        max-width: 95vw;
     }
 }
