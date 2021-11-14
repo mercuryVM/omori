@@ -98,10 +98,12 @@ div.footer div.separator a {
   font-size: 30px;
   margin-bottom: 2px;
   margin-top: 2px;
+  font-family: 'OMORIGAME';
 }
 
 div.footer div.separator div.list a {
   font-size: 14px;
+  font-family: 'Roboto';
 }
 
 div.content {
@@ -167,7 +169,8 @@ span.menuBTN {
 
 a {
   text-decoration: none;
-  color: white;
+  color: #2f0c7a;
+  font-family: 'Roboto';
 }
 
 body {

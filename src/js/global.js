@@ -81,7 +81,7 @@ async function ShowDialogues(toCall) {
 const getMewo = async () => {
   $("#meow")[0].play();
     $("#meow")[0].volume = 0.5;
-    await MostrarDialogo("MEWO", "MEOW? (Esperando por algo acontecer?)")
+    await MostrarDialogo("MEWO", minigameLanguage.get("mewo"))
     await MostrarDialogo("MEWO", "");
 }
 
@@ -150,7 +150,7 @@ async function Intro(skip) {
     opacity: 1,
   }, 500, async function () {
     if (!skip) {
-      await MostrarDialogo("???", "Voce deseja aceitar nossas politicas de cookies, que no fim das contas nem existem?");
+      await MostrarDialogo("???", minigameLanguage.get("cookies"));
       await MostrarDialogo("???", "");
     }
     $(".cookiesWarn").css("display", "none");

@@ -5,6 +5,7 @@ let nextMovement = false;
 const itemSpace = new Map();
 let playerOrientation = "up";
 let stabbing = false;
+let minigameLanguage = new Map();
 
 let inventory = [];
 
@@ -332,8 +333,8 @@ let interacting = false;
 const getLaptop = async () => {
     $("#laptop")[0].play();
     $("#laptop")[0].volume = 0.3;
-    await MostrarDialogo(false, "O calor do notebook aqueceu seu colo.")
-    await MostrarDialogo(false, "Foi bom...")
+    await MostrarDialogo(false, minigameLanguage.get("laptop.1"))
+    await MostrarDialogo(false, minigameLanguage.get("laptop.2"))
     interacting = false;
   }
 
@@ -361,7 +362,7 @@ function Interact(){
             ShowDialogues(
                 async () => {
                   inventory.push("knife");
-                  await MostrarDialogo(false, "Você pegou uma faca.")
+                  await MostrarDialogo(false, minigameLanguage.get("knife_get"))
                   await MostrarDialogo(false, "")
                   interacting = false;
                   $("#knifeItem").css("display", "none");
@@ -376,7 +377,7 @@ function Interact(){
             interacting = true;
             ShowDialogues(
                 async () => {
-                  await MostrarDialogo(false, "Uma caixa de lenços para enxugar suas tristezas...")
+                  await MostrarDialogo(false, minigameLanguage.get("sad_lenco"))
                   await MostrarDialogo(false, "")
                   interacting = false;
                 }
@@ -385,7 +386,7 @@ function Interact(){
             interacting = true;
             ShowDialogues(
                 async () => {
-                  await MostrarDialogo(false, "Seu caderno de desenho...")
+                  await MostrarDialogo(false, minigameLanguage.get("draw"))
                   await MostrarDialogo(false, "")
                   interacting = false;
                 }
@@ -407,7 +408,7 @@ function Interact(){
             interacting = true;
             ShowDialogues(
                 async () => {
-                  await MostrarDialogo(false, "Seu caderno de desenho...")
+                  await MostrarDialogo(false, minigameLanguage.get("draw"))
                   await MostrarDialogo(false, "")
                   interacting = false;
                 }
@@ -418,7 +419,7 @@ function Interact(){
             interacting = true;
             ShowDialogues(
                 async () => {
-                  await MostrarDialogo(false, "Uma caixa de lenços para enxugar suas tristezas...")
+                  await MostrarDialogo(false, minigameLanguage.get("sad_lenco"))
                   await MostrarDialogo(false, "")
                   interacting = false;
                 }
@@ -428,7 +429,7 @@ function Interact(){
             ShowDialogues(
                 async () => {
                   inventory.push("knife");
-                  await MostrarDialogo(false, "Você pegou uma faca.")
+                  await MostrarDialogo(false, minigameLanguage.get("knife_get"))
                   await MostrarDialogo(false, "")
                   interacting = false;
                   $("#knifeItem").css("display", "none");
@@ -482,12 +483,12 @@ async function Stab(){
         $(".something").css("display", "flex");
 
         const messages = [
-            "Você matou Mari. Ela amava você e você matou ela.",
-            "HERO amava ela e você matou ela",
-            "AUBREY amava ela e você matou ela",
-            "KEL amava ela e você matou ela",
-            "BASIL amava ela e você matou ela",
-            "Você amava ela e você matou ela",
+            "something.1",
+            "something.2",
+            "something.3",
+            "something.4",
+            "something.5",
+            "something.6",
         ]
 
         let basilAnimation = [
@@ -502,7 +503,7 @@ async function Stab(){
             for(;;) {
                 $("#body").css("overflow", "hidden");
                 $("#body")[0].scrollTop = 0;
-                await MostrarDialogo("???", messages[messageNow]);
+                await MostrarDialogo("???", minigameLanguage.get(messages[messageNow]));
                 if(messageNow + 1 != messages.length) messageNow++;
             }
         });
