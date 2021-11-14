@@ -99,9 +99,13 @@ div.block div.infosub {
   flex: 30%;
 }
 
+div.subblock div.info a {
+  color: #9a67e9;
+  text-decoration: none;
+}
+
 div.subblock a {
   color: #2f0c7a;
-  text-decoration: none;
 }
 
 div.subblock img {
