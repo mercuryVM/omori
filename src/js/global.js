@@ -176,7 +176,7 @@ function FixContentHeader(){
   const height = $(".header")[0].clientHeight;
 
   if(!isNaN(height)){
-    $(".content").css("padding-top", height + "px");
+    $(".content").css("padding-top", (height + 20) + "px");
   }
 }
 

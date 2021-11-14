@@ -1,270 +1,293 @@
 div.trailer video {
-    height: 35vw;
-    min-height: 250px;
-    border-radius: 25px;
+  height: 35vw;
+  min-height: 250px;
+  border-radius: 25px;
 }
 
 div.downloadBTN img {
-    width: 8vw;
-    margin: 20;
-    min-width: 200px;
-    pointer-events: all;
+  width: 8vw;
+  margin: 20;
+  min-width: 200px;
+  pointer-events: all;
 }
 
 div.trailer {
-    margin-top: 100px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    opacity: 0;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
 }
 
 div.experience div.box {
-    display: flex;
-    opacity: 0;
-    margin: 64px 0px;
+  display: flex;
+  opacity: 0;
+  margin: 64px 0px;
 }
 
 div.box div.imageandheader {
-    padding: 20px;
+  padding: 20px;
 }
 
 div.imageandheader p {
-    font-family: 'Roboto';
+  font-family: "Roboto";
 }
 
 div.imageandheader div.cards {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 div.cards img {
-    height: 22vw;
-    position: relative;
-    max-height: 200px;
-    margin: 0 15px;
-    border-radius: 10px;
-    border-width: 4px;
-    border-color: rgba(0, 0, 0, 0.295);
-    border-bottom-style: solid;
-    border-right-style: solid;
-    -webkit-transition: all .25s ease;
-    -moz-transition: all .25s ease;
-    -o-transition: all .25s ease;
-    -ms-transition: all .25s ease;
-    transition: all 0.25s ease;
+  height: 22vw;
+  position: relative;
+  max-height: 200px;
+  margin: 0 15px;
+  border-radius: 10px;
+  border-width: 4px;
+  border-color: rgba(0, 0, 0, 0.295);
+  border-bottom-style: solid;
+  border-right-style: solid;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 
 div.box img.headImage {
-    border-radius: 20px;
-    border-width: 4px;
-    border-color: black;
-    border-style: solid;
-    object-fit: cover;
-    max-width: 600px;
-    width: calc(30vw - 100px);
-    height: auto;
-    -webkit-transition: all .25s ease;
-    -moz-transition: all .25s ease;
-    -o-transition: all .25s ease;
-    -ms-transition: all .25s ease;
-    transition: all 0.25s ease;
+  border-radius: 20px;
+  border-width: 4px;
+  border-color: black;
+  border-style: solid;
+  object-fit: cover;
+  max-width: 600px;
+  width: calc(30vw - 100px);
+  height: auto;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 
 div.experience span.header,
 div.trailer span.header {
-    font-family: 'Roboto';
-    font-size: 36px;
-    text-align: end;
-    font-weight: 700;
-    margin-right: 20px;
+  font-family: "Roboto";
+  font-size: 36px;
+  text-align: end;
+  font-weight: 700;
+  margin-right: 20px;
 }
 
 div.intro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
 }
 
 div.something {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    pointer-events: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
 }
 
 div.introDialogo {
-    max-width: 800px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
-img.headImage:hover, div.cards img:hover{
-    -webkit-filter: brightness(50%);
-   filter: brightness(50%);
+img.headImage:hover,
+div.cards img:hover {
+  -webkit-filter: brightness(50%);
+  filter: brightness(50%);
 }
 
 div.intro img.omori {
-    height: 25vw;
-    min-height: 215px;
+  height: 25vw;
+  min-height: 215px;
+}
+
+div#carousel {
+    width: calc(100% - 40px);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #333333;
 }
 
 div.left {
-    background-color: white;
-    border-radius: 10px;
-    border-color: black;
-    border-width: 5px;
-    width: 15vw;
-    border-style: solid;
+  background-color: white;
+  border-radius: 10px;
+  border-color: black;
+  border-width: 5px;
+  width: 15vw;
+  border-style: solid;
+}
+
+h1 {
+  font-family: "Roboto";
+  font-size: 24px;
+  text-align: end;
+  font-weight: 700;
+}
+
+div.download {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 1280px) {
-    div.box {
-        flex-direction: column-reverse;
-    }
+  div.box {
+    flex-direction: column-reverse;
+  }
 
-    div.invertedBox {
-        flex-direction: column !important;
-    }
+  div.invertedBox {
+    flex-direction: column !important;
+  }
 
-    div.box img.headImage{
-        width: calc(100% - 50px);
-        margin: auto;
-    }
+  div.box img.headImage {
+    width: calc(100% - 50px);
+    margin: auto;
+  }
 }
 /* modificações para mobile */
 
 @media screen and (max-width: 960px) {
+  div.experience span.header,
+  div.trailer span.header {
+    font-size: 48px;
+    text-align: right;
+  }
 
-    div.experience span.header,
-    div.trailer span.header {
-        font-size: 48px;
-        text-align: right;
-    }
+  div.experience span.header,
+  div.trailer span.header {
+    font-size: 24px;
+  }
 
-    div.experience span.header,
-    div.trailer span.header {
-        font-size: 24px;
-    }
+  div.downloadBTN img {
+    min-width: 150px;
+  }
 
-    div.downloadBTN img{
-        min-width: 150px;
-    }
+  div.trailer video {
+    min-height: 150px;
+  }
 
-    div.trailer video{
-        min-height: 150px;
-    }
-
-    p.dialogName{
-        font-size: 32px;
-    }
+  p.dialogName {
+    font-size: 32px;
+  }
 }
 
 /* correção para telas muito pequenas */
 
 @media screen and (max-width: 600px) {
-    div.intro img.omori{
-        min-height: 150px;
-    }
+  div.intro img.omori {
+    min-height: 150px;
+  }
 
-    div.content div.hands {
-        overflow: hidden;
-    }
+  div.content div.hands {
+    overflow: hidden;
+  }
 }
 
 @media screen and (max-width: 340px) {
-    div.imageandheader div.cards img {
-        height: 125px;
-    }
+  div.imageandheader div.cards img {
+    height: 125px;
+  }
 
-    div.box div.imageandheader {
-        padding: 10px;
-    }
+  div.box div.imageandheader {
+    padding: 10px;
+  }
 
-    div.experience span.header, div.trailer span.header {
-        font-size: 20px;
-    }
+  div.experience span.header,
+  div.trailer span.header {
+    font-size: 20px;
+  }
 
-    span.menuBTN {
-        font-size: 32px;
-    }
+  span.menuBTN {
+    font-size: 32px;
+  }
 
-    p.dialogName {
-        font-size: 24px;
-    }
+  p.dialogName {
+    font-size: 24px;
+  }
 
-    p.diagolSeta {
-        display: none;
-    }
+  p.diagolSeta {
+    display: none;
+  }
 
-    img.dialogSeta {
-        height: 8vw;
-        margin-left: auto;
-    }
+  img.dialogSeta {
+    height: 8vw;
+    margin-left: auto;
+  }
 }
 
 @media screen and (max-width: 180px) {
-    div.box div.imageandheader p iframe {
-        display: none;
-    }
+  div.box div.imageandheader p iframe {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 250px) {
-    div.imageandheader div.cards {
-        display: none;
-    }
-    
-    div.hands img.hand {
-        margin: 0px 5vw;
-    }
+  div.imageandheader div.cards {
+    display: none;
+  }
 
-    div.box img.headImage {
-        border-width: 2px;
-        border-radius: 5px;
-        width: 100%;
-    }
+  div.hands img.hand {
+    margin: 0px 5vw;
+  }
 
-    div.experience div.box{
-        margin: 2vw 0px;
-    }
+  div.box img.headImage {
+    border-width: 2px;
+    border-radius: 5px;
+    width: 100%;
+  }
 
-    div.experience span.header, div.trailer span.header {
-        font-size: 10vw;
-        margin: 0;
-    }
+  div.experience div.box {
+    margin: 2vw 0px;
+  }
 
-    span.menuBTN {
-        font-size: 16vw;
-    }
+  div.experience span.header,
+  div.trailer span.header {
+    font-size: 10vw;
+    margin: 0;
+  }
 
-    div.imageandheader p {
-        font-size: 6.5vw;
-    }
+  span.menuBTN {
+    font-size: 16vw;
+  }
 
-    img.miau {
-        height: 23vw;
-    }
+  div.imageandheader p {
+    font-size: 6.5vw;
+  }
 
-    p.dialogName {
-        font-size: 9.5vw;
-    }
+  img.miau {
+    height: 23vw;
+  }
 
-    div.dialogoNome {
-        padding: 3vw 6vw;
-    }
+  p.dialogName {
+    font-size: 9.5vw;
+  }
 
-    div.dialogo {
-        padding: 3vw 6vw;
-    }
+  div.dialogoNome {
+    padding: 3vw 6vw;
+  }
 
-    div.introDialogo {
-        max-width: 95vw;
-    }
+  div.dialogo {
+    padding: 3vw 6vw;
+  }
+
+  div.introDialogo {
+    max-width: 95vw;
+  }
 }

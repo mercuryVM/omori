@@ -11,9 +11,11 @@
   <link href="/src/css/wiki.css" type="text/css" rel="stylesheet" />
   <link href="/src/css/abridorImagem.css" type="text/css" rel="stylesheet" />
   <link href="/src/css/menu.css" type="text/css" rel="stylesheet" />
+  <link href="/src/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
   <!-– jquery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="./src/js/jquery.transit.min.js"></script>
+  <script src="/src/js/bootstrap.min.js"></script>
   <!-– fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -483,6 +485,51 @@
     </div>
 
     <div class="content" style="opacity: 0">
+      <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img ignore=true src="/src/img/gamepics/Omori_AAPI_Wallpaper.webp" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <p>Conheça o mundo imenso que te aguarda!</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img ignore=true src="/src/img/gamepics/Omoriorigingroup.webp" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <p>Seus amigos estão te esperando...</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img ignore=true src="/src/img/gamepics/SunsetPicnic.webp" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <p>Hora do piquenique!</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img ignore=true src="/src/img/gamepics/Family_photo.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <p>MARI com SUNNY e seus pais</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img ignore=true src="/src/img/gamepics/mari_death.gif" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>...</h5>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev control-right" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next control-left" type="button" data-bs-target="#carousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+
       <div class="intro" data-aos="fade-down">
         <div class="whitespace" tabindex="1">
           <img src="/src/img/whitespace/sketchbook.png" ignore=true class="sketchbook" />
@@ -493,28 +540,6 @@
           <img src="/src/img/whitespace/omori walk/bottom/omori_idle.png" id="character" ignore=true class="omori" />
         </div>
         <span class="walk" id="walkTip">Pressione WASD para andar.</span>
-        <div class="introDialogo">
-          <div class="dialogoNome">
-            <p class="dialogName">OMORI</p>
-          </div>
-          <div class="dialogo">
-            <p class="dialogName" id="dialogMessage">
-              Bem-vindo ao meu espaço branco...
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="hands" data-aos="fade-up">
-        <img src="/src/img/HANDS_SPRITE.gif" ignore=true class="hand hcima">
-        <img src="/src/img/HANDS_SPRITE.gif" ignore=true class="hand hcima">
-        <img src="/src/img/HANDS_SPRITE.gif" ignore=true class="hand hcima">
-        <img src="/src/img/HANDS_SPRITE.gif" ignore=true class="hand hcima">
-        <img src="/src/img/HANDS_SPRITE.gif" ignore=true class="hand hcima">
-        <img src="/src/img/HANDS_SPRITE.gif" ignore=true class="hand hcima">
-        <img src="/src/img/HANDS_SPRITE.gif" ignore=true class="hand hcima">
-        <img src="/src/img/HANDS_SPRITE.gif" ignore=true class="hand hcima handextra">
-        <img src="/src/img/HANDS_SPRITE.gif" ignore=true class="hand hcima handextra">
       </div>
 
       <div class="experience">
@@ -569,24 +594,16 @@
         </div>
       </div>
 
-      <div class="hands" data-aos="fade-up">
-        <img src="/src/img/HANDS_SPRITE.gif" ignore=true class="hand hbaixo">
-        <img src="/src/img/HANDS_SPRITE.gif" ignore=true class="hand hbaixo">
-        <img src="/src/img/HANDS_SPRITE.gif" ignore=true class="hand hbaixo">
-        <img src="/src/img/HANDS_SPRITE.gif" ignore=true class="hand hbaixo">
-        <img src="/src/img/HANDS_SPRITE.gif" ignore=true class="hand hbaixo">
-        <img src="/src/img/HANDS_SPRITE.gif" ignore=true class="hand hbaixo">
-        <img src="/src/img/HANDS_SPRITE.gif" ignore=true class="hand hbaixo">
-        <img src="/src/img/HANDS_SPRITE.gif" ignore=true class="hand hbaixo handextra">
-        <img src="/src/img/HANDS_SPRITE.gif" ignore=true class="hand hbaixo handextra">
-      </div>
+      <div class="download">
+        <h1>Disponível para baixar em</h1>
 
-      <div class="trailer" data-aos="fade-up">
-        <span class="header">Confira o trailer oficial!</span>
-        <video controls id="trailer" onplay="Musica(false)" onended="Musica(true)" onpause="Musica(true)"
-          onplaying="Musica(false)">
-          <source src="/src/videos/trailer.webm">
-        </video>
+        <div class="omoribtn">
+          <a href="https://store.steampowered.com/agecheck/app/1150690/" target="_blank">
+          <div class="inside">
+            <img src="/src/img/social/steam.png" ignore=true>
+          </div>
+        </a>
+        </div>
       </div>
 
     </div>

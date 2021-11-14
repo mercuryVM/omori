@@ -201,18 +201,28 @@ div.footer div.socialmedia {
   width: 100%;
 }
 
-div.footer div.socialmedia div.omoribtn {
+div.omoribtn {
   border-width: 1px;
   border-color: black;
   border-style: solid;
+  font-family: "OMORIGAME";
+  font-size: 32px;
+  width: max-content;
 }
 
-div.footer div.socialmedia div.omoribtn div.inside {
+a {
+  text-decoration: none !important;
+}
+
+div.omoribtn div.inside {
   border-width: 2.5px;
   border-color: rgb(255, 255, 255);
   border-style: solid;
   background-color: black;
   padding: 5px;
+  display: flex;
+  align-items: center;
+  column-gap: 0.75vw;
 }
 
 /* modificações para mobile */
@@ -304,11 +314,11 @@ div.footer div.socialmedia div.omoribtn div.inside {
     font-size: 8vw;
   }
 
-  div.footer div.socialmedia div.omoribtn div.inside img {
+  div.omoribtn div.inside img {
     height: 7vw;
   }
 
-  div.footer div.socialmedia div.omoribtn div.inside {
+  div.omoribtn div.inside {
     padding: 2vw;
   }
 
