@@ -129,6 +129,7 @@ div#carousel {
     border-radius: 10px;
     overflow: hidden;
     background-color: #333333;
+    z-index: 4;
 }
 
 div.experience {
