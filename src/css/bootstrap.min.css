@@ -248,3 +248,9 @@
 .carousel-dark .carousel-caption {
   color: #000;
 }
+
+@media screen and (max-width: 960px){
+  .carousel-caption p {
+    font-size: 4.5vw;
+  }
+}

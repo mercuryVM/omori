@@ -172,11 +172,16 @@ function Musica(bool) {
   else $("#ost")[0].pause();
 }
 
+let changed = false;
+
 function FixContentHeader(){
   const height = $(".header")[0].clientHeight;
 
   if(!isNaN(height)){
+    let oldScrollTop = $("#body")[0].scrollTop;
+
     $(".content").css("padding-top", (height + 20) + "px");
+    $("#body")[0].scrollTop = oldScrollTop;
   }
 }
 
@@ -187,6 +192,7 @@ Intro(skip ? true : false);
 AOS.init()
 
 FixContentHeader()
+
 setTimeout(() => {
   FixContentHeader()
-}, 1000)
+}, 1)

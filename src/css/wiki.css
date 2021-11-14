@@ -117,11 +117,23 @@ div.intro img.omori {
   min-height: 215px;
 }
 
+div.experience img.whyplay {
+    max-width: 450px;
+    width: 60vw;
+    margin: auto;
+
+}
+
 div#carousel {
     width: calc(100% - 40px);
     border-radius: 10px;
     overflow: hidden;
     background-color: #333333;
+}
+
+div.experience {
+    display: flex;
+    flex-direction: column;
 }
 
 div.left {
