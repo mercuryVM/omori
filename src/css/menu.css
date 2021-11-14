@@ -238,6 +238,29 @@ div.mobileMenu p {
   }
 }
 
+@media screen and (max-width: 270px){
+  div.mobileMenu div.btn span.text  {
+    font-size: 12px;
+  }
+
+  div.mobileMenu div.btn img.icon {
+    min-width: 16px;
+    min-height: 16px;
+    height: 24px;
+  }
+}
+
+@media screen and (max-width: 150px){
+  div.mobileMenu div.btn span.text  {
+    font-size: 10vw;
+    margin: 0;
+  }
+
+  div.mobileMenu div.btn img.icon {
+    display: none;
+  }
+}
+
 div.mobileMenu div.btn div.omori,
 div.subMenuOption div.omori {
   background-image: url(../../src/img/menuoptions/characters/omori.gif);

@@ -1,266 +1,315 @@
-div.block{
-    display: flex;
-    width: 100%;
+div.block {
+  display: flex;
+  width: 100%;
 }
 
-div.block div.subblock{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    flex: 1;
-    user-select: text;
+div.block div.subblock {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 1;
+  user-select: text;
 }
 
-div.block div.subblock p{
-    font-size: 16px;
-    margin: 0.5rem 0;
-    color: rgb(32, 32, 32);
+div.block div.subblock p {
+  font-size: 16px;
+  margin: 0.5rem 0;
+  color: rgb(32, 32, 32);
 }
 
 div.block div.subblock strong {
-    font-weight: 700;
-    color: black;
+  font-weight: 700;
+  color: black;
 }
 
 div.block div.subblock .title {
-    margin-right: auto;
-    margin-bottom: 5px;
+  margin-right: auto;
+  margin-bottom: 5px;
 }
 
 div.content {
-    font-family: 'Roboto', cursive;
-    padding: 100px 75px;
+  font-family: "Roboto", cursive;
+  padding: 100px 75px;
 }
 
 div.block div.subblock div.info {
-    border-width: 2px;
-    border-color: black;
-    border-radius: 5px;
-    border-style: solid;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin-left: 50px;
+  border-width: 2px;
+  border-color: black;
+  border-radius: 5px;
+  border-style: solid;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 50px;
 }
 
 div.block div.subblock div.info img {
-    padding: 10px;
-    object-fit: contain;
-    max-width: 250px;
-    width: auto;
+  padding: 10px;
+  object-fit: contain;
+  max-width: 250px;
+  width: auto;
 }
 
 div.block div.subblock div.info div.line {
-    display: flex;
-    color: white;
-    background: black;
-    padding: 4px 10px;
-    font-size: 14px;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 1px 0px;
+  display: flex;
+  color: white;
+  background: black;
+  padding: 4px 10px;
+  font-size: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 1px 0px;
+  text-align: center;
 }
 
 div.block div.subblock div.imagecontainer {
-    margin: 10px 0px;
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 10px;
-    column-gap: 10px;
+  margin: 10px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 10px;
 }
 
 div.block div.subblock div.imagecontainer img {
-    border-radius: 10px;
-    width: 450px;
-    height: auto;
-    margin: auto;
+  border-radius: 10px;
+  width: 450px;
+  height: auto;
+  margin: auto;
 }
 
 div.block div.subblock div.info div.line div.values {
-    display: flex;
-    flex-direction: column;
-    margin-right: auto;
-    flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  flex: 50%;
 }
 
 div.block div.subblock div.info div.line div.name {
-    flex: 1;
-    font-weight: 700;
-    margin: auto;
+  flex: 50%;
+  font-weight: 700;
+  margin: auto;
 }
 
-div.block div.subblock div.info div.line div.values  div.value {
-    font-size: 14px;
+div.block div.subblock div.info div.line div.values div.value {
+  font-size: 14px;
 }
 
 div.block div.infosub {
-    flex: 30%
+  flex: 30%;
 }
 
 div.subblock a {
-    color: #2f0c7a;
-    text-decoration: none;
+  color: #2f0c7a;
+  text-decoration: none;
 }
 
 div.subblock img {
-    margin: 10px auto;
-    border-radius: 10px;
-    height: auto;
-    object-fit: cover;
-    width: 350px;
+  margin: 10px auto;
+  border-radius: 10px;
+  height: auto;
+  object-fit: cover;
+  width: 350px;
 }
 
 div.subblock div.alert {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    margin: 10px 0px;
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 5px;
-    row-gap: 10px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  row-gap: 10px;
 }
 
-div.subblock div.alert img, div.subblock div.info img {
-    height: auto;
-    width: auto;
+div.subblock div.alert img,
+div.subblock div.info img {
+  height: auto;
+  width: auto;
 }
 
-div.subblock div.alert span{
-    margin: 10px 0px;
+div.subblock div.alert span {
+  margin: 10px 0px;
 }
 
-div.subblock div.spoiler{
-    color: #ec0000 !important;
-    border-color: #ec0000;
+div.subblock div.spoiler {
+  color: #ec0000 !important;
+  border-color: #ec0000;
 }
 
-div.subblock div.fandom{
-    color: #2f0c7a !important;
-    border-color: #2f0c7a;
+div.subblock div.fandom {
+  color: #2f0c7a !important;
+  border-color: #2f0c7a;
 }
 
-div.subblock div.alert span{
-    text-align: center;
+div.subblock div.alert span {
+  text-align: center;
 }
-
 
 div.block div.subblock div.separatorline {
-    width: 100%;
-    height: 1px;
-    background: rgba(0,0,0,0.3);
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.3);
 }
 
-table, th, td {
-    border: 1px solid rgb(117, 117, 117);
-    border-collapse: collapse;
-    padding: 10px;
-  }
+table,
+th,
+td {
+  border: 1px solid rgb(117, 117, 117);
+  border-collapse: collapse;
+  padding: 10px;
+}
 
 table {
-    margin: 10px 0px;
+  margin: 10px 0px;
 }
 
 ul li {
-    margin: 10px 0px;
+  margin: 10px 0px;
+}
+
+div.block div.subblock table img.icon {
+    height: 16px;
+    width: 16px;
+    margin: 0px;
+    cursor: pointer;
+    pointer-events: all;
+    max-width: 16px;
+    max-height: 16px;
 }
 
 @media screen and (max-width: 1460px) {
-    div.block div.infosub {
-        flex: 50%
-    }
+  div.block div.infosub {
+    flex: 50%;
+  }
 }
 
 @media screen and (max-width: 1024px) {
-    div.block div.infosub {
-        flex: 70%;
-    }
+  div.block div.infosub {
+    flex: 70%;
+  }
 
-    div.block div.subblock p{
-        font-size: 15px;
-    }
+  div.block div.subblock p {
+    font-size: 15px;
+  }
 
-    div.block div.subblock div.info div.line div.values div.value, div.block div.subblock div.info div.line  {
-        font-size: 14px;
-    }
+  div.block div.subblock div.info div.line div.values div.value,
+  div.block div.subblock div.info div.line {
+    font-size: 14px;
+  }
 
-    div.block div.alert img {
-        height: 64px;
-    }
-    
-    div.block div.alert span {
-        font-size: 14px !important;
-    }
+  div.block div.alert img {
+    height: 64px;
+  }
+
+  div.block div.alert span {
+    font-size: 14px !important;
+  }
 }
 
-
 @media screen and (max-width: 640px) {
-    div.block div.infosub {
-        flex: 90%;
-    }
+  div.block div.infosub {
+    flex: 90%;
+  }
 
-    table, th, td {
-        font-size: 14px;
-        padding:4px;
-      }
+  table,
+  th,
+  td {
+    font-size: 14px;
+    padding: 4px;
+  }
 
-    div.block {
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-    }
+  div.block div.subblock table img.icon {
+    height: 2vw;
+    width: 2vw;
+    margin: 0px;
+    cursor: pointer;
+    pointer-events: all;
+}
 
-    div.block div.subblock div.info {
-        margin-left: 0;
-        margin-bottom: 25px;
-        margin-top: 25px;
-    }
+  div.block {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
 
-    div.block div.alert span {
-        font-size: 13px !important;
-    }
+  div.block div.subblock div.info {
+    margin-left: 0;
+    margin-bottom: 25px;
+    margin-top: 25px;
+  }
 
-    div.subblock img {
-        margin: 10px 0px;
-        height: auto;
-        object-fit: cover;
-        width: 100%;
-    }
+  div.block div.alert span {
+    font-size: 13px !important;
+  }
 
-    div.block div.subblock div.imagecontainer img {
-        width: 100%;
-    }
+  div.subblock img {
+    margin: 10px 0px;
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  div.block div.subblock div.imagecontainer img {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 340px) {
-    table, th, td {
-        font-size: 4vw;
-        padding: 2px;
-      }
+  table,
+  th,
+  td {
+    font-size: 4vw;
+    padding: 2px;
+  }
+
+  div.block div.subblock .title {
+    font-size: 7vw;
+  }
+
+  div.block div.subblock p {
+    font-size: 5.5vw;
+  }
 }
 
-@media screen and (max-width: 240px) {
-    div.subblock div.alert {
-        flex-direction: column;
-    }
+@media screen and (max-width: 280px) {
+  div.subblock div.alert {
+    flex-direction: column;
+  }
 
-    div.subblock div.alert img {
-        display: none;
-    }
+  div.subblock div.alert img {
+    display: none;
+  }
 
-    div.block div.subblock p {
-        font-size: 8vw;
-    }
+  div.block div.alert span {
+      font-size: 7vw !important;
+  }
 
-    div.block div.subblock div.info img {
-        height: 48vw;
-    }
+  div.subblock a {
+      font-size: 7vw;
+  }
 
-    h3 {
-        font-size: 14px;
-    }
+  div.block div.subblock div.info div.line div.name {
+      font-size: 5.5vw;
+  }
 
-    h2 {
-        font-size: 16px;
-    }
+  div.block div.subblock div.info div.line div.values div.value, div.block div.subblock div.info div.line {
+      font-size: 5.5vw;
+  }
+
+  div.block div.subblock p {
+    font-size: 6vw;
+  }
+
+  div.block div.subblock div.info img {
+    height: 48vw;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
 }

@@ -95,9 +95,13 @@ div.footer div.separator span.title {
 
 div.footer div.separator a{
     color: #9a67e9;
-    font-size: 14px;
+    font-size: 30px;
     margin-bottom: 2px;
     margin-top: 2px;
+}
+
+div.footer div.separator div.list a{
+    font-size: 14px;
 }
 
 div.content {
@@ -267,6 +271,24 @@ img.miau {
     }
 }
 
+@media screen and (max-width: 320px){
+    div.footer div.separator span.title {
+        font-size: 8vw;
+    }
+
+    div.footer img.logo {
+        width: 32vw;
+    }
+
+    div.footer span.copyright {
+        font-size: 8vw;
+    }
+
+    div.footer div.separator a {
+        font-size: 7vw;
+    }
+}
+
 @media screen and (max-width: 250px) {
     div.footer div.separator span.title {
         font-size: 8vw;
@@ -279,5 +301,10 @@ img.miau {
 
     div.footer div.separator div.list a {
         font-size: 6vw;
+    }
+
+    div.header, div.footer {
+        padding: 5px;
+        column-gap: 5px;
     }
 }
