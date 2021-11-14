@@ -194,6 +194,27 @@ img.miau {
   margin-left: auto;
 }
 
+div.footer div.socialmedia {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+div.footer div.socialmedia div.omoribtn {
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+}
+
+div.footer div.socialmedia div.omoribtn div.inside {
+  border-width: 2.5px;
+  border-color: rgb(255, 255, 255);
+  border-style: solid;
+  background-color: black;
+  padding: 5px;
+}
+
 /* modificações para mobile */
 
 @media screen and (max-width: 960px) {
@@ -281,6 +302,14 @@ img.miau {
 @media screen and (max-width: 320px) {
   div.footer div.separator span.title {
     font-size: 8vw;
+  }
+
+  div.footer div.socialmedia div.omoribtn div.inside img {
+    height: 7vw;
+  }
+
+  div.footer div.socialmedia div.omoribtn div.inside {
+    padding: 2vw;
   }
 
   div.footer img.logo {

@@ -243,6 +243,10 @@ div.mobileMenu p {
     font-size: 12px;
   }
 
+  div.mobileMenu p {
+    font-size: 16px;
+  }
+
   div.mobileMenu div.btn img.icon {
     min-width: 16px;
     min-height: 16px;
@@ -252,8 +256,17 @@ div.mobileMenu p {
 
 @media screen and (max-width: 150px){
   div.mobileMenu div.btn span.text  {
-    font-size: 10vw;
-    margin: 0;
+    font-size: 9vw;
+    margin-left: 4vw;
+  }
+
+  div.mobileMenu p {
+    font-size: 12vw;
+  }
+
+  div.subMenuOption div.image, div.btn div.image {
+    min-width: 30vw;
+    min-height: 30vw;
   }
 
   div.mobileMenu div.btn img.icon {
