@@ -185,6 +185,20 @@ function FixContentHeader(){
   }
 }
 
+$('a').click(function(e){
+  var id = $(this).attr('href')
+
+  if(id[0] !== "#") return;
+
+  e.preventDefault()
+
+  targetOffset = $(id).offset().top,
+  menuheight = $('.header').innerHeight();
+  $('html, body').animate({ //animação
+      scrollTop: targetOffset - menuheight - 20
+  }, 500);
+});
+
 var skip = window.sessionStorage.getItem("skip");
 
 Intro(skip ? true : false);
