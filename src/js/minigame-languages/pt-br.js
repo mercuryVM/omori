@@ -15,3 +15,8 @@ minigameLanguage.set("something.6", "Você amava ela e você matou ela")
 
 minigameLanguage.set("cookies", "Você deseja aceitar nossas politicas de cookies, que no fim das contas nem existem?")
 minigameLanguage.set("mewo", "MEOW? (Esperando por algo acontecer?)")
+
+minigameLanguage.set("mewo.1", "MEOW? (Não há muito o que fazer aqui né?)")
+minigameLanguage.set("mewo.2", "MEOW? (Ou há?)")
+minigameLanguage.set("mewo.3", "MEOW? (Você está procurando uma saída?)")
+minigameLanguage.set("mewo.4", "MEOW? (Sempre há uma... mas...)")

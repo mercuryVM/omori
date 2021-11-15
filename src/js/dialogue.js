@@ -3,6 +3,7 @@ const nameDialogo = document.getElementsByClassName("dialogName")[0];
 const messageDialogo = document.getElementById("dialogMessage");
 const setaDialogo = document.getElementById("dialogSeta");
 const typing = $("#typing");
+let pleaseStop = false;
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -59,7 +60,7 @@ function MostrarDialogo(enviou, mensagem) {
         }
 
         async function AnimateAgain() {
-            if (!waitingEnter) {
+            if (!waitingEnter && !pleaseStop) {
                 dialogueResolve();
                 return;
             }

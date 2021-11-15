@@ -78,11 +78,35 @@ async function ShowDialogues(toCall) {
   })
 }
 
+let mewoDialogue = 0;
+
 const getMewo = async () => {
   $("#meow")[0].play();
     $("#meow")[0].volume = 0.5;
-    await MostrarDialogo("MEWO", minigameLanguage.get("mewo"))
-    await MostrarDialogo("MEWO", "");
+
+    try{
+      if(inventory.includes("knife")){
+        if(mewoDialogue === 0) {
+          await MostrarDialogo("MEWO", minigameLanguage.get("mewo.1"))
+        }else if(mewoDialogue === 1){
+          await MostrarDialogo("MEWO", minigameLanguage.get("mewo.2"))
+        }else if(mewoDialogue === 2){
+          await MostrarDialogo("MEWO", minigameLanguage.get("mewo.3"))
+        }else if(mewoDialogue === 3){
+          await MostrarDialogo("MEWO", minigameLanguage.get("mewo.4"))
+        }else {
+          await MostrarDialogo("MEWO", minigameLanguage.get("mewo"))
+        }
+  
+        mewoDialogue++;
+      }else {
+        await MostrarDialogo("MEWO", minigameLanguage.get("mewo"))
+      }
+    }catch(e){
+      await MostrarDialogo("MEWO", "MEOW? (Esperando por algo acontecer?)")
+    }finally {
+      await MostrarDialogo("MEWO", "");
+    }
 }
 
 $(".miau").click(() => {

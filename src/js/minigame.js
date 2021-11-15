@@ -7,6 +7,7 @@ let playerOrientation = "up";
 let stabbing = false;
 let minigameLanguage = new Map();
 
+
 let inventory = [];
 
 let actualPosition = {
@@ -368,6 +369,9 @@ function Interact(){
                   $("#knifeItem").css("display", "none");
                   $("#quest")[0].volume = 0.75;
                   $("#quest")[0].play();
+                  $("#ost").attr("src", "/src/music/arachnopobia.mp3");
+                  $("#ost")[0].play();
+                  $("#quest")[0].play();
                   itemSpace.delete(JSON.stringify({x:1, y: 3}));
                 }
               );
@@ -499,6 +503,8 @@ async function Stab(){
 
         let messageNow = 0;
 
+        $(".cookiesWarn").find("#dialogMessage").css("font-family", "OMORI")
+
         ShowDialogues(async () => {
             for(;;) {
                 $("#body").css("overflow", "hidden");
@@ -598,6 +604,8 @@ async function Stab(){
         ]
 
         animation = 0;
+
+        pleaseStop = true;
 
         for(;;){
             await sleep(100);
