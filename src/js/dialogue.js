@@ -134,3 +134,11 @@ $(boxDialogo).click(() => {
         clicked = true;
     }
 })
+
+$(".cookiesWarn").click(() => {
+    if (waitingEnter) {
+        waitingEnter = false;
+    }else {
+        clicked = true;
+    }
+})
