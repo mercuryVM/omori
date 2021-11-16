@@ -83,11 +83,6 @@ function PlayQueriedMovements(context) {
 
     if(stabbing) return;
 
-    if ((y - 1) <= 0 || (y + 1) >= 4 || (x + 1) > 4 || (x - 1) <= 0) {
-        StopAnimation();
-        return;
-    }
-
     if (Boolean(isPressing)) {
         if (context) {
             context(true);
@@ -145,6 +140,10 @@ function MoveUp(isNext) {
             animationEnded = true;
             character.css("transform", "translate(0px, -6px)")
             character.css("grid-row", y - 1)
+            if ((y - 2) <= 0) {
+                StopAnimation()
+                return;
+            }
             PlayQueriedMovements(MoveUp);
         })
 }
@@ -235,6 +234,10 @@ function MoveDown(isNext) {
             animationEnded = true;
             character.css("transform", "translate(0px, -6px)")
             character.css("grid-row", y + 1)
+            if ((y + 2) >= 4) {
+                StopAnimation()
+                return;
+            }
             PlayQueriedMovements(MoveDown);
         })
 }
@@ -279,6 +282,10 @@ function MoveRight(isNext) {
             animationEnded = true;
             character.css("transform", "translate(0px, -6px)")
             character.css("grid-column", x + 1)
+            if ((x + 2) > 4) {
+                StopAnimation()
+                return;
+            }
             PlayQueriedMovements(MoveRight);
         })
 }
@@ -325,6 +332,10 @@ function MoveLeft(isNext) {
             animationEnded = true;
             character.css("transform", "translate(0px, -6px)")
             character.css("grid-column", x - 1)
+            if ((x - 2) < 1) {
+                StopAnimation()
+                return;
+            }
             PlayQueriedMovements(MoveLeft);
         })
 }
