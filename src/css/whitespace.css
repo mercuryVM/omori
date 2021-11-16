@@ -62,7 +62,9 @@ div.intro div.whitespace {
 }
 
 div.intro span.walk {
-  transform: translate(200px, -55px);
+  transform: translate(0px, -57px);
+  background-color: white;
+  pointer-events: none;
   color: gray;
   font-family: sans-serif;
   font-weight: 700;
