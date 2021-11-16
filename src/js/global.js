@@ -174,8 +174,13 @@ async function Intro(skip) {
     opacity: 1,
   }, 500, async function () {
     if (!skip) {
-      await MostrarDialogo("???", minigameLanguage.get("cookies"));
-      await MostrarDialogo("???", "");
+      try{
+        await MostrarDialogo("???", minigameLanguage.get("cookies"));
+      }catch(e){
+        await MostrarDialogo("???", "Você deseja aceitar nossas políticas de cookies que no fim das contas nem existem?");
+      }finally {
+        await MostrarDialogo("???", "");
+      }
     }
     $(".cookiesWarn").css("display", "none");
     $("#body").css("overflow-y", "auto");
