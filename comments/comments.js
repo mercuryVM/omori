@@ -119,12 +119,14 @@ function CreateMessage(data) {
 
     messageList.push(objeto);
 
+    /*
     if(messageList.length > 20){
         const oldMessage = messageList[0];
         if(!oldMessage) return;
         DeleteMessage(oldMessage);
         messageList = messageList.slice(1, messageList.length);
     }
+    */
 }
 
 let selectedCharacter = false;
