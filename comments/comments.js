@@ -1,4 +1,4 @@
-const socket = io("https://omori-backend.herokuapp.com/");
+const socket = io("https://omori-backend-286605bc653f.herokuapp.com/");
 
 moment.locale("pt-br");
 
