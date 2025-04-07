@@ -79,11 +79,11 @@ for(var i = 101; i < 399; i++){
     }
 }
 
-console.log(soma)
-
+let sending = false;
 
 function CreateMessage(data) {
     if (!data) return;
+
     const objeto = {
         data,
         dom: false
@@ -166,6 +166,9 @@ $("#form").on("submit", function (e) {
     $("#tooMessages").css("display", "none")
 
     if (socket) socket.emit("send", characterId, name, message)
+
+    $("#name").val("");
+    $("#message").val("");
 })
 
 $("#omori").click(() => { SelectCharacter("omori") })
